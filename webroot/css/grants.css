@@ -1,7 +1,37 @@
+main.row {
+    max-width: max-content;
+}
+
 .label {
     font-weight: bold;
 }
 
 header img {
-    height: 75px;
+    height: 2em;
+}
+
+i.fi-eye{
+    color: #696814;
+}
+i.fi-pencil {
+    color: #2c83b6;
+}
+i.fi-x{
+    color: #c24246;
+}
+
+.top-bar-section ul {
+    list-style-type: none;
+}
+.top-bar-section li {
+    float: left;
+    margin: 0 0.3em;
+}
+
+a {
+    color: #2c83b6;
+}
+
+.top-bar{
+    background-color: #fff;
 }
