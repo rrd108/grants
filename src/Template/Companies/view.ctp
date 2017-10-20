@@ -31,7 +31,7 @@
         <?php if (!empty($company->grants)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"></th>
                 <th scope="col"><?= __('Issuer Id') ?></th>
                 <th scope="col"><?= __('Shortname') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
@@ -40,15 +40,23 @@
             </tr>
             <?php foreach ($company->grants as $grants): ?>
             <tr>
-                <td><?= h($grants->id) ?></td>
-                <td><?= h($grants->issuer_id) ?></td>
+                <td><?= $this->Html->link(
+                        '<i class="fi-eye" title="' . __('View') . '"></i>',
+                        ['controller' => 'Grants', 'action' => 'view', $grants->id],
+                        ['escape' => false]) ?></td>
+                <td><?= h($grants->issuer->name) ?></td>
                 <td><?= h($grants->shortname) ?></td>
                 <td><?= h($grants->name) ?></td>
                 <td><?= h($grants->code) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['controller' => 'Grants', 'action' => 'view', $grants->id]) ?>
-                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['controller' => 'Grants', 'action' => 'edit', $grants->id]) ?>
-                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['controller' => 'Grants', 'action' => 'delete', $grants->id], ['confirm' => __('Are you sure you want to delete # {0}?', $grants->id)]) ?>
+                    <?= $this->Html->link(
+                        '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
+                        ['controller' => 'Grants', 'action' => 'edit', $grants->id],
+                        ['escape' => false]) ?>
+                    <?= $this->Form->postLink(
+                        '<i class="fi-x" title="' . __('Delete') . '"></i>',
+                        ['controller' => 'Grants', 'action' => 'delete', $grants->id],
+                        ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $grants->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

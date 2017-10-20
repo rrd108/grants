@@ -27,9 +27,18 @@
                 <td><?= $this->Number->format($company->id) ?></td>
                 <td><?= h($company->name) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', $company->id]) ?>
-                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $company->id]) ?>
-                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $company->id], ['confirm' => __('Are you sure you want to delete # {0}?', $company->id)]) ?>
+                    <?= $this->Html->link(
+                        '<i class="fi-eye" title="' . __('View') . '"></i>',
+                        ['action' => 'view', $company->id],
+                        ['escape' => false]) ?>
+                    <?= $this->Html->link(
+                        '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
+                        ['action' => 'edit', $company->id],
+                        ['escape' => false]) ?>
+                    <?= $this->Form->postLink(
+                        '<i class="fi-x" title="' . __('Delete') . '"></i>',
+                        ['action' => 'delete', $company->id],
+                        ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $company->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

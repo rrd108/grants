@@ -45,18 +45,26 @@
         <?php if (!empty($grant->companies)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"></th>
                 <th scope="col"><?= __('Name') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($grant->companies as $companies): ?>
             <tr>
-                <td><?= h($companies->id) ?></td>
+                <td><?= $this->Html->link(
+                        '<i class="fi-eye" title="' . __('View') . '"></i>',
+                        ['controller' => 'Companies', 'action' => 'view', $companies->id],
+                        ['escape' => false]) ?></td>
                 <td><?= h($companies->name) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['controller' => 'Companies', 'action' => 'view', $companies->id]) ?>
-                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['controller' => 'Companies', 'action' => 'edit', $companies->id]) ?>
-                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['controller' => 'Companies', 'action' => 'delete', $companies->id], ['confirm' => __('Are you sure you want to delete # {0}?', $companies->id)]) ?>
+                    <?= $this->Html->link(
+                        '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
+                        ['controller' => 'Companies', 'action' => 'edit', $companies->id],
+                        ['escape' => false]) ?>
+                    <?= $this->Form->postLink(
+                        '<i class="fi-x" title="' . __('Delete') . '"></i>',
+                        ['controller' => 'Companies', 'action' => 'delete', $companies->id],
+                        ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $companies->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

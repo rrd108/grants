@@ -48,6 +48,7 @@
     <table>
         <thead>
         <tr>
+            <th scope="col"></th>
             <th scope="col"><?= __('Created') ?></th>
             <th scope="col"><?= __('Status') ?></th>
             <th scope="col"><?= __('User') ?></th>
@@ -59,6 +60,10 @@
         <tbody>
         <?php foreach ($companiesGrant->histories as $history) : ?>
             <tr>
+                <td><?= $this->Html->link(
+                        '<i class="fi-eye" title="' . __('View') . '"></i>',
+                        ['controller' => 'Histories', 'action' => 'view', $history->id],
+                        ['escape' => false]) ?></td>
                 <td><?= h($history->created) ?></td>
                 <td>
                     <?= $history->has('status')
@@ -82,10 +87,6 @@
                     ?>
                 </td>
                 <td class="actions">
-                    <?= $this->Html->link(
-                        '<i class="fi-eye" title="' . __('View') . '"></i>',
-                        ['controller' => 'Histories', 'action' => 'view', $history->id],
-                        ['escape' => false]) ?>
                     <?= $this->Html->link(
                         '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
                         ['controller' => 'Histories', 'action' => 'edit', $history->id],

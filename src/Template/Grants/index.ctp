@@ -18,7 +18,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"></th>
                 <th scope="col"><?= $this->Paginator->sort('issuer_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('shortname') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
@@ -29,15 +29,23 @@
         <tbody>
             <?php foreach ($grants as $grant): ?>
             <tr>
-                <td><?= $this->Number->format($grant->id) ?></td>
+                <td><?= $this->Html->link(
+                        '<i class="fi-eye" title="' . __('View') . '"></i>',
+                        ['action' => 'view', $grant->id],
+                        ['escape' => false]) ?></td>
                 <td><?= $grant->has('issuer') ? $this->Html->link($grant->issuer->name, ['controller' => 'Issuers', 'action' => 'view', $grant->issuer->id]) : '' ?></td>
                 <td><?= h($grant->shortname) ?></td>
                 <td><?= h($grant->name) ?></td>
                 <td><?= h($grant->code) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', $grant->id]) ?>
-                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $grant->id]) ?>
-                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $grant->id], ['confirm' => __('Are you sure you want to delete # {0}?', $grant->id)]) ?>
+                    <?= $this->Html->link(
+                        '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
+                        ['action' => 'edit', $grant->id],
+                        ['escape' => false]) ?>
+                    <?= $this->Form->postLink(
+                        '<i class="fi-x" title="' . __('Delete') . '"></i>',
+                        ['action' => 'delete', $grant->id],
+                        ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $grant->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
