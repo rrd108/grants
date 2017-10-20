@@ -17,7 +17,7 @@
         <legend><?= __('Add Status') ?></legend>
         <?php
             echo $this->Form->control('name');
-            echo $this->Form->control('tyle', ['value' => 'secondary']);
+            echo $this->Form->control('style', ['value' => 'secondary']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit'), ['class' => 'button']) ?>
