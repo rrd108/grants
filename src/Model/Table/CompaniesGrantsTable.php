@@ -47,7 +47,7 @@ class CompaniesGrantsTable extends Table
         ]);
         $this->hasMany('Histories', [
             'foreignKey' => 'company_grant_id',
-            'sort' => 'created'
+            'sort' => 'Histories.created DESC'
         ]);
     }
 

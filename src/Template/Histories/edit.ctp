@@ -32,6 +32,7 @@
             echo $this->Form->control('status_id', ['options' => $statuses]);
             echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('event');
+            echo $this->Form->control('created');
             echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>
