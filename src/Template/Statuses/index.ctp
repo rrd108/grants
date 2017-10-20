@@ -16,20 +16,30 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('style') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($statuses as $status): ?>
             <tr>
-                <td><?= $this->Number->format($status->id) ?></td>
+                <td><?= $this->Html->link(
+                    '<i class="fi-eye" title="' . __('View') . '"></i>',
+                    ['action' => 'view', $status->id],
+                    ['escape' => false]) ?></td>
                 <td><?= h($status->name) ?></td>
+                <td><?= h($status->style) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', $status->id], ['escape' => false]) ?>
-                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $status->id], ['escape' => false]) ?>
-                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $status->id], ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $status->id)]) ?>
+                    <?= $this->Html->link(
+                        '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
+                        ['action' => 'edit', $status->id],
+                        ['escape' => false]) ?>
+                    <?= $this->Form->postLink(
+                        '<i class="fi-x" title="' . __('Delete') . '"></i>',
+                        ['action' => 'delete', $status->id],
+                        ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $status->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
