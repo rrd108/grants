@@ -27,6 +27,8 @@
             echo $this->Form->control('company_id', ['options' => $companies]);
             echo $this->Form->control('grant_id', ['options' => $grants]);
             echo $this->Form->control('contact');
+            echo $this->Form->control('amount');
+            echo $this->Form->control('deminimis');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit'), ['class' => 'button']) ?>

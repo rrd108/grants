@@ -21,6 +21,7 @@
                 <th scope="col"></th>
                 <th scope="col"><?= $this->Paginator->sort('company_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('grant_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('amount') ?></th>
                 <th scope="col"><?= __('Current Status') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('contact') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -35,13 +36,14 @@
                     ['escape' => false]) ?></td>
                 <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name, ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
                 <td><?= $companiesGrant->has('grant') ? $this->Html->link($companiesGrant->grant->shortname, ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]) : '' ?></td>
+                <td><?= $this->Number->format($companiesGrant->amount) ?></td>
                 <td><?= $companiesGrant->has('histories')
                         ? '<span class="label '. h($companiesGrant->histories[0]['status']['style']) . '">'
                             . h($companiesGrant->histories[0]['status']['name'])
                             . '</span>'
                         : ''
                     ?></td>
-                <td><?= $companiesGrant->has('contact') ? $this->Text->autoLink($companiesGrant->contact) : '' ?></td>
+                <td><?= $this->Text->autoLink($companiesGrant->contact) ?></td>
                 <td class="actions">
                     <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $companiesGrant->id], ['escape' => false]) ?>
                     <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $companiesGrant->id],

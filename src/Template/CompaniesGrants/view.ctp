@@ -39,7 +39,19 @@
         <tr>
             <th scope="row"><?= __('Contact') ?></th>
             <td>
-                <?= $companiesGrant->has('contact') ? $companiesGrant->contact : '' ?>
+                <?= h($companiesGrant->contact) ?>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Amount') ?></th>
+            <td>
+                <?= $this->Number->format($companiesGrant->amount) ?>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('De minimis  ') ?></th>
+            <td>
+                <?= $companiesGrant->deminimis ?>
             </td>
         </tr>
     </table>
