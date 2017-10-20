@@ -14,7 +14,6 @@
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
 </head>
 <body>
     <header>
@@ -40,5 +39,10 @@
     </main>
     <footer>
     </footer>
+    <?= $this->Html->script('vendor/jquery.js') ?>
+    <?= $this->Html->script('vendor/what-input.js') ?>
+    <?= $this->Html->script('vendor/foundation.js') ?>
+    <?= $this->Html->script('grants.js') ?>
+    <?= $this->fetch('script') ?>
 </body>
 </html>
