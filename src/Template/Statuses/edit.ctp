@@ -23,6 +23,7 @@
         <legend><?= __('Edit Status') ?></legend>
         <?php
             echo $this->Form->control('name');
+            echo $this->Form->control('style');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit'), ['class' => 'button']) ?>
