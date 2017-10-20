@@ -46,9 +46,9 @@
                 <td><?= h($grants->name) ?></td>
                 <td><?= h($grants->code) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Grants', 'action' => 'view', $grants->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Grants', 'action' => 'edit', $grants->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Grants', 'action' => 'delete', $grants->id], ['confirm' => __('Are you sure you want to delete # {0}?', $grants->id)]) ?>
+                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['controller' => 'Grants', 'action' => 'view', $grants->id], ['escape' => false]) ?>
+                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['controller' => 'Grants', 'action' => 'edit', $grants->id], ['escape' => false]) ?>
+                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['controller' => 'Grants', 'action' => 'delete', $grants->id], ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $grants->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

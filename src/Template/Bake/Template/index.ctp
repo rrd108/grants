@@ -100,9 +100,10 @@ if (!empty($indexColumns)) {
         $pk = '$' . $singularVar . '->' . $primaryKey[0];
 %>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', <%= $pk %>]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', <%= $pk %>]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>)]) ?>
+                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', <%= $pk %>], ['escape' => false]) ?>
+                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', <%= $pk %>], ['escape' => false]) ?>
+                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', <%= $pk %>],
+                    ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -38,9 +38,12 @@
                     ?></td>
                 <td><?= $companiesGrant->has('contact') ? $this->Text->autoLink($companiesGrant->contact) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $companiesGrant->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $companiesGrant->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $companiesGrant->id], ['confirm' => __('Are you sure you want to delete # {0}?', $companiesGrant->id)]) ?>
+                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', $companiesGrant->id],
+                        ['escape' => false]) ?>
+                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $companiesGrant->id], ['escape' => false]) ?>
+                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $companiesGrant->id],
+                        ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?',
+                            $companiesGrant->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -27,9 +27,9 @@
                 <td><?= $this->Number->format($status->id) ?></td>
                 <td><?= h($status->name) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $status->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $status->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $status->id], ['confirm' => __('Are you sure you want to delete # {0}?', $status->id)]) ?>
+                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', $status->id], ['escape' => false]) ?>
+                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $status->id], ['escape' => false]) ?>
+                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $status->id], ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $status->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

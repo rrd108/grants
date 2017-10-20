@@ -48,9 +48,9 @@
                 <td><?= h($histories->event) ?></td>
                 <td><?= h($histories->created) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Histories', 'action' => 'view', $histories->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Histories', 'action' => 'edit', $histories->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Histories', 'action' => 'delete', $histories->id], ['confirm' => __('Are you sure you want to delete # {0}?', $histories->id)]) ?>
+                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['controller' => 'Histories', 'action' => 'view', $histories->id], ['escape' => false]) ?>
+                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['controller' => 'Histories', 'action' => 'edit', $histories->id], ['escape' => false]) ?>
+                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['controller' => 'Histories', 'action' => 'delete', $histories->id], ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $histories->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

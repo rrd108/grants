@@ -27,9 +27,9 @@
                 <td><?= $this->Number->format($issuer->id) ?></td>
                 <td><?= h($issuer->name) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $issuer->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $issuer->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $issuer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $issuer->id)]) ?>
+                    <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', $issuer->id], ['escape' => false]) ?>
+                    <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $issuer->id], ['escape' => false]) ?>
+                    <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $issuer->id], ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $issuer->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
