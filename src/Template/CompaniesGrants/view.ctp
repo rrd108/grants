@@ -24,7 +24,12 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Grant') ?></th>
-            <td><?= $companiesGrant->has('grant') ? $this->Html->link($companiesGrant->grant->shortname, ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]) : '' ?></td>
+            <td><?= $companiesGrant->has('grant')
+                    ? $this->Html->link(
+                        $companiesGrant->grant->shortname,
+                        ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]
+                    ) . ' ' . h($companiesGrant->grant->code)
+                    : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Issuer') ?></th>
@@ -32,7 +37,8 @@
                 <?= $companiesGrant->has('grant')
                     ? $this->Html->link(
                         $companiesGrant->grant->issuer->name,
-                        ['controller' => 'issuers', 'action' => 'view', $companiesGrant->grant->issuer->id])
+                        ['controller' => 'issuers', 'action' => 'view', $companiesGrant->grant->issuer->id]
+                    )
                     : '' ?>
             </td>
         </tr>
