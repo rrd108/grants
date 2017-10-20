@@ -21,7 +21,7 @@ class CompaniesGrantsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Companies', 'Issuers', 'Histories.Statuses']
+            'contain' => ['Companies', 'Grants', 'Histories.Statuses']
         ];
         $companiesGrants = $this->paginate($this->CompaniesGrants);
 
@@ -39,7 +39,11 @@ class CompaniesGrantsController extends AppController
     public function view($id = null)
     {
         $companiesGrant = $this->CompaniesGrants->get($id, [
-            'contain' => ['Companies', 'Grants.Issuers', 'Histories.Statuses', 'Histories.Tags']
+            'contain' => [
+                'Companies',
+                'Grants.Issuers',
+                'Histories' => ['Statuses', 'Tags', 'Users']
+            ]
         ]);
 
         $this->set('companiesGrant', $companiesGrant);

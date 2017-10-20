@@ -17,7 +17,6 @@
     </ul>
 </nav>
 <div class="companiesGrants view small-9 medium-10 large-10 columns content">
-    <h3><?= h($companiesGrant->id) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Company') ?></th>
@@ -47,6 +46,17 @@
 
     <h3><?= __('History') ?></h3>
     <table>
+        <thead>
+        <tr>
+            <th scope="col"><?= __('Created') ?></th>
+            <th scope="col"><?= __('Status') ?></th>
+            <th scope="col"><?= __('User') ?></th>
+            <th scope="col"><?= __('Event') ?></th>
+            <th scope="col"><?= __('Tags') ?></th>
+            <th scope="col" class="actions"><?= __('Actions') ?></th>
+        </tr>
+        </thead>
+        <tbody>
         <?php foreach ($companiesGrant->histories as $history) : ?>
             <tr>
                 <td><?= h($history->created) ?></td>
@@ -87,5 +97,6 @@
                 </td>
             </tr>
         <?php endforeach; ?>
+        </tbody>
     </table>
 </div>

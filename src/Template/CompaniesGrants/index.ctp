@@ -31,8 +31,8 @@
                 <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name, ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
                 <td><?= $companiesGrant->has('grant') ? $this->Html->link($companiesGrant->grant->shortname, ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]) : '' ?></td>
                 <td><?= $companiesGrant->has('histories')
-                        ? '<span class="label '. h($companiesGrant->histories[count($companiesGrant->histories)-1]['status']['style']) . '">'
-                            . h($companiesGrant->histories[count($companiesGrant->histories)-1]['status']['name'])
+                        ? '<span class="label '. h($companiesGrant->histories[0]['status']['style']) . '">'
+                            . h($companiesGrant->histories[0]['status']['name'])
                             . '</span>'
                         : ''
                     ?></td>
