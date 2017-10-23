@@ -27,6 +27,9 @@ class CompaniesGrantsTableTest extends TestCase
         'app.companies_grants',
         'app.companies',
         'app.grants',
+        'app.issuers',
+        'app.histories',
+        'app.statuses',
     ];
 
     /**
@@ -53,6 +56,11 @@ class CompaniesGrantsTableTest extends TestCase
         parent::tearDown();
     }
 
+    public function testFindNotStandBy()
     {
+        $actual = $this->CompaniesGrants->find('notStandBy', []);
+        debug($actual->toArray());
+        $expected = [];
+        $this->assertEquals($expected, $actual->extract('id')->toArray());
     }
 }

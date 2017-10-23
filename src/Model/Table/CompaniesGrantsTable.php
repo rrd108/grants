@@ -80,4 +80,17 @@ class CompaniesGrantsTable extends Table
 
         return $rules;
     }
+
+    /**
+     *
+     * Find grants where the last status is not standby
+     *
+     * @param \Cake\ORM\Query $query
+     * @param array           $options
+     * @return \Cake\ORM\Query
+     */
+    public function findNotStandBy(Query $query, array  $options)
+    {
+        return $query->matching('Histories.Statuses');
+    }
 }
