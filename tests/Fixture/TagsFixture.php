@@ -35,9 +35,6 @@ class TagsFixture extends TestFixture
      * @var array
      */
     public $records = [
-        [
-            'id' => 1,
-            'name' => 'Lorem ipsum dolor sit amet'
-        ],
+        ['id' => 1, 'name' => 'tag 1'],
     ];
 }

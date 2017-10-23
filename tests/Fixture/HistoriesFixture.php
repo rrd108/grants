@@ -51,9 +51,17 @@ class HistoriesFixture extends TestFixture
             'id' => 1,
             'company_grant_id' => 1,
             'status_id' => 1,
-            'user_id' => 'f2a8c0da-c9ed-43be-8be7-c6433da96982',
-            'event' => 'Lorem ipsum dolor sit amet',
-            'created' => '2017-10-19 13:42:24'
+            'user_id' => '3b72c8fc-06f0-42b2-b8e1-5a1efaf98062',
+            'event' => '',
+            'created' => '2017-10-23 15:32:59'
+        ],
+        [
+            'id' => 2,
+            'company_grant_id' => 1,
+            'status_id' => 0,
+            'user_id' => '3b72c8fc-06f0-42b2-b8e1-5a1efaf98062',
+            'event' => '',
+            'created' => '2017-10-25 15:32:59'
         ],
     ];
 }

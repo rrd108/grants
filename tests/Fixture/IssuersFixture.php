@@ -35,9 +35,7 @@ class IssuersFixture extends TestFixture
      * @var array
      */
     public $records = [
-        [
-            'id' => 1,
-            'name' => 'Lorem ipsum dolor sit amet'
-        ],
+        ['id' => 1, 'name' => 'Issuer 1'],
+        ['id' => 2, 'name' => 'Issuer 2'],
     ];
 }

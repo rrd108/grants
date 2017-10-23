@@ -20,7 +20,7 @@ class GrantsFixture extends TestFixture
         'id' => ['type' => 'integer', 'length' => 5, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'issuer_id' => ['type' => 'integer', 'length' => 5, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'shortname' => ['type' => 'string', 'length' => 45, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'name' => ['type' => 'string', 'length' => 45, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'name' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'code' => ['type' => 'string', 'length' => 45, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
             'fk_grants_issuers_idx' => ['type' => 'index', 'columns' => ['issuer_id'], 'length' => []],
@@ -45,9 +45,16 @@ class GrantsFixture extends TestFixture
         [
             'id' => 1,
             'issuer_id' => 1,
-            'shortname' => 'Lorem ipsum dolor sit amet',
-            'name' => 'Lorem ipsum dolor sit amet',
-            'code' => 'Lorem ipsum dolor sit amet'
+            'shortname' => 'Grant 1',
+            'name' => 'Test Gran #1',
+            'code' => 'TG-1'
+        ],
+        [
+            'id' => 2,
+            'issuer_id' => 1,
+            'shortname' => 'Grant 2',
+            'name' => 'Test Gran #2',
+            'code' => 'TG-2'
         ],
     ];
 }

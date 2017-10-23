@@ -35,9 +35,7 @@ class CompaniesFixture extends TestFixture
      * @var array
      */
     public $records = [
-        [
-            'id' => 1,
-            'name' => 'Lorem ipsum dolor sit amet'
-        ],
+        ['id' => 1, 'name' => 'Company 1'],
+        ['id' => 2, 'name' => 'Company 2'],
     ];
 }
