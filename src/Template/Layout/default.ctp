@@ -18,16 +18,16 @@
 <body>
     <header>
         <nav class="top-bar expanded" data-topbar role="navigation">
-            <?= $this->Html->image('logo.png') ?>
+            <?= $this->Html->link(
+                $this->Html->image('logo.png'),
+                ['controller' => 'CompaniesGrants', 'action' => 'index'],
+                ['escape' => false]
+            ) ?>
             <div class="top-bar-section">
                 <ul class="right">
                     <li><?= $this->Html->link(
-                        __('Histories'),
-                        ['controller' => 'Histories', 'action' => 'index']
-                        ) ?></li>
-                    <li><?= $this->Html->link(
-                        __('Current status'),
-                        ['controller' => 'CompaniesGrants', 'action' => 'index']
+                        __('New History'),
+                        ['controller' => 'Histories', 'action' => 'add']
                         ) ?></li>
                 </ul>
             </div>
