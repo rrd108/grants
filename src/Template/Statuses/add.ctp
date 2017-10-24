@@ -18,6 +18,7 @@
         <?php
             echo $this->Form->control('name');
             echo $this->Form->control('style', ['value' => 'secondary']);
+            echo $this->Form->control('await');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit'), ['class' => 'button']) ?>
