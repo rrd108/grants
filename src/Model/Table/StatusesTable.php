@@ -59,4 +59,16 @@ class StatusesTable extends Table
 
         return $validator;
     }
+
+    /**
+     * Find awating statuses
+     *
+     * @param \Cake\ORM\Query $query
+     * @param array           $options
+     * @return \Cake\ORM\Query
+     */
+    public function findAwait(Query $query, array $options)
+    {
+        return $query->where(['Statuses.await' => true]);
+    }
 }

@@ -49,6 +49,13 @@ class CompaniesGrantsTable extends Table
             'foreignKey' => 'company_grant_id',
             'sort' => 'Histories.created DESC'
         ]);
+        $this->hasMany('LatestHistory', [
+            'className' => 'Histories',
+            'foreignKey' => 'company_grant_id',
+            'strategy' => 'subquery',
+            'finder' => 'latest',
+            'limit' => 1,   //symulates a hasOne
+        ]);
     }
 
     /**
@@ -83,14 +90,24 @@ class CompaniesGrantsTable extends Table
 
     /**
      *
-     * Find grants where the last status is not standby
+     * Find grants where the last status is awaiting
      *
      * @param \Cake\ORM\Query $query
      * @param array           $options
      * @return \Cake\ORM\Query
      */
-    public function findNotStandBy(Query $query, array  $options)
+    public function findAwait(Query $query, array  $options)
     {
-        return $query->matching('Histories.Statuses');
+        return $query->contain(
+            [
+                'LatestHistory'=> [
+                    'Statuses' => function ($q) use ($options) {
+                        return $q->find('await', $options);
+                    }
+                ]
+            ]
+        )->reject(function ($row) { //TODO refactor
+            return empty($row->latest_history);
+        });
     }
 }

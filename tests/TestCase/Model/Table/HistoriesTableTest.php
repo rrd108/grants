@@ -24,12 +24,7 @@ class HistoriesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.histories',
-        'app.companies_grants',
-        'app.statuses',
-        'app.users',
-        'app.tags',
-        'app.histories_tags'
+        'app.histories'
     ];
 
     /**
@@ -56,33 +51,10 @@ class HistoriesTableTest extends TestCase
         parent::tearDown();
     }
 
-    /**
-     * Test initialize method
-     *
-     * @return void
-     */
-    public function testInitialize()
+    public function testFindLatest()
     {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
+        $actual = $this->Histories->find('latest', []);
+        $expected = [2,3];
+        $this->assertEquals($expected, $actual->extract('id')->toArray());
     }
 }

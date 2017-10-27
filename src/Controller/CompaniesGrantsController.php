@@ -21,7 +21,7 @@ class CompaniesGrantsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Companies', 'Grants', 'Histories.Statuses']
+            'contain' => ['Companies', 'Grants', 'LatestHistory.Statuses']
         ];
         $companiesGrants = $this->paginate($this->CompaniesGrants);
 

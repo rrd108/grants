@@ -19,7 +19,7 @@ class StatusesFixture extends TestFixture
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 5, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'name' => ['type' => 'string', 'length' => 45, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'standby' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
+        'await' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '1', 'comment' => '', 'precision' => null],
         'style' => ['type' => 'string', 'length' => 25, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
@@ -40,14 +40,14 @@ class StatusesFixture extends TestFixture
         [
             'id' => 1,
             'name' => 'status 1',
-            'standby' => 0,
+            'await' => 1,
             'style' => 'primary'
         ],
         [
             'id' => 2,
             'name' => 'status 2',
-            'standby' => 1,
-            'style' => 'primary'
+            'await' => 0,
+            'style' => 'secondary'
         ],
     ];
 }

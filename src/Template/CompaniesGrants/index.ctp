@@ -36,9 +36,9 @@ $this->assign('title', __('Current status of Grants'));
                 <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name, ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
                 <td><?= $companiesGrant->has('grant') ? $this->Html->link($companiesGrant->grant->shortname, ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]) : '' ?></td>
                 <td><?= $this->Number->format($companiesGrant->amount) ?></td>
-                <td><?= $companiesGrant->has('histories')
-                        ? '<span class="label '. h($companiesGrant->histories[0]['status']['style']) . '">'
-                            . h($companiesGrant->histories[0]['status']['name'])
+                <td><?= $companiesGrant->has('latest_history')
+                        ? '<span class="label '. h($companiesGrant->latest_history[0]['status']['style']) . '">'
+                            . h($companiesGrant->latest_history[0]['status']['name'])
                             . '</span>'
                         : ''
                     ?></td>

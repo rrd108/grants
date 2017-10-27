@@ -52,23 +52,10 @@ class StatusesTableTest extends TestCase
         parent::tearDown();
     }
 
-    /**
-     * Test initialize method
-     *
-     * @return void
-     */
-    public function testInitialize()
+    public function testFindAwait()
     {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
+        $actual = $this->Statuses->find('await', []);
+        $expected = [1];
+        $this->assertEquals($expected, $actual->extract('id')->toArray());
     }
 }

@@ -50,7 +50,7 @@ class CompaniesGrantsFixture extends TestFixture
             'company_id' => 1,
             'grant_id' => 1,
             'contact' => 'Jon Doe, +36 30 123 456 78, jondoe@example.com',
-            'amount' => 10000000,
+            'amount' => 100,
             'deminimis' => 0
         ],
         [

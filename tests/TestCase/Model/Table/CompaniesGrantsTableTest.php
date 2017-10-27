@@ -56,11 +56,10 @@ class CompaniesGrantsTableTest extends TestCase
         parent::tearDown();
     }
 
-    public function testFindNotStandBy()
+    public function testFindAwait()
     {
-        $actual = $this->CompaniesGrants->find('notStandBy', []);
-        debug($actual->toArray());
-        $expected = [];
+        $actual = $this->CompaniesGrants->find('await', []);
+        $expected = [1];
         $this->assertEquals($expected, $actual->extract('id')->toArray());
     }
 }

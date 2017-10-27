@@ -2,6 +2,7 @@
 namespace App\Model\Table;
 
 use ArrayObject;
+use Cake\Database\Expression\IdentifierExpression;
 use Cake\Event\Event;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
@@ -98,4 +99,32 @@ class HistoriesTable extends Table
         return $rules;
     }
 
+    /**
+     * Find latest histories
+     *
+     * @param \Cake\ORM\Query $query
+     * @param array           $options
+     * @return \Cake\ORM\Query
+     */
+    public function findLatest(Query $query, array $options)
+    {
+        return $query->innerJoin(
+            [
+                'latest' => $query->getConnection()->newQuery()
+                    ->select(
+                        [
+                            'cg_id' => 'Histories.company_grant_id',
+                            'latest' => $query->func()->max('Histories.created')
+
+                        ]
+                    )
+                    ->from(['Histories' => 'histories'])
+                    ->group('Histories.company_grant_id')
+            ],
+            [
+                $this->getAlias() . '.company_grant_id' => new IdentifierExpression('latest.cg_id'),
+                $this->getAlias() . '.created' => new IdentifierExpression('latest.latest')
+            ]
+        );
+    }
 }
