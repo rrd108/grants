@@ -25,7 +25,6 @@ class StatusesTableTest extends TestCase
      */
     public $fixtures = [
         'app.statuses',
-        'app.histories'
     ];
 
     /**
