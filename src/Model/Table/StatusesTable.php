@@ -69,6 +69,6 @@ class StatusesTable extends Table
      */
     public function findAwait(Query $query, array $options)
     {
-        return $query->where(['Statuses.await' => true]);
+        return $query->where(['await' => true]);
     }
 }
