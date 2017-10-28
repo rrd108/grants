@@ -21,9 +21,18 @@ class CompaniesGrantsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Companies', 'Grants', 'LatestHistory.Statuses']
+            'sortWhitelist' => [
+                'Companies.name', 'Grants.shortname', 'amount', 'contact',
+                'LatestHistory.Histories__deadline', 'Statuses.name'
+            ],
+            'order' => [
+                'LatestHistory.Histories__deadline' => 'DESC',
+                'Statuses.await' => 'DESC',
+                'Statuses.name'
+            ]
         ];
-        $companiesGrants = $this->paginate($this->CompaniesGrants);
+
+        $companiesGrants = $this->paginate($this->CompaniesGrants->find('current'));
 
         $this->set(compact('companiesGrants'));
         $this->set('_serialize', ['companiesGrants']);

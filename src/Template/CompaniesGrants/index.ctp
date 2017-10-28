@@ -18,10 +18,11 @@ $this->assign('title', __('Current status of Grants'));
         <thead>
             <tr>
                 <th scope="col"></th>
-                <th scope="col"><?= $this->Paginator->sort('company_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('grant_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Companies.name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Grants.shortname') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('amount') ?></th>
-                <th scope="col"><?= __('Current Status') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Statuses.name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('LatestHistory.Histories__deadline') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('contact') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -33,13 +34,19 @@ $this->assign('title', __('Current status of Grants'));
                     '<i class="fi-eye" title="' . __('View') . '"></i>',
                     ['action' => 'view', $companiesGrant->id],
                     ['escape' => false]) ?></td>
-                <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name, ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
-                <td><?= $companiesGrant->has('grant') ? $this->Html->link($companiesGrant->grant->shortname, ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]) : '' ?></td>
+                <td><?= $this->Html->link($companiesGrant->company['name'], ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company['id']]) ?></td>
+                <td><?= $this->Html->link($companiesGrant->grant['shortname'], ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant['id']]) ?></td>
                 <td><?= $this->Number->format($companiesGrant->amount) ?></td>
-                <td><?= $companiesGrant->has('latest_history')
-                        ? '<span class="label '. h($companiesGrant->latest_history[0]['status']['style']) . '">'
-                            . h($companiesGrant->latest_history[0]['status']['name'])
+                <td><?= $companiesGrant['Statuses']['name']
+                        ? '<span class="label '. h($companiesGrant['Statuses']['style']) . '">'
+                            . h($companiesGrant['Statuses']['name'])
                             . '</span>'
+                        : ''
+                    ?></td>
+                <td><?= ($companiesGrant->LatestHistory['Histories__deadline'])
+                        ? '<span class="label '. h($companiesGrant['Statuses']['style']) . '">'
+                        . h($companiesGrant->LatestHistory['Histories__deadline'])
+                        . '</span>'
                         : ''
                     ?></td>
                 <td><?= $this->Text->autoLink($companiesGrant->contact) ?></td>

@@ -49,13 +49,6 @@ class CompaniesGrantsTable extends Table
             'foreignKey' => 'company_grant_id',
             'sort' => 'Histories.created DESC'
         ]);
-        $this->hasMany('LatestHistory', [
-            'className' => 'Histories',
-            'foreignKey' => 'company_grant_id',
-            'strategy' => 'subquery',
-            'finder' => 'latest',
-            'limit' => 1,   //symulates a hasOne
-        ]);
     }
 
     /**
@@ -89,25 +82,30 @@ class CompaniesGrantsTable extends Table
     }
 
     /**
-     *
-     * Find grants where the last status is awaiting
+     * Find grants with current status
      *
      * @param \Cake\ORM\Query $query
      * @param array           $options
      * @return \Cake\ORM\Query
      */
-    public function findAwait(Query $query, array  $options)
+    public function findCurrent(Query $query, array $options)
     {
-        return $query->contain(
-            [
-                'LatestHistory'=> [
-                    'Statuses' => function ($q) use ($options) {
-                        return $q->find('await', $options);
-                    }
-                ]
-            ]
-        )->reject(function ($row) { //TODO refactor
-            return empty($row->latest_history);
-        });
+        return $query->select([
+            'CompaniesGrants.id', 'CompaniesGrants.company_id', 'CompaniesGrants.grant_id',
+            'CompaniesGrants.contact', 'CompaniesGrants.amount', 'CompaniesGrants.deminimis',
+            'Companies.id', 'Companies.name',
+            'Grants.id', 'Grants.shortname',
+            'LatestHistory.Histories__deadline',
+            'Statuses.name', 'Statuses.await', 'Statuses.style'])
+            ->contain('Companies')
+            ->contain('Grants')
+            ->innerJoin(
+                ['LatestHistory' => $this->Histories->find('latest', $options)],
+                ['CompaniesGrants.id = LatestHistory.Histories__company_grant_id']
+            )
+            ->innerJoin(
+                ['Statuses' => 'statuses'],
+                ['Statuses.id = LatestHistory.Histories__status_id']
+            );
     }
 }

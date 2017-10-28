@@ -23,6 +23,7 @@ class HistoriesFixture extends TestFixture
         'user_id' => ['type' => 'uuid', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'event' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'deadline' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         '_indexes' => [
             'fk_histories_companies_grants1_idx' => ['type' => 'index', 'columns' => ['company_grant_id'], 'length' => []],
             'fk_histories_statuses1_idx' => ['type' => 'index', 'columns' => ['status_id'], 'length' => []],
@@ -53,7 +54,8 @@ class HistoriesFixture extends TestFixture
             'status_id' => 1,
             'user_id' => '3b72c8fc-06f0-42b2-b8e1-5a1efaf98062',
             'event' => '',
-            'created' => '2017-10-01 12:00:00'
+            'created' => '2017-10-01 12:00:00',
+            'deadline' => '2017-10-09',
         ],
         [
             'id' => 2,
@@ -61,7 +63,8 @@ class HistoriesFixture extends TestFixture
             'status_id' => 1,
             'user_id' => '3b72c8fc-06f0-42b2-b8e1-5a1efaf98062',
             'event' => '',
-            'created' => '2017-10-20 15:00:00'
+            'created' => '2017-10-20 15:00:00',
+            'deadline' => '2017-10-29',
         ],
         [
             'id' => 3,
@@ -69,7 +72,8 @@ class HistoriesFixture extends TestFixture
             'status_id' => 2,
             'user_id' => '3b72c8fc-06f0-42b2-b8e1-5a1efaf98062',
             'event' => '',
-            'created' => '2017-10-15 11:00:00'
+            'created' => '2017-10-15 11:00:00',
+            'deadline'
         ],
     ];
 }
