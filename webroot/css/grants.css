@@ -1,3 +1,7 @@
+.s150{
+    font-size: 150%;
+}
+
 main.row {
     max-width: max-content;
 }
@@ -18,6 +22,17 @@ i.fi-pencil {
 }
 i.fi-x{
     color: #c24246;
+}
+i.fi-alert{
+    color: #c60f13;
+    text-shadow: 0 0 .1em #fff,
+        0 0 .2em #fff,
+        0 0 .3em #fff,
+        0 0 .4em #fff,
+        0 0 .5em #e30,
+        0 0 .6em #e30,
+        0 0 .7em #e30,
+        0 0 .8em #e30;
 }
 
 .top-bar-section ul {
