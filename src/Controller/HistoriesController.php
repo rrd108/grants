@@ -56,6 +56,9 @@ class HistoriesController extends AppController
         $history = $this->Histories->newEntity();
         if ($this->request->is('post')) {
             $history = $this->Histories->patchEntity($history, $this->request->getData());
+            if ($history->hasdeadline != 1){
+                $history->deadline = null;
+            }
             if ($this->Histories->save($history)) {
                 $this->Flash->success(__('The history has been saved.'));
 
@@ -90,6 +93,9 @@ class HistoriesController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $history = $this->Histories->patchEntity($history, $this->request->getData());
+            if ($history->hasdeadline != 1){
+                $history->deadline = null;
+            }
             if ($this->Histories->save($history)) {
                 $this->Flash->success(__('The history has been saved.'));
 
