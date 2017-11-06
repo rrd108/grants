@@ -30,10 +30,15 @@ $this->assign('title', __('Current status of Grants'));
         <tbody>
             <?php foreach ($companiesGrants as $companiesGrant): ?>
             <tr>
-                <td><?= $this->Html->link(
-                    '<i class="fi-eye" title="' . __('View') . '"></i>',
+                <td>
+                    <?= $this->Html->link(
+                        ($companiesGrant->LatestHistory['Histories__deadline']
+                            && $companiesGrant->LatestHistory['Histories__deadline'] <= date('Y-m-d'))
+                        ? '<i class="fi-alert s150" title="' . __('Overdued') . '"></i>'
+                        : '<i class="fi-eye s150" title="' . __('View') . '"></i>',
                     ['action' => 'view', $companiesGrant->id],
-                    ['escape' => false]) ?></td>
+                    ['escape' => false]) ?>
+                </td>
                 <td><?= $this->Html->link($companiesGrant->company['name'], ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company['id']]) ?></td>
                 <td><?= $this->Html->link($companiesGrant->grant['shortname'], ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant['id']]) ?></td>
                 <td><?= $this->Number->format($companiesGrant->amount) ?></td>
