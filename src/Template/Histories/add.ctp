@@ -27,6 +27,8 @@
             echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('event');
             echo $this->Form->control('created');
+            echo $this->Form->label(__('Has deadline:'));
+            echo $this->Form->checkbox('hasdeadline', ['hiddenField' => false, 'checked' => true]);
             echo $this->Form->control('deadline');
             echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
