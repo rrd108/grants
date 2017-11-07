@@ -17,8 +17,9 @@ class CompaniesGrantsController extends AppController
      * Index method
      *
      * @return \Cake\Http\Response|void
+     * @param $await set the status await
      */
-    public function index()
+    public function index(int $await=1)
     {
         $this->paginate = [
             'sortWhitelist' => [
@@ -32,8 +33,7 @@ class CompaniesGrantsController extends AppController
             ]
         ];
 
-        $companiesGrants = $this->paginate($this->CompaniesGrants->find('current'));
-
+        $companiesGrants = $this->paginate($this->CompaniesGrants->find('current')->where(['Statuses.await' => $await]));
         $this->set(compact('companiesGrants'));
         $this->set('_serialize', ['companiesGrants']);
     }
@@ -55,8 +55,13 @@ class CompaniesGrantsController extends AppController
             ]
         ]);
 
+        $statuses = $this->CompaniesGrants->Histories->Statuses->find('list')->all();
+        $users = $this->CompaniesGrants->Histories->Users->find('list')->all();
+        $tags = $this->CompaniesGrants->Histories->Tags->find('list')->all();
+        $this->set('users',$users);
+        $this->set('statuses',$statuses);
+        $this->set('tags',$tags);
         $this->set('companiesGrant', $companiesGrant);
-        $this->set('_serialize', ['companiesGrant']);
     }
 
     /**
