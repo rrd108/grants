@@ -72,7 +72,7 @@ class HistoriesController extends AppController
             ->map(function ($companyGrant) {
                 return $companyGrant->company->name . ' - ' . $companyGrant->grant->shortname;
             });
-        $statuses = $this->Histories->Statuses->find('list', ['limit' => 200]);
+        $statuses = $this->Histories->Statuses->find('list', ['limit' => 200])->order('name');
         $users = $this->Histories->Users->find('list', ['limit' => 200]);
         $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
         $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
