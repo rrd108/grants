@@ -51,8 +51,6 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', ['controller' => 'CompaniesGrants', 'action' => 'index']);
 
-    $routes->connect('/:await',['controller' => 'CompaniesGrants', 'action' => 'index']);
-
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
