@@ -84,7 +84,17 @@
             <td></td>
             <td>
                 <?= $this->Form->label(__('Created')) ?>
-                <?= $this->Form->datetime('created'); ?>
+                <?= $this->Form->datetime('created',[
+                    'minYear' => date('Y')-2,
+                    'maxYear' => date('Y')+2,
+                    'empty' => [
+                        'year' => __('Choose year...'),
+                        'month' => __('Choose month...'),
+                        'day' => __('Choose day...'),
+                        'hour' => __('Choose hour...'),
+                        'minute' => __('Choose minute...')
+                    ]
+                ]); ?>
             </td>
             <td><?= $this->Form->control(__('Status'), ['options' => $statuses, 'name' => 'status_id']); ?></td>
             <td><?= $this->Form->control(__('User'), ['options' => $users, 'name' => 'user_id']); ?></td>
