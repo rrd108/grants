@@ -54,9 +54,7 @@ class CompaniesGrantsController extends AppController
                 'Histories' => ['Statuses', 'Tags', 'Users']
             ]
         ]);
-
         $this->set('companiesGrant', $companiesGrant);
-        $this->set('_serialize', ['companiesGrant']);
     }
 
     /**

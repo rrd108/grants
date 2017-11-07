@@ -76,6 +76,17 @@
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <?= $this->Form->create(null, ['url' => ['controller' => 'Histories', 'action' => 'add']]); ?>
+            <td></td>
+            <td><?= $this->Form->datetime('created'); ?></td>
+            <td><?= $this->Form->control('status_id', ['options' => '']); ?></td>
+            <td><?= __('User') ?></td>
+            <td><?= __('Event') ?></td>
+            <td><?= __('Tags') ?></td>
+            <td><?= __('Actions') ?></td>
+            <?= $this->Form->end() ?>
+        </tr>
         <?php foreach ($companiesGrant->histories as $history) : ?>
             <tr>
                 <td><?= $this->Html->link(
