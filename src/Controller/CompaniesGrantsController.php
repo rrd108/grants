@@ -32,8 +32,7 @@ class CompaniesGrantsController extends AppController
             ]
         ];
 
-        $companiesGrants = $this->paginate($this->CompaniesGrants->find('current'));
-
+        $companiesGrants = $this->paginate($this->CompaniesGrants->find('current')->where(['Statuses.await' => 1]));
         $this->set(compact('companiesGrants'));
         $this->set('_serialize', ['companiesGrants']);
     }
