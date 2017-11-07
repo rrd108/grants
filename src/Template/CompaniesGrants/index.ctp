@@ -13,7 +13,7 @@ $this->assign('title', __('Current status of Grants'));
 </nav>
 <div class="companiesGrants index small-9 medium-10 large-10 columns content">
     <h3><?= __('Current status') ?></h3>
-    <h4>Show Standby</h4>
+    <h4><?= $this->Html->link(__('Stand by'),['controller' => 'CompaniesGrants', 'action' => 'index', 'await' => 0]) ?></h4>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

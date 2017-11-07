@@ -51,6 +51,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', ['controller' => 'CompaniesGrants', 'action' => 'index']);
 
+    $routes->connect('/companies-grants/:index/*',['controller' => 'CompaniesGrants']);
+
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
