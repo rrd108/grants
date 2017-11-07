@@ -54,6 +54,13 @@ class CompaniesGrantsController extends AppController
                 'Histories' => ['Statuses', 'Tags', 'Users']
             ]
         ]);
+
+        $statuses = $this->CompaniesGrants->Histories->Statuses->find('list')->all();
+        $users = $this->CompaniesGrants->Histories->Users->find('list')->all();
+        $tags = $this->CompaniesGrants->Histories->Tags->find('list')->all();
+        $this->set('users',$users);
+        $this->set('statuses',$statuses);
+        $this->set('tags',$tags);
         $this->set('companiesGrant', $companiesGrant);
     }
 

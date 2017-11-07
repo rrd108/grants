@@ -1,13 +1,14 @@
 <?php
 /**
-  * @var \App\View\AppView $this
-  */
+ * @var \App\View\AppView $this
+ */
 ?>
 <nav class="small-3 medium-2 large-2 columns" id="actions-sidebar">
     <ul class="menu vertical">
         <li class="menu-text"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Companies Grant'), ['action' => 'edit', $companiesGrant->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Companies Grant'), ['action' => 'delete', $companiesGrant->id], ['confirm' => __('Are you sure you want to delete # {0}?', $companiesGrant->id)]) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Companies Grant'), ['action' => 'delete', $companiesGrant->id],
+                ['confirm' => __('Are you sure you want to delete # {0}?', $companiesGrant->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Companies Grants'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Companies Grant'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Companies'), ['controller' => 'Companies', 'action' => 'index']) ?> </li>
@@ -20,7 +21,8 @@
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Company') ?></th>
-            <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name, ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
+            <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name,
+                    ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Grant') ?></th>
@@ -78,13 +80,17 @@
         <tbody>
         <tr>
             <?= $this->Form->create(null, ['url' => ['controller' => 'Histories', 'action' => 'add']]); ?>
+            <?= $this->Form->hidden('company_grant_id',['value' => $companiesGrant->id]) ?>
             <td></td>
-            <td><?= $this->Form->datetime('created'); ?></td>
-            <td><?= $this->Form->control('status_id', ['options' => '']); ?></td>
-            <td><?= __('User') ?></td>
-            <td><?= __('Event') ?></td>
-            <td><?= __('Tags') ?></td>
-            <td><?= __('Actions') ?></td>
+            <td>
+                <?= $this->Form->label(__('Created')) ?>
+                <?= $this->Form->datetime('created'); ?>
+            </td>
+            <td><?= $this->Form->control(__('Status'), ['options' => $statuses, 'name' => 'status_id']); ?></td>
+            <td><?= $this->Form->control(__('User'), ['options' => $users, 'name' => 'user_id']); ?></td>
+            <td><?= $this->Form->control('Event'); ?></td>
+            <td><?= $this->Form->control(__('Tags'), ['options' => $tags]); ?></td>
+            <td><?= $this->Form->button(__('Save'), ['type' => 'submit', 'class' => 'button']) ?></td>
             <?= $this->Form->end() ?>
         </tr>
         <?php foreach ($companiesGrant->histories as $history) : ?>
@@ -101,8 +107,11 @@
                         : ''
                     ?>
                 </td>
-                <td><?= $history->has('user') ? $this->Html->link($history->user->username, ['controller' => 'Users',
-                        'action' => 'view', $history->user->id]) : '' ?></td>
+                <td><?= $history->has('user') ? $this->Html->link($history->user->username, [
+                        'controller' => 'Users',
+                        'action' => 'view',
+                        $history->user->id
+                    ]) : '' ?></td>
                 <td><?= h($history->event) ?></td>
                 <td>
                     <?php
