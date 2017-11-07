@@ -41,6 +41,10 @@ class CompaniesTable extends Table
             'targetForeignKey' => 'grant_id',
             'joinTable' => 'companies_grants'
         ]);
+
+        $this->hasMany('CompaniesGrants',[
+           'foreignKey' => 'company_id'
+        ]);
     }
 
     /**
