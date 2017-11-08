@@ -35,10 +35,11 @@ class CompaniesController extends AppController
      */
     public function view($id = null)
     {
-        $company = $this->Companies->get($id, [
+        $company = $this->Companies->find('current',['id'=>$id])->find('list');
+        /*$company = $this->Companies->get($id, [
             'contain' => ['Grants.Issuers']
-        ]);
-
+        ]);*/
+        debug($company);
         $this->set('company', $company);
         $this->set('_serialize', ['company']);
     }

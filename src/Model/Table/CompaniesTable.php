@@ -1,6 +1,8 @@
 <?php
+
 namespace App\Model\Table;
 
+use App\Model\Entity\CompaniesGrant;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
@@ -42,8 +44,8 @@ class CompaniesTable extends Table
             'joinTable' => 'companies_grants'
         ]);
 
-        $this->hasMany('CompaniesGrants',[
-           'foreignKey' => 'company_id'
+        $this->hasMany('CompaniesGrants', [
+            'foreignKey' => 'company_id'
         ]);
     }
 
@@ -64,5 +66,50 @@ class CompaniesTable extends Table
             ->notEmpty('name');
 
         return $validator;
+    }
+
+
+    /**
+     * Find grants with current status
+     *
+     * @param \Cake\ORM\Query $query
+     * @param array $options
+     * @return \Cake\ORM\Query
+     */
+    public function findCurrent(Query $query, array $options)
+    {
+        return $query->select([
+            'Companies.id',
+            'Companies.name',
+            'CompaniesGrants.id',
+            'CompaniesGrants.company_id',
+            'CompaniesGrants.grant_id',
+            'CompaniesGrants.contact',
+            'CompaniesGrants.amount',
+            'CompaniesGrants.deminimis',
+            'Grants.id',
+            'Grants.shortname',
+            'Grants.name',
+            'Grants.code',
+            'LatestHistory.Histories__deadline',
+            'Statuses.name',
+            'Statuses.await',
+            'Statuses.style',
+            'Issuers.name'
+        ])
+            ->contain('Grants')
+            ->contain('CompaniesGrants')
+            ->innerJoin(['CompaniesGrants' => 'companies_grants'], ['Companies.id = CompaniesGrants.company_id'])
+            ->innerJoin(['Grants' => 'grants'], ['Grants.id = CompaniesGrants.grant_id'])
+            ->innerJoin(['Issuers' => 'issuers'],['Grants.issuer_id = Issuers.id'])
+            ->innerJoin(
+                ['LatestHistory' => $this->CompaniesGrants->Histories->find('latest', $options)],
+                ['CompaniesGrants.id = LatestHistory.Histories__company_grant_id']
+            )
+            ->innerJoin(
+                ['Statuses' => 'statuses'],
+                ['Statuses.id = LatestHistory.Histories__status_id']
+            )
+            ->where(['Companies.id' => $options['id']]);
     }
 }

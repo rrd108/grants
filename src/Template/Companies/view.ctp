@@ -32,7 +32,7 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"></th>
-                <th scope="col"><?= __('Issuer Id') ?></th>
+                <th scope="col"><?= __('Issuer Name') ?></th>
                 <th scope="col"><?= __('Shortname') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
                 <th scope="col"><?= __('Code') ?></th>
