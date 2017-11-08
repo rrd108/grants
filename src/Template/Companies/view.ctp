@@ -15,7 +15,7 @@
     </ul>
 </nav>
 <div class="companies view small-9 medium-10 large-10 columns content">
-    <h3><?= h($company-->name) ?></h3>
+    <h3><?= h($company->name) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Name') ?></th>
