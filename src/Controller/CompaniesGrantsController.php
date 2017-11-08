@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -19,12 +20,16 @@ class CompaniesGrantsController extends AppController
      * @return \Cake\Http\Response|void
      * @param $await set the status await
      */
-    public function index(int $await=1)
+    public function index(int $await = 1)
     {
         $this->paginate = [
             'sortWhitelist' => [
-                'Companies.name', 'Grants.shortname', 'amount', 'contact',
-                'LatestHistory.Histories__deadline', 'Statuses.name'
+                'Companies.name',
+                'Grants.shortname',
+                'amount',
+                'contact',
+                'LatestHistory.Histories__deadline',
+                'Statuses.name'
             ],
             'order' => [
                 'LatestHistory.Histories__deadline' => 'DESC',
@@ -56,11 +61,12 @@ class CompaniesGrantsController extends AppController
         ]);
 
         $statuses = $this->CompaniesGrants->Histories->Statuses->find('list')->all();
-        $users = $this->CompaniesGrants->Histories->Users->find('list')->all();
+        $users = $this->CompaniesGrants->Histories->Users->find('list',
+            ['keyField' => 'id', 'valueField' => 'username'])->all();
         $tags = $this->CompaniesGrants->Histories->Tags->find('list')->all();
-        $this->set('users',$users);
-        $this->set('statuses',$statuses);
-        $this->set('tags',$tags);
+        $this->set('users', $users);
+        $this->set('statuses', $statuses);
+        $this->set('tags', $tags);
         $this->set('companiesGrant', $companiesGrant);
     }
 
