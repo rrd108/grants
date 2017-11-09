@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\I18n\Time;
 /**
  * Histories Controller
  *
@@ -79,7 +79,10 @@ class HistoriesController extends AppController
             'valueField' => 'username',
             'limit' => 200
         ]);
+        $time = Time::now('Europe/Paris');
+        //debug($time->timestamp);die();
         $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
+        $this->set('time',$time);
         $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
         $this->set('_serialize', ['history']);
     }

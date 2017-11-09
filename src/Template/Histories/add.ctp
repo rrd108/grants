@@ -26,23 +26,13 @@
         <?php
         echo $this->Form->control('company_grant_id', ['options' => $companiesGrants, 'empty' => true]);
         echo $this->Form->control('status_id', ['options' => $statuses, 'empty' => true]);
-        echo $this->Form->control('user_id', ['options' => $users]);
+        echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
         echo $this->Form->control('event');
-        echo $this->Form->label(__('Created'));
-        echo $this->Form->datetime('created', [
-            'minYear' => date('Y') - 2,
-            'maxYear' => date('Y') + 2,
-            'empty' => [
-                'year' => __('Choose year...'),
-                'month' => __('Choose month...'),
-                'day' => __('Choose day...'),
-                'hour' => __('Choose hour...'),
-                'minute' => __('Choose minute...')
-            ]
-        ]);
+        echo $this->Form->control('created', ['value' => date('Y-m-d H:i:s',$time->timestamp)]);
         echo $this->Form->label(__('Has deadline:'));
         echo $this->Form->checkbox('hasdeadline', ['hiddenField' => false, 'checked' => true]);
-        echo $this->Form->control('deadline');
+        $displayDate = date('Y-m-d', strtotime('+8 days',$time->timestamp));
+        echo $this->Form->control('deadline',['value' => $displayDate]);
         echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>
