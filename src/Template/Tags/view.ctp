@@ -33,8 +33,8 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Company Grant Id') ?></th>
-                <th scope="col"><?= __('Status Id') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Status') ?></th>
+                <th scope="col"><?= __('User Name') ?></th>
                 <th scope="col"><?= __('Event') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -43,8 +43,8 @@
             <tr>
                 <td><?= h($histories->id) ?></td>
                 <td><?= h($histories->company_grant_id) ?></td>
-                <td><?= h($histories->status_id) ?></td>
-                <td><?= h($histories->user_id) ?></td>
+                <td><?= h($histories->status->name) ?></td>
+                <td><?= h($histories->user->username) ?></td>
                 <td><?= h($histories->event) ?></td>
                 <td><?= h($histories->created) ?></td>
                 <td class="actions">
