@@ -36,7 +36,7 @@ class TagsController extends AppController
     public function view($id = null)
     {
         $tag = $this->Tags->get($id, [
-            'contain' => ['Histories']
+            'contain' => ['Histories', 'Histories.Users', 'Histories.Statuses']
         ]);
 
         $this->set('tag', $tag);

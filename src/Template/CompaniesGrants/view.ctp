@@ -3,7 +3,7 @@
  * @var \App\View\AppView $this
  */
 ?>
-<nav class="small-3 medium-2 large-2 columns" id="actions-sidebar">
+<nav class="small-12 medium-2 large-2 columns" id="actions-sidebar">
     <ul class="menu vertical">
         <li class="menu-text"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Companies Grant'), ['action' => 'edit', $companiesGrant->id]) ?> </li>
@@ -17,7 +17,7 @@
         <li><?= $this->Html->link(__('New Grant'), ['controller' => 'Grants', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="companiesGrants view small-9 medium-10 large-10 columns content">
+<div class="companiesGrants view small-12 medium-10 large-10 columns content">
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Company') ?></th>
@@ -65,16 +65,16 @@
     </table>
 
     <h3><?= __('History') ?></h3>
-    <table>
+    <table class="stack">
         <thead>
         <tr>
-            <th scope="col"></th>
-            <th scope="col"><?= __('Created') ?></th>
-            <th scope="col"><?= __('Status') ?></th>
-            <th scope="col"><?= __('User') ?></th>
-            <th scope="col"><?= __('Event') ?></th>
-            <th scope="col"><?= __('Tags') ?></th>
-            <th scope="col" class="actions"><?= __('Actions') ?></th>
+            <th scope="col" style="width: 1%"></th>
+            <th scope="col" style="width: 20%"><?= __('Created') ?></th>
+            <th scope="col" style="width: 20%"><?= __('Status') ?></th>
+            <th scope="col" style="width: 20%"><?= __('User') ?></th>
+            <th scope="col" style="width: 20%"><?= __('Event') ?></th>
+            <th scope="col" style="width: 15%"><?= __('Tags') ?></th>
+            <th scope="col" style="width: 4%" class="actions"><?= __('Actions') ?></th>
         </tr>
         </thead>
         <tbody>
@@ -84,7 +84,17 @@
             <td></td>
             <td>
                 <?= $this->Form->label(__('Created')) ?>
-                <?= $this->Form->datetime('created'); ?>
+                <?= $this->Form->datetime('created',[
+                    'minYear' => date('Y')-2,
+                    'maxYear' => date('Y')+2,
+                    'empty' => [
+                        'year' => __('Choose year...'),
+                        'month' => __('Choose month...'),
+                        'day' => __('Choose day...'),
+                        'hour' => __('Choose hour...'),
+                        'minute' => __('Choose minute...')
+                    ]
+                ]); ?>
             </td>
             <td><?= $this->Form->control(__('Status'), ['options' => $statuses, 'name' => 'status_id']); ?></td>
             <td><?= $this->Form->control(__('User'), ['options' => $users, 'name' => 'user_id']); ?></td>

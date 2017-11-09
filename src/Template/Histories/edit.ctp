@@ -3,7 +3,7 @@
   * @var \App\View\AppView $this
   */
 ?>
-<nav class="small-3 medium-2 large-2 columns" id="actions-sidebar">
+<nav class="small-12 medium-3 large-3 columns" id="actions-sidebar">
     <ul class="menu vertical">
         <li class="menu-text"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -23,7 +23,7 @@
         <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="histories form small-9 medium-10 large-10 columns content">
+<div class="histories form small-12 medium-9 large-9 columns content">
     <?= $this->Form->create($history) ?>
     <fieldset>
         <legend><?= __('Edit History') ?></legend>

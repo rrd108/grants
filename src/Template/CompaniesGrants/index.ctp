@@ -1,7 +1,7 @@
 <?php
 $this->assign('title', __('Current status of Grants'));
 ?>
-<nav class="small-3 medium-2 large-2 columns" id="actions-sidebar">
+<nav class="small-12 medium-2 large-2 columns" id="actions-sidebar">
     <ul class="menu vertical">
         <li class="menu-text"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Companies Grant'), ['action' => 'add']) ?></li>
@@ -11,7 +11,7 @@ $this->assign('title', __('Current status of Grants'));
         <li><?= $this->Html->link(__('New Grant'), ['controller' => 'Grants', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="companiesGrants index small-9 medium-10 large-10 columns content">
+<div class="companiesGrants index small-12 medium-10 large-10 columns content">
     <h3><?= __('Current status') ?></h3>
     <h4><?= $this->Html->link(__('Show Stand by'),['controller' => 'CompaniesGrants', 'action' => 'index', 0]) ?></h4>
     <table cellpadding="0" cellspacing="0">

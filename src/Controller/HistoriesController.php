@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -56,7 +57,7 @@ class HistoriesController extends AppController
         $history = $this->Histories->newEntity();
         if ($this->request->is('post')) {
             $history = $this->Histories->patchEntity($history, $this->request->getData());
-            if ($history->hasdeadline != 1){
+            if ($history->hasdeadline != 1) {
                 $history->deadline = null;
             }
             if ($this->Histories->save($history)) {
@@ -72,8 +73,12 @@ class HistoriesController extends AppController
             ->map(function ($companyGrant) {
                 return $companyGrant->company->name . ' - ' . $companyGrant->grant->shortname;
             });
-        $statuses = $this->Histories->Statuses->find('list', ['limit' => 200]);
-        $users = $this->Histories->Users->find('list', ['limit' => 200]);
+        $statuses = $this->Histories->Statuses->find('list', ['limit' => 200])->order('name');
+        $users = $this->Histories->Users->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'username',
+            'limit' => 200
+        ]);
         $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
         $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
         $this->set('_serialize', ['history']);
@@ -93,7 +98,7 @@ class HistoriesController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $history = $this->Histories->patchEntity($history, $this->request->getData());
-            if ($history->hasdeadline != 1){
+            if ($history->hasdeadline != 1) {
                 $history->deadline = null;
             }
             if ($this->Histories->save($history)) {
@@ -105,7 +110,11 @@ class HistoriesController extends AppController
         }
         $companiesGrants = $this->Histories->CompaniesGrants->find('list', ['limit' => 200]);
         $statuses = $this->Histories->Statuses->find('list', ['limit' => 200]);
-        $users = $this->Histories->Users->find('list', ['limit' => 200]);
+        $users = $this->Histories->Users->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'username',
+            'limit' => 200
+        ]);
         $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
         $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
         $this->set('_serialize', ['history']);
