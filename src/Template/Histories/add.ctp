@@ -28,7 +28,7 @@
         echo $this->Form->control('status_id', ['options' => $statuses, 'empty' => true]);
         echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
         echo $this->Form->control('event');
-        echo $this->Form->control('created', ['value' => date('Y-m-d H:i:s',$time->timestamp)]);
+        echo $this->Form->control('created', ['type' => 'text', 'value' => date('Y-m-d H:i:s',$time->timestamp)]);
         echo $this->Form->label(__('Has deadline:'));
         echo $this->Form->checkbox('hasdeadline', ['hiddenField' => false, 'checked' => true]);
         $displayDate = date('Y-m-d', strtotime('+8 days',$time->timestamp));
