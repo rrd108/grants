@@ -79,8 +79,7 @@ class HistoriesController extends AppController
             'valueField' => 'username',
             'limit' => 200
         ]);
-        $time = Time::now('Europe/Paris');
-        //debug($time->timestamp);die();
+        $time = Time::now(AppController::timeZone);
         $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
         $this->set('time',$time);
         $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
