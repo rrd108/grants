@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\I18n\Time;
+
 /**
  * CompaniesGrants Controller
  *
@@ -64,7 +65,12 @@ class CompaniesGrantsController extends AppController
         $users = $this->CompaniesGrants->Histories->Users->find('list',
             ['keyField' => 'id', 'valueField' => 'username'])->all();
         $tags = $this->CompaniesGrants->Histories->Tags->find('list')->all();
-        $time = Time::now(AppController::timeZone);
+        if(AppController::timeZone == 'Europe/Paris'){
+            $time = Time::now()->modify('+1 hours');
+        } else {
+            $time =  Time::now();
+        }
+        $time = date('Y:m:d H:i:s',$time->timestamp);
         $this->set('users', $users);
         $this->set('statuses', $statuses);
         $this->set('tags', $tags);
