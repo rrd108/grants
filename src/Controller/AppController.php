@@ -28,6 +28,7 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
 
+    const timeZone = 'Europe/Paris';
     /**
      * Initialization hook method.
      *

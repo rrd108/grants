@@ -41,7 +41,7 @@ class HistoriesTable extends Table
         parent::initialize($config);
 
         $this->setTable('histories');
-        $this->setDisplayField('id');
+        $this->setDisplayField('event');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');

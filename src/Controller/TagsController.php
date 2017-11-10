@@ -86,7 +86,7 @@ class TagsController extends AppController
             }
             $this->Flash->error(__('The tag could not be saved. Please, try again.'));
         }
-        $histories = $this->Tags->Histories->find('list', ['limit' => 200]);
+        $histories = $this->Tags->Histories->find('list', ['limit' => 200])->where(['Histories.event != ' => ""]);
         $this->set(compact('tag', 'histories'));
         $this->set('_serialize', ['tag']);
     }
