@@ -35,7 +35,7 @@ class CompaniesController extends AppController
      */
     public function view($id = null)
     {
-        $company = $this->Companies->CompaniesGrants->find('current')->where(['Companies.id' => $id])->contain('Grants.Issuers')->select(['Issuers.name','Grants.name','Grants.code']);
+        $company = $this->Companies->CompaniesGrants->find('current')->find('withCompany',['company_id' => $id]);
         $this->set('company', $company);
         $this->set('_serialize', ['company']);
     }

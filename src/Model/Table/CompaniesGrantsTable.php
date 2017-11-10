@@ -108,4 +108,12 @@ class CompaniesGrantsTable extends Table
                 ['Statuses.id = LatestHistory.Histories__status_id']
             );
     }
+
+    public function findWithCompany(Query $query, array $options)
+    {
+        return $query->select(
+            ['Issuers.name','Grants.name','Grants.code'])
+            ->contain('Grants.Issuers')
+            ->where(['Companies.id' => $options['company_id']]);
+    }
 }
