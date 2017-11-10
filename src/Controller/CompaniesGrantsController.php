@@ -60,7 +60,7 @@ class CompaniesGrantsController extends AppController
             ]
         ]);
 
-        $statuses = $this->CompaniesGrants->Histories->Statuses->find('list')->all();
+        $statuses = $this->CompaniesGrants->Histories->Statuses->find('list')->order('name')->all();
         $users = $this->CompaniesGrants->Histories->Users->find('list',
             ['keyField' => 'id', 'valueField' => 'username'])->all();
         $tags = $this->CompaniesGrants->Histories->Tags->find('list')->all();

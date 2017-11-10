@@ -83,23 +83,12 @@
             <?= $this->Form->hidden('company_grant_id',['value' => $companiesGrant->id]) ?>
             <td></td>
             <td>
-                <?= $this->Form->label(__('Created')) ?>
-                <?= $this->Form->datetime('created',[
-                    'minYear' => date('Y')-2,
-                    'maxYear' => date('Y')+2,
-                    'empty' => [
-                        'year' => __('Choose year...'),
-                        'month' => __('Choose month...'),
-                        'day' => __('Choose day...'),
-                        'hour' => __('Choose hour...'),
-                        'minute' => __('Choose minute...')
-                    ]
-                ]); ?>
+                <?= $this->Form->control('Created', ['type' => 'Text']); ?>
             </td>
-            <td><?= $this->Form->control(__('Status'), ['options' => $statuses, 'name' => 'status_id']); ?></td>
-            <td><?= $this->Form->control(__('User'), ['options' => $users, 'name' => 'user_id']); ?></td>
+            <td><?= $this->Form->control(__('Status'), ['empty' => true ,'options' => $statuses, 'name' => 'status_id']); ?></td>
+            <td><?= $this->Form->control(__('User'), ['empty' => true, 'options' => $users, 'name' => 'user_id']); ?></td>
             <td><?= $this->Form->control('Event'); ?></td>
-            <td><?= $this->Form->control(__('Tags'), ['options' => $tags]); ?></td>
+            <td><?= $this->Form->control(__('Tags'), ['empty' => true, 'options' => $tags]); ?></td>
             <td><?= $this->Form->button(__('Save'), ['type' => 'submit', 'class' => 'button']) ?></td>
             <?= $this->Form->end() ?>
         </tr>
