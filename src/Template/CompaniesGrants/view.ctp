@@ -80,13 +80,18 @@
         <tbody>
         <tr>
             <?= $this->Form->create(null, ['url' => ['controller' => 'Histories', 'action' => 'add']]); ?>
-            <?= $this->Form->hidden('company_grant_id',['value' => $companiesGrant->id]) ?>
+            <?= $this->Form->hidden('company_grant_id', ['value' => $companiesGrant->id]) ?>
             <td></td>
             <td>
-                <?= $this->Form->control('created', ['type' => 'text', 'value' => $time->year.'-'.$time->month.'-'.$time->day.' '.$time->hour.':'.$time->minute.':'.$time->second]); ?>
+                <?= $this->Form->control('created', [
+                    'type' => 'text',
+                    'value' => $time
+                ]); ?>
             </td>
-            <td><?= $this->Form->control(__('Status'), ['empty' => true ,'options' => $statuses, 'name' => 'status_id']); ?></td>
-            <td><?= $this->Form->control(__('User'), ['empty' => true, 'options' => $users, 'name' => 'user_id']); ?></td>
+            <td><?= $this->Form->control(__('Status'),
+                    ['empty' => true, 'options' => $statuses, 'name' => 'status_id']); ?></td>
+            <td><?= $this->Form->control(__('User'),
+                    ['empty' => true, 'options' => $users, 'name' => 'user_id']); ?></td>
             <td><?= $this->Form->control('Event'); ?></td>
             <td><?= $this->Form->control(__('Tags'), ['empty' => true, 'options' => $tags]); ?></td>
             <td><?= $this->Form->button(__('Save'), ['type' => 'submit', 'class' => 'button']) ?></td>
