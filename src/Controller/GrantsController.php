@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -58,8 +59,12 @@ class GrantsController extends AppController
             $grant = $this->Grants->patchEntity($grant, $this->request->getData());
             if ($this->Grants->save($grant)) {
                 $this->Flash->success(__('The grant has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                if ($grant->companies == null) {
+                    return $this->redirect(['action' => 'index']);
+                } else {
+                    $companiesGrantsId = $this->Grants->CompaniesGrants->find()->where(['company_id' => $grant->companies[0]->id])->where(['grant_id' => $grant->id])->first()->id;
+                    return $this->redirect(['controller' => 'CompaniesGrants', 'action' => 'view', $companiesGrantsId]);
+                }
             }
             $this->Flash->error(__('The grant could not be saved. Please, try again.'));
         }
