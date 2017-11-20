@@ -64,7 +64,9 @@ class GrantsController extends AppController
             $this->Flash->error(__('The grant could not be saved. Please, try again.'));
         }
         $issuers = $this->Grants->Issuers->find('list', ['limit' => 200]);
-        $companies = $this->Grants->Companies->find('list', ['limit' => 200]);
+        $companies = $this->Grants->Companies->find('list', ['limit' => 200])->toArray();
+        $companies[null] = null;
+        ksort($companies);
         $this->set(compact('grant', 'issuers', 'companies'));
         $this->set('_serialize', ['grant']);
     }
