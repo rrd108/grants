@@ -222,4 +222,4 @@ if (Configure::read('debug')) {
 }
 
 Plugin::load('CakeDC/Users', ['routes' => true, 'bootstrap' => true]);
-Configure::write('Auth.authenticate.Form.fields.username', 'email');
+Configure::write('Auth.authenticate.Form.fields.username', 'username');
