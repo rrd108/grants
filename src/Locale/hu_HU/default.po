@@ -1,0 +1,994 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-11-21 08:22+0100\n"
+"PO-Revision-Date: 2017-11-22 10:40+0100\n"
+"Language-Team: EMAIL@ADDRESS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: \n"
+"Language: hu_HU\n"
+
+#: Controller/CompaniesController.php:54;80
+msgid "The company has been saved."
+msgstr "A cég elemntve."
+
+#: Controller/CompaniesController.php:58;84
+msgid "The company could not be saved. Please, try again."
+msgstr "A cég mentése sikertelen. Kérem, próbálja újra."
+
+#: Controller/CompaniesController.php:103
+msgid "The company has been deleted."
+msgstr "A cég törlésre került."
+
+#: Controller/CompaniesController.php:105
+msgid "The company could not be deleted. Please, try again."
+msgstr "A cég törlése sikertelen. Kérem, próbálja újra."
+
+#: Controller/CompaniesGrantsController.php:92;119
+msgid "The companies grant has been saved."
+msgstr "A cég-pályázat elmentve."
+
+#: Controller/CompaniesGrantsController.php:96;123
+msgid "The companies grant could not be saved. Please, try again."
+msgstr "A cég-pályázat mentése sikertelen. Kérem, próbálja újra."
+
+#: Controller/CompaniesGrantsController.php:143
+msgid "The companies grant has been deleted."
+msgstr "A cég-pályázat törlésre került."
+
+#: Controller/CompaniesGrantsController.php:145
+msgid "The companies grant could not be deleted. Please, try again."
+msgstr "A cég-pályázat törlése sikertelen. Kérem próbálja újra."
+
+#: Controller/GrantsController.php:61;100
+msgid "The grant has been saved."
+msgstr "A pályázat elmentve."
+
+#: Controller/GrantsController.php:75;104
+msgid "The grant could not be saved. Please, try again."
+msgstr "A pályázat mentése sikertelen. Kérem próbálja úja."
+
+#: Controller/GrantsController.php:124
+msgid "The grant has been deleted."
+msgstr "A pályázat törlésre került."
+
+#: Controller/GrantsController.php:126
+msgid "The grant could not be deleted. Please, try again."
+msgstr "A pályázat törlése sikertelen. Kérem próbálja újra."
+
+#: Controller/HistoriesController.php:64;112
+msgid "The history has been saved."
+msgstr "Az történés elmentve."
+
+#: Controller/HistoriesController.php:68;116
+msgid "The history could not be saved. Please, try again."
+msgstr "Az történés mentése sikertelen. Kérem próbálja újra."
+
+#: Controller/HistoriesController.php:142
+msgid "The history has been deleted."
+msgstr "Az történés törlésre került."
+
+#: Controller/HistoriesController.php:144
+msgid "The history could not be deleted. Please, try again."
+msgstr "Az történés törlése sikertelen. Kérem próbálja újra."
+
+#: Controller/IssuersController.php:57;82
+msgid "The issuer has been saved."
+msgstr "A kibocsátó elmentve."
+
+#: Controller/IssuersController.php:61;86
+msgid "The issuer could not be saved. Please, try again."
+msgstr "A kibocsátó mentése sikertelen."
+
+#: Controller/IssuersController.php:104
+msgid "The issuer has been deleted."
+msgstr "A kibocsátó törlésre került."
+
+#: Controller/IssuersController.php:106
+msgid "The issuer could not be deleted. Please, try again."
+msgstr "A kibocsátó törlése sikertelen. Kérem próbálja újra."
+
+#: Controller/StatusesController.php:57;82
+msgid "The status has been saved."
+msgstr "Az állapot elmentve."
+
+#: Controller/StatusesController.php:61;86
+msgid "The status could not be saved. Please, try again."
+msgstr "Az állapot mentése sikertelen."
+
+#: Controller/StatusesController.php:104
+msgid "The status has been deleted."
+msgstr "Az állapot törlésre került."
+
+#: Controller/StatusesController.php:106
+msgid "The status could not be deleted. Please, try again."
+msgstr "Az állapot  törlése sikertelen. Kérem próbálja újra."
+
+#: Controller/TagsController.php:57;83
+msgid "The tag has been saved."
+msgstr "A címke elmentve."
+
+#: Controller/TagsController.php:61;87
+msgid "The tag could not be saved. Please, try again."
+msgstr "A címke mentése sikertelen. Kérem próbálja újra."
+
+#: Controller/TagsController.php:106
+msgid "The tag has been deleted."
+msgstr "A címke törlésre került."
+
+#: Controller/TagsController.php:108
+msgid "The tag could not be deleted. Please, try again."
+msgstr "A címke törlése sikertelen. Kérem próbálja újra."
+
+#: Template/Bake/Element/form.ctp:30 Template/Bake/Template/index.ctp:42;68
+#: Template/Bake/Template/view.ctp:63;159 Template/Companies/add.ctp:8
+#: Template/Companies/edit.ctp:8 Template/Companies/index.ctp:8;21
+#: Template/Companies/view.ctp:8;41 Template/CompaniesGrants/add.ctp:8
+#: Template/CompaniesGrants/edit.ctp:8 Template/CompaniesGrants/index.ctp:6;27
+#: Template/CompaniesGrants/view.ctp:8;77 Template/Grants/add.ctp:8
+#: Template/Grants/edit.ctp:8 Template/Grants/index.ctp:8;26
+#: Template/Grants/view.ctp:8;50 Template/Histories/add.ctp:8
+#: Template/Histories/edit.ctp:8 Template/Histories/index.ctp:8;31
+#: Template/Histories/view.ctp:8;58 Template/Issuers/add.ctp:8
+#: Template/Issuers/edit.ctp:8 Template/Issuers/index.ctp:8;21
+#: Template/Issuers/view.ctp:8;39 Template/Statuses/add.ctp:8
+#: Template/Statuses/edit.ctp:8 Template/Statuses/index.ctp:8;22
+#: Template/Statuses/view.ctp:8;40 Template/Tags/add.ctp:8
+#: Template/Tags/edit.ctp:8 Template/Tags/index.ctp:8;21
+#: Template/Tags/view.ctp:8;40
+msgid "Actions"
+msgstr "Műveletek"
+
+#: Template/Bake/Element/form.ctp:33 Template/Bake/Template/index.ctp:105
+#: Template/Bake/Template/view.ctp:170 Template/Companies/edit.ctp:10
+#: Template/Companies/index.ctp:39 Template/Companies/view.ctp:60
+#: Template/CompaniesGrants/edit.ctp:10 Template/CompaniesGrants/index.ctp:60
+#: Template/CompaniesGrants/view.ctp:137 Template/Grants/edit.ctp:10
+#: Template/Grants/index.ctp:46 Template/Grants/view.ctp:65
+#: Template/Histories/edit.ctp:10 Template/Histories/index.ctp:68
+#: Template/Histories/view.ctp:67 Template/Issuers/edit.ctp:10
+#: Template/Issuers/index.ctp:32 Template/Issuers/view.ctp:51
+#: Template/Statuses/edit.ctp:10 Template/Statuses/index.ctp:40
+#: Template/Statuses/view.ctp:53 Template/Tags/edit.ctp:10
+#: Template/Tags/index.ctp:32 Template/Tags/view.ctp:53
+msgid "Delete"
+msgstr "Törlés"
+
+#: Template/Bake/Element/form.ctp:35 Template/Bake/Template/index.ctp:106
+#: Template/Bake/Template/view.ctp:65;170 Template/Companies/edit.ctp:12
+#: Template/Companies/index.ctp:41 Template/Companies/view.ctp:11;64
+#: Template/CompaniesGrants/edit.ctp:12 Template/CompaniesGrants/index.ctp:61
+#: Template/CompaniesGrants/view.ctp:11;139 Template/Grants/edit.ctp:12
+#: Template/Grants/index.ctp:48 Template/Grants/view.ctp:10;67
+#: Template/Histories/edit.ctp:12 Template/Histories/index.ctp:68
+#: Template/Histories/view.ctp:10;67 Template/Issuers/edit.ctp:12
+#: Template/Issuers/index.ctp:32 Template/Issuers/view.ctp:10;51
+#: Template/Statuses/edit.ctp:12 Template/Statuses/index.ctp:42
+#: Template/Statuses/view.ctp:10;53 Template/Tags/edit.ctp:12
+#: Template/Tags/index.ctp:32 Template/Tags/view.ctp:10;53
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Biztos benne, hogy törölni szeretné #{0}-t?"
+
+#: Template/Bake/Element/form.ctp:39 Template/Bake/Template/view.ctp:66
+msgid "List <%= $pluralHumanName %>"
+msgstr "<%= $pluralHumanName %> listázása"
+
+#: Template/Bake/Element/form.ctp:46 Template/Bake/Template/index.ctp:50
+#: Template/Bake/Template/view.ctp:74
+msgid "List <%= $this->_pluralHumanName($alias) %>"
+msgstr "<%= $this->_pluralHumanName($alias) %> listázása"
+
+#: Template/Bake/Element/form.ctp:47 Template/Bake/Template/index.ctp:51
+msgid "New <%= $this->_singularHumanName($alias) %>"
+msgstr "Új <%= $this->_singularHumanName($alias) %>"
+
+#: Template/Bake/Element/form.ctp:59
+msgid "<%= Inflector::humanize($action) %> <%= $singularHumanName %>"
+msgstr "<%= Inflector::humanize($action) %> <%= $singularHumanName %>"
+
+#: Template/Bake/Element/form.ctp:102 Template/Companies/add.ctp:23
+#: Template/Companies/edit.ctp:29 Template/CompaniesGrants/add.ctp:27
+#: Template/CompaniesGrants/edit.ctp:34 Template/Grants/add.ctp:29
+#: Template/Grants/edit.ctp:34 Template/Histories/add.ctp:39
+#: Template/Histories/edit.ctp:42 Template/Issuers/add.ctp:22
+#: Template/Issuers/edit.ctp:28 Template/Statuses/add.ctp:24
+#: Template/Statuses/edit.ctp:29 Template/Tags/add.ctp:23
+#: Template/Tags/edit.ctp:29 View/Helper/FormHelper.php:1900
+msgid "Submit"
+msgstr "Végrehajt"
+
+#: Template/Bake/Template/index.ctp:43 Template/Bake/Template/view.ctp:67
+msgid "New <%= $singularHumanName %>"
+msgstr "Új <%= $singularHumanName %>"
+
+#: Template/Bake/Template/index.ctp:61
+msgid "<%= $pluralHumanName %>"
+msgstr "<%= $pluralHumanName %>"
+
+#: Template/Bake/Template/index.ctp:103 Template/Bake/Template/view.ctp:168
+#: Template/Companies/index.ctp:31 Template/Companies/view.ctp:46
+#: Template/CompaniesGrants/index.ctp:38 Template/CompaniesGrants/view.ctp:103
+#: Template/Grants/index.ctp:33 Template/Grants/view.ctp:55
+#: Template/Histories/index.ctp:66 Template/Histories/view.ctp:65
+#: Template/Issuers/index.ctp:30 Template/Issuers/view.ctp:49
+#: Template/Statuses/index.ctp:29 Template/Statuses/view.ctp:51
+#: Template/Tags/index.ctp:30 Template/Tags/view.ctp:51
+msgid "View"
+msgstr "Megtekintés"
+
+#: Template/Bake/Template/index.ctp:104 Template/Bake/Template/view.ctp:169
+#: Template/Companies/index.ctp:35 Template/Companies/view.ctp:56
+#: Template/CompaniesGrants/index.ctp:59 Template/CompaniesGrants/view.ctp:133
+#: Template/Grants/index.ctp:42 Template/Grants/view.ctp:61
+#: Template/Histories/index.ctp:67 Template/Histories/view.ctp:66
+#: Template/Issuers/index.ctp:31 Template/Issuers/view.ctp:50
+#: Template/Statuses/index.ctp:36 Template/Statuses/view.ctp:52
+#: Template/Tags/index.ctp:31 Template/Tags/view.ctp:52
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: Template/Bake/Template/index.ctp:114 Template/Companies/index.ctp:49
+#: Template/CompaniesGrants/index.ctp:70 Template/Grants/index.ctp:56
+#: Template/Histories/index.ctp:76 Template/Issuers/index.ctp:40
+#: Template/Statuses/index.ctp:50 Template/Tags/index.ctp:40
+msgid "first"
+msgstr "első"
+
+#: Template/Bake/Template/index.ctp:115 Template/Companies/index.ctp:50
+#: Template/CompaniesGrants/index.ctp:71 Template/Grants/index.ctp:57
+#: Template/Histories/index.ctp:77 Template/Issuers/index.ctp:41
+#: Template/Statuses/index.ctp:51 Template/Tags/index.ctp:41
+msgid "previous"
+msgstr "előző"
+
+#: Template/Bake/Template/index.ctp:117 Template/Companies/index.ctp:52
+#: Template/CompaniesGrants/index.ctp:73 Template/Grants/index.ctp:59
+#: Template/Histories/index.ctp:79 Template/Issuers/index.ctp:43
+#: Template/Statuses/index.ctp:53 Template/Tags/index.ctp:43
+msgid "next"
+msgstr "következő"
+
+#: Template/Bake/Template/index.ctp:118 Template/Companies/index.ctp:53
+#: Template/CompaniesGrants/index.ctp:74 Template/Grants/index.ctp:60
+#: Template/Histories/index.ctp:80 Template/Issuers/index.ctp:44
+#: Template/Statuses/index.ctp:54 Template/Tags/index.ctp:44
+msgid "last"
+msgstr "utolsó"
+
+#: Template/Bake/Template/index.ctp:120 Template/Companies/index.ctp:55
+#: Template/CompaniesGrants/index.ctp:76 Template/Grants/index.ctp:62
+#: Template/Histories/index.ctp:82 Template/Issuers/index.ctp:46
+#: Template/Statuses/index.ctp:56 Template/Tags/index.ctp:46
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+"{{page}} oldal a(z) {{pages}} oldalból, {{current}} rekord megjelenítése "
+"{{count}} közül."
+
+#: Template/Bake/Template/view.ctp:64
+msgid "Edit <%= $singularHumanName %>"
+msgstr "<%= $singularHumanName %> szerkesztése"
+
+#: Template/Bake/Template/view.ctp:65
+msgid "Delete <%= $singularHumanName %>"
+msgstr "<%= $singularHumanName %> törlése"
+
+#: Template/Bake/Template/view.ctp:75
+msgid ""
+"New <%= Inflector::humanize(Inflector::singularize(Inflector::"
+"underscore($alias))) %>"
+msgstr ""
+"Új <%= Inflector::humanize(Inflector::singularize(Inflector::"
+"underscore($alias))) %>"
+
+#: Template/Bake/Template/view.ctp:93
+msgid "<%= Inflector::humanize($details["
+msgstr "<%= Inflector::humanize($details["
+
+#: Template/Bake/Template/view.ctp:98;115;131;140;157
+msgid "<%= Inflector::humanize($field) %>"
+msgstr "<%= Inflector::humanize($field) %>"
+
+#: Template/Bake/Template/view.ctp:107
+msgid ""
+"<%= Inflector::humanize(Inflector::singularize(Inflector::"
+"underscore($alias))) %>"
+msgstr ""
+"<%= Inflector::humanize(Inflector::singularize(Inflector::"
+"underscore($alias))) %>"
+
+#: Template/Bake/Template/view.ctp:132
+msgid "Yes"
+msgstr "Igen"
+
+#: Template/Bake/Template/view.ctp:132
+msgid "No"
+msgstr "Nem"
+
+#: Template/Bake/Template/view.ctp:152
+msgid "Related <%= $otherPluralHumanName %>"
+msgstr "Kapcsolódva <%= $otherPluralHumanName %>"
+
+#: Template/Companies/add.ctp:9 Template/Companies/edit.ctp:15
+#: Template/Companies/view.ctp:12 Template/CompaniesGrants/add.ctp:10
+#: Template/CompaniesGrants/edit.ctp:16 Template/CompaniesGrants/index.ctp:8
+#: Template/CompaniesGrants/view.ctp:14 Template/Grants/add.ctp:12
+#: Template/Grants/edit.ctp:18 Template/Grants/index.ctp:12
+#: Template/Grants/view.ctp:15
+msgid "List Companies"
+msgstr "Cégek listázása"
+
+#: Template/Companies/add.ctp:10 Template/Companies/edit.ctp:16
+#: Template/Companies/index.ctp:10 Template/Companies/view.ctp:14
+#: Template/CompaniesGrants/add.ctp:12 Template/CompaniesGrants/edit.ctp:18
+#: Template/CompaniesGrants/index.ctp:10 Template/CompaniesGrants/view.ctp:16
+#: Template/Grants/add.ctp:9 Template/Grants/edit.ctp:15
+#: Template/Grants/view.ctp:11 Template/Issuers/add.ctp:10
+#: Template/Issuers/edit.ctp:16 Template/Issuers/index.ctp:10
+#: Template/Issuers/view.ctp:13
+msgid "List Grants"
+msgstr "Pályázatok listázása"
+
+#: Template/Companies/add.ctp:11 Template/Companies/edit.ctp:17
+#: Template/Companies/index.ctp:11 Template/Companies/view.ctp:15
+#: Template/CompaniesGrants/add.ctp:13 Template/CompaniesGrants/edit.ctp:19
+#: Template/CompaniesGrants/index.ctp:11 Template/CompaniesGrants/view.ctp:17
+#: Template/Grants/index.ctp:9 Template/Grants/view.ctp:12
+#: Template/Issuers/add.ctp:11 Template/Issuers/edit.ctp:17
+#: Template/Issuers/index.ctp:11 Template/Issuers/view.ctp:14
+msgid "New Grant"
+msgstr "Új pályázat"
+
+#: Template/Companies/add.ctp:17
+msgid "Add Company"
+msgstr "Cég hozzáadása"
+
+#: Template/Companies/edit.ctp:23 Template/Companies/view.ctp:9
+msgid "Edit Company"
+msgstr "Cég szerkesztése"
+
+#: Template/Companies/index.ctp:9 Template/Companies/view.ctp:13
+#: Template/CompaniesGrants/add.ctp:11 Template/CompaniesGrants/edit.ctp:17
+#: Template/CompaniesGrants/index.ctp:9 Template/CompaniesGrants/view.ctp:15
+#: Template/Grants/add.ctp:13 Template/Grants/edit.ctp:19
+#: Template/Grants/index.ctp:13 Template/Grants/view.ctp:16
+msgid "New Company"
+msgstr "Új cég"
+
+#: Template/Companies/index.ctp:15
+msgid "Companies"
+msgstr "Cégek"
+
+#: Template/Companies/view.ctp:10
+msgid "Delete Company"
+msgstr "Cég törlése"
+
+#: Template/Companies/view.ctp:22;38 Template/Grants/view.ctp:31;49
+#: Template/Histories/view.ctp:57 Template/Issuers/view.ctp:21;37
+#: Template/Statuses/view.ctp:21 Template/Tags/view.ctp:21
+msgid "Name"
+msgstr "Név"
+
+#: Template/Companies/view.ctp:26 Template/Grants/view.ctp:39
+#: Template/Histories/view.ctp:43;56 Template/Issuers/view.ctp:25;34
+#: Template/Statuses/view.ctp:25;34 Template/Tags/view.ctp:25;34
+msgid "Id"
+msgstr "Azonosító"
+
+#: Template/Companies/view.ctp:31 Template/Issuers/view.ctp:30
+msgid "Related Grants"
+msgstr "Kapcsolódó pályázatok"
+
+#: Template/Companies/view.ctp:36
+msgid "Issuer Name"
+msgstr "Kibocsátó név"
+
+#: Template/Companies/view.ctp:37 Template/Grants/view.ctp:27
+#: Template/Issuers/view.ctp:36
+msgid "Shortname"
+msgstr "Rövid név"
+
+#: Template/Companies/view.ctp:39 Template/Grants/view.ctp:35
+#: Template/Issuers/view.ctp:38
+msgid "Code"
+msgstr "Kód"
+
+#: Template/Companies/view.ctp:40 Template/CompaniesGrants/view.ctp:73;91
+#: Template/Histories/view.ctp:31 Template/Tags/view.ctp:36
+msgid "Status"
+msgstr "Státusz"
+
+#: Template/CompaniesGrants/add.ctp:9 Template/CompaniesGrants/edit.ctp:15
+#: Template/CompaniesGrants/view.ctp:12 Template/Histories/add.ctp:10
+#: Template/Histories/edit.ctp:16 Template/Histories/index.ctp:10
+#: Template/Histories/view.ctp:13
+msgid "List Companies Grants"
+msgstr "Cég-pályázatok listázása"
+
+#: Template/CompaniesGrants/add.ctp:19
+msgid "Add Companies Grant"
+msgstr "Cég-pályázat hozzáadása"
+
+#: Template/CompaniesGrants/edit.ctp:25 Template/CompaniesGrants/view.ctp:9
+msgid "Edit Companies Grant"
+msgstr "Cég-pályázat szerkesztése"
+
+#: Template/CompaniesGrants/index.ctp:2
+msgid "Current status of Grants"
+msgstr "A pályázat aktuális állapota"
+
+#: Template/CompaniesGrants/index.ctp:7 Template/CompaniesGrants/view.ctp:13
+#: Template/Histories/add.ctp:12 Template/Histories/edit.ctp:17
+#: Template/Histories/index.ctp:11 Template/Histories/view.ctp:14
+msgid "New Companies Grant"
+msgstr "Új cég-pályázat"
+
+#: Template/CompaniesGrants/index.ctp:15
+msgid "Current status"
+msgstr "Aktuális állapot"
+
+#: Template/CompaniesGrants/index.ctp:16
+msgid "Show Stand by"
+msgstr "Készenlét megjelenítése"
+
+#: Template/CompaniesGrants/index.ctp:37
+msgid "Overdued"
+msgstr "Lejárt"
+
+#: Template/CompaniesGrants/view.ctp:10
+msgid "Delete Companies Grant"
+msgstr "Cég-pályázat törlése"
+
+#: Template/CompaniesGrants/view.ctp:23
+msgid "Company"
+msgstr "Cég"
+
+#: Template/CompaniesGrants/view.ctp:28
+msgid "Grant"
+msgstr "Pályázat"
+
+#: Template/CompaniesGrants/view.ctp:37 Template/Grants/view.ctp:23
+msgid "Issuer"
+msgstr "Kibocsátó"
+
+#: Template/CompaniesGrants/view.ctp:48
+msgid "Contact"
+msgstr "Kapcsolattartó"
+
+#: Template/CompaniesGrants/view.ctp:54
+msgid "Amount"
+msgstr "Összeg"
+
+#: Template/CompaniesGrants/view.ctp:60
+msgid "De minimis  "
+msgstr "De miminis"
+
+#: Template/CompaniesGrants/view.ctp:67
+msgid "History"
+msgstr "Történés"
+
+#: Template/CompaniesGrants/view.ctp:72 Template/Histories/view.ctp:47
+#: Template/Statuses/view.ctp:39 Template/Tags/view.ctp:39
+msgid "Created"
+msgstr "Létrehozva"
+
+#: Template/CompaniesGrants/view.ctp:74;93 Template/Histories/view.ctp:35
+msgid "User"
+msgstr "Felhasználó"
+
+#: Template/CompaniesGrants/view.ctp:75 Template/Histories/view.ctp:39
+#: Template/Statuses/view.ctp:38 Template/Tags/view.ctp:38
+msgid "Event"
+msgstr "Esemény"
+
+#: Template/CompaniesGrants/view.ctp:76;96 Template/Histories/index.ctp:29
+#: Template/Tags/index.ctp:15
+msgid "Tags"
+msgstr "Címkék"
+
+#: Template/CompaniesGrants/view.ctp:97
+msgid "Save"
+msgstr "Mentés"
+
+#: Template/Grants/add.ctp:10 Template/Grants/edit.ctp:16
+#: Template/Grants/index.ctp:10 Template/Grants/view.ctp:13
+#: Template/Issuers/add.ctp:9 Template/Issuers/edit.ctp:15
+#: Template/Issuers/view.ctp:11
+msgid "List Issuers"
+msgstr "Kibocsátók lsitázásáa"
+
+#: Template/Grants/add.ctp:11;14 Template/Grants/edit.ctp:17
+#: Template/Grants/index.ctp:11 Template/Grants/view.ctp:14
+#: Template/Issuers/index.ctp:9 Template/Issuers/view.ctp:12
+msgid "New Issuer"
+msgstr "Új kibocsátó"
+
+#: Template/Grants/add.ctp:20
+msgid "Add Grant"
+msgstr "Pályázat hozzáadása"
+
+#: Template/Grants/edit.ctp:25 Template/Grants/view.ctp:9
+msgid "Edit Grant"
+msgstr "Pályázat szerkesztése"
+
+#: Template/Grants/index.ctp:17
+msgid "Grants"
+msgstr "Pályázatok"
+
+#: Template/Grants/view.ctp:10
+msgid "Delete Grant"
+msgstr "Pályázat törlése"
+
+#: Template/Grants/view.ctp:44
+msgid "Related Companies"
+msgstr "Kapcsolódó cégek"
+
+#: Template/Histories/add.ctp:9 Template/Histories/edit.ctp:15
+#: Template/Histories/view.ctp:11 Template/Statuses/add.ctp:10
+#: Template/Statuses/edit.ctp:16 Template/Statuses/index.ctp:10
+#: Template/Statuses/view.ctp:13 Template/Tags/add.ctp:10
+#: Template/Tags/edit.ctp:16 Template/Tags/index.ctp:10
+#: Template/Tags/view.ctp:13
+msgid "List Histories"
+msgstr "Történések listázása"
+
+#: Template/Histories/add.ctp:14 Template/Histories/edit.ctp:18
+#: Template/Histories/index.ctp:12 Template/Histories/view.ctp:15
+#: Template/Statuses/add.ctp:9 Template/Statuses/edit.ctp:15
+#: Template/Statuses/view.ctp:11
+msgid "List Statuses"
+msgstr "Státuszok listázása"
+
+#: Template/Histories/add.ctp:15 Template/Histories/edit.ctp:19
+#: Template/Histories/index.ctp:13 Template/Histories/view.ctp:16
+#: Template/Statuses/index.ctp:9 Template/Statuses/view.ctp:12
+msgid "New Status"
+msgstr "Új státusz"
+
+#: Template/Histories/add.ctp:16 Template/Histories/edit.ctp:20
+#: Template/Histories/index.ctp:14 Template/Histories/view.ctp:17
+msgid "List Users"
+msgstr "Felhasználók listázása"
+
+#: Template/Histories/add.ctp:17 Template/Histories/edit.ctp:21
+#: Template/Histories/index.ctp:15 Template/Histories/view.ctp:18
+msgid "New User"
+msgstr "Új felhasználó"
+
+#: Template/Histories/add.ctp:18 Template/Histories/edit.ctp:22
+#: Template/Histories/index.ctp:16 Template/Histories/view.ctp:19
+#: Template/Tags/add.ctp:9 Template/Tags/edit.ctp:15 Template/Tags/view.ctp:11
+msgid "List Tags"
+msgstr "Címkék listázása"
+
+#: Template/Histories/add.ctp:19 Template/Histories/edit.ctp:23
+#: Template/Histories/index.ctp:17 Template/Histories/view.ctp:20
+#: Template/Tags/index.ctp:9 Template/Tags/view.ctp:12
+msgid "New Tag"
+msgstr "Új címke"
+
+#: Template/Histories/add.ctp:25
+msgid "Add History"
+msgstr "Új történés"
+
+#: Template/Histories/add.ctp:32 Template/Histories/edit.ctp:36
+msgid "Has deadline:"
+msgstr "Van határideje:"
+
+#: Template/Histories/edit.ctp:29 Template/Histories/view.ctp:9
+msgid "Edit History"
+msgstr "Történés szerkesztése"
+
+#: Template/Histories/index.ctp:9 Template/Histories/view.ctp:12
+#: Template/Layout/default.ctp:29 Template/Statuses/add.ctp:11
+#: Template/Statuses/edit.ctp:17 Template/Statuses/index.ctp:11
+#: Template/Statuses/view.ctp:14 Template/Tags/add.ctp:11
+#: Template/Tags/edit.ctp:17 Template/Tags/index.ctp:11
+#: Template/Tags/view.ctp:14
+msgid "New History"
+msgstr "Új történés"
+
+#: Template/Histories/index.ctp:21
+msgid "Histories"
+msgstr "Történések"
+
+#: Template/Histories/view.ctp:10
+msgid "Delete History"
+msgstr "Történés törlése"
+
+#: Template/Histories/view.ctp:27
+msgid "Companies Grant"
+msgstr "Cég-pályázatok"
+
+#: Template/Histories/view.ctp:52
+msgid "Related Tags"
+msgstr "Kapcsolódó címkék"
+
+#: Template/Issuers/add.ctp:17
+msgid "Add Issuer"
+msgstr "Kibocsátó hozzáadása"
+
+#: Template/Issuers/edit.ctp:23 Template/Issuers/view.ctp:9
+msgid "Edit Issuer"
+msgstr "Kibocsátó szerkesztése"
+
+#: Template/Issuers/index.ctp:15
+msgid "Issuers"
+msgstr "Kiocsátók"
+
+#: Template/Issuers/view.ctp:10
+msgid "Delete Issuer"
+msgstr "Kibocsátó törlése"
+
+#: Template/Issuers/view.ctp:35
+msgid "Issuer Id"
+msgstr "Kibocsátó azonosító"
+
+#: Template/Layout/error.ctp:35 Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr "Hiba"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "Vissza"
+
+#: Template/Statuses/add.ctp:17
+msgid "Add Status"
+msgstr "Státusz hozzáadása"
+
+#: Template/Statuses/edit.ctp:23 Template/Statuses/view.ctp:9
+msgid "Edit Status"
+msgstr "Státusz szerkesztése"
+
+#: Template/Statuses/index.ctp:15
+msgid "Statuses"
+msgstr "Státuszok"
+
+#: Template/Statuses/view.ctp:10
+msgid "Delete Status"
+msgstr "Státusz törlése"
+
+#: Template/Statuses/view.ctp:30 Template/Tags/view.ctp:30
+msgid "Related Histories"
+msgstr "Kapcsolódó történések"
+
+#: Template/Statuses/view.ctp:35 Template/Tags/view.ctp:35
+msgid "Company Grant Id"
+msgstr "Cég-pályázat azonosító"
+
+#: Template/Statuses/view.ctp:36
+msgid "Status Id"
+msgstr "Státusz azonostó"
+
+#: Template/Statuses/view.ctp:37
+msgid "User Id"
+msgstr "Felhasználó azonosító"
+
+#: Template/Tags/add.ctp:17
+msgid "Add Tag"
+msgstr "Címke hozzáadása"
+
+#: Template/Tags/edit.ctp:23 Template/Tags/view.ctp:9
+msgid "Edit Tag"
+msgstr "Címke szerkesztése"
+
+#: Template/Tags/view.ctp:10
+msgid "Delete Tag"
+msgstr "Címke törlése"
+
+#: Template/Tags/view.ctp:37
+msgid "User Name"
+msgstr "Felhasználó név"
+
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr "A kért cím {0} nem található a kiszolgálón."
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "Belső hiba történt"
+
+#: Controller/Component/AuthComponent.php:496
+msgid "You are not authorized to access that location."
+msgstr "Nem jogosult a keresett oldal megtekintéséhez."
+
+#: Controller/Component/CsrfComponent.php:155
+msgid "Missing CSRF token cookie"
+msgstr "Hiányzik a CSRF token süti"
+
+#: Controller/Component/CsrfComponent.php:159
+msgid "CSRF token mismatch."
+msgstr "Nem megfelelő CSRF token"
+
+#: Error/ExceptionRenderer.php:258
+msgid "Not Found"
+msgstr "Nem található"
+
+#: Error/ExceptionRenderer.php:260
+msgid "An Internal Error Has Occurred."
+msgstr "Belső hiba történt."
+
+#: Http/Response.php:2258
+msgid "The requested file contains `..` and will not be read."
+msgstr "A kért fáj '..'-ot tartalmaz, nem lehet betölteni"
+
+#: Http/Response.php:2269
+msgid "The requested file was not found"
+msgstr "A kért fájl nem található"
+
+#: I18n/Number.php:90
+msgid "{0,number,#,###.##} KB"
+msgstr "{0,number,#,###.##} KB"
+
+#: I18n/Number.php:92
+msgid "{0,number,#,###.##} MB"
+msgstr "{0,number,#,###.##} MB"
+
+#: I18n/Number.php:94
+msgid "{0,number,#,###.##} GB"
+msgstr "{0,number,#,###.##} GB"
+
+#: I18n/Number.php:96
+msgid "{0,number,#,###.##} TB"
+msgstr "{0,number,#,###.##} TB"
+
+#: I18n/Number.php:88
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] "{0,number,integer} Bájt"
+msgstr[1] "{0,number,integer} Bájt"
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr "{0} mostantól"
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr "{0} óta"
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr "{0} után"
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr "{0} előtt"
+
+#: I18n/RelativeTimeFormatter.php:114
+msgid "just now"
+msgstr "pont most"
+
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr "körülbelül egy másodperce"
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr "körülbelül egy perce"
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr "körülbelül egy órája"
+
+#: I18n/RelativeTimeFormatter.php:154;332
+msgid "about a day ago"
+msgstr "körülbelül egy napja"
+
+#: I18n/RelativeTimeFormatter.php:155;333
+msgid "about a week ago"
+msgstr "körülbelül egy hete"
+
+#: I18n/RelativeTimeFormatter.php:156;334
+msgid "about a month ago"
+msgstr "körülbelül egy hónapja"
+
+#: I18n/RelativeTimeFormatter.php:157;335
+msgid "about a year ago"
+msgstr "körülbelül egy éve"
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr "körülbelül egy másodpercen belül"
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr "körülbelül egy percen belül"
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr "körülbelül egy órán belül"
+
+#: I18n/RelativeTimeFormatter.php:171;346
+msgid "in about a day"
+msgstr "körülbelül egy napon belül"
+
+#: I18n/RelativeTimeFormatter.php:172;347
+msgid "in about a week"
+msgstr "körülbelül egy héten belül"
+
+#: I18n/RelativeTimeFormatter.php:173;348
+msgid "in about a month"
+msgstr "körülbelül egy  hónapon belül"
+
+#: I18n/RelativeTimeFormatter.php:174;349
+msgid "in about a year"
+msgstr "körülbelül egy éven belül"
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr "ma"
+
+#: I18n/RelativeTimeFormatter.php:370
+msgid "%s ago"
+msgstr "% óta"
+
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr "tovább %-val/vel"
+
+#: I18n/RelativeTimeFormatter.php:47;126;316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} év"
+msgstr[1] "{0} év"
+
+#: I18n/RelativeTimeFormatter.php:51;129;319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} hónap"
+msgstr[1] "{0} hónap"
+
+#: I18n/RelativeTimeFormatter.php:57;132;322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} hét"
+msgstr[1] "{0} hét"
+
+#: I18n/RelativeTimeFormatter.php:59;135;325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} nap"
+msgstr[1] "{0} nap"
+
+#: I18n/RelativeTimeFormatter.php:64;138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} óra"
+msgstr[1] "{0} óra"
+
+#: I18n/RelativeTimeFormatter.php:68;141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} perc"
+msgstr[1] "{0} perc"
+
+#: I18n/RelativeTimeFormatter.php:72;144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} másodperc"
+msgstr[1] "{0} másodperc"
+
+#: ORM/RulesChecker.php:57
+msgid "This value is already in use"
+msgstr "Az érték már használatban van"
+
+#: ORM/RulesChecker.php:104
+msgid "This value does not exist"
+msgstr "Az érték nem létezik"
+
+#: ORM/RulesChecker.php:128
+msgid "The count does not match {0}{1}"
+msgstr "A(z) {0}, és {1} értékek nem egyeznek"
+
+#: Utility/Text.php:899
+msgid "and"
+msgstr "és"
+
+#: Validation/Validator.php:103
+msgid "This field is required"
+msgstr "A mező kitöltése kötelező"
+
+#: Validation/Validator.php:104
+msgid "This field cannot be left empty"
+msgstr "A mezőt nem szabad üresen hagyni"
+
+#: Validation/Validator.php:1801
+msgid "The provided value is invalid"
+msgstr "A megadott érték érvénytelen"
+
+#: View/Helper/FormHelper.php:1020
+msgid "New %s"
+msgstr "Új %"
+
+#: View/Helper/FormHelper.php:1023
+msgid "Edit %s"
+msgstr "% szerkesztése"
+
+#: View/Helper/HtmlHelper.php:794
+msgid "Home"
+msgstr "Főoldal"
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "January"
+msgstr "Január"
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "February"
+msgstr "Február"
+
+#: View/Widget/DateTimeWidget.php:542
+msgid "March"
+msgstr "Március"
+
+#: View/Widget/DateTimeWidget.php:543
+msgid "April"
+msgstr "Április"
+
+#: View/Widget/DateTimeWidget.php:544
+msgid "May"
+msgstr "Május"
+
+#: View/Widget/DateTimeWidget.php:545
+msgid "June"
+msgstr "Június"
+
+#: View/Widget/DateTimeWidget.php:546
+msgid "July"
+msgstr "Július"
+
+#: View/Widget/DateTimeWidget.php:547
+msgid "August"
+msgstr "Augusztus"
+
+#: View/Widget/DateTimeWidget.php:548
+msgid "September"
+msgstr "Szeptember"
+
+#: View/Widget/DateTimeWidget.php:549
+msgid "October"
+msgstr "Október"
+
+#: View/Widget/DateTimeWidget.php:550
+msgid "November"
+msgstr "November"
+
+#: View/Widget/DateTimeWidget.php:551
+msgid "December"
+msgstr "December"
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:17
+msgid "Please enter your username and password"
+msgstr "Adja meg a felhasználó nevét és a jelszavát"
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:18
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:19
+msgid "Password"
+msgstr "Jelszó"
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:27
+msgid "Remember me"
+msgstr "Emlékezz rám"
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:35
+msgid "Register"
+msgstr "Regisztráció"
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:41
+msgid "Reset Password"
+msgstr "Jelszó visszaállítása"
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:46
+msgid "Login"
+msgstr "Bejelentkezés"
