@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -58,13 +59,25 @@ class GrantsController extends AppController
             $grant = $this->Grants->patchEntity($grant, $this->request->getData());
             if ($this->Grants->save($grant)) {
                 $this->Flash->success(__('The grant has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                if ($grant->companies == null) {
+                    return $this->redirect(['action' => 'index']);
+                } else {
+                    $companiesGrant = $this->Grants->CompaniesGrants->find()->where(['company_id' => $grant->companies[0]->id])->where(['grant_id' => $grant->id])->first();
+                    $history = $this->Grants->CompaniesGrants->Histories->newEntity();
+                    $history->company_grant_id = $companiesGrant->id;
+                    $history->status_id = 11;
+                    $history->user_id = $this->request->session()->read('Auth.User.id');
+                    $history->created = time();
+                    $this->Grants->CompaniesGrants->Histories->save($history);
+                    return $this->redirect(['controller' => 'CompaniesGrants', 'action' => 'view', $companiesGrant->id]);
+                }
             }
             $this->Flash->error(__('The grant could not be saved. Please, try again.'));
         }
         $issuers = $this->Grants->Issuers->find('list', ['limit' => 200]);
-        $companies = $this->Grants->Companies->find('list', ['limit' => 200]);
+        $companies = $this->Grants->Companies->find('list', ['limit' => 200])->toArray();
+        $companies[null] = null;
+        ksort($companies);
         $this->set(compact('grant', 'issuers', 'companies'));
         $this->set('_serialize', ['grant']);
     }
