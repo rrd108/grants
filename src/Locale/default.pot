@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-11-21 06:51+0000\n"
+"POT-Creation-Date: 2017-11-24 11:10+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -1132,11 +1132,11 @@ msgid "December"
 msgstr ""
 
 #: Template/Plugin/CakeDC/Users/Users/login.ctp:17
-msgid "Please enter your username and password"
+msgid "Please enter your email and password"
 msgstr ""
 
 #: Template/Plugin/CakeDC/Users/Users/login.ctp:18
-msgid "Username"
+msgid "Email"
 msgstr ""
 
 #: Template/Plugin/CakeDC/Users/Users/login.ctp:19
