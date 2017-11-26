@@ -31,8 +31,7 @@
         echo $this->Form->control('created', ['type' => 'text', 'value' => $time]);
         echo $this->Form->label(__('Has deadline:'));
         echo $this->Form->checkbox('hasdeadline', ['hiddenField' => false, 'checked' => true]);
-        $displayDate = date('Y-m-d', strtotime('+8 days',$time->timestamp));
-        echo $this->Form->control('deadline',['value' => $displayDate]);
+        echo $this->Form->control('deadline',['type' => 'text', 'value' => $deadlinetime]);
         echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>

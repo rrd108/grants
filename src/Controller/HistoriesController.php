@@ -85,8 +85,11 @@ class HistoriesController extends AppController
             $time =  Time::now();
         }
         $time = date('Y:m:d H:i:s',$time->timestamp);
+        $deadlinetime = Time::now()->addDay(8);
+        $deadlinetime = date('Y:m:d',$deadlinetime->timestamp);
         $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
         $this->set('time',$time);
+        $this->set('deadlinetime',$deadlinetime);
         $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
         $this->set('_serialize', ['history']);
     }

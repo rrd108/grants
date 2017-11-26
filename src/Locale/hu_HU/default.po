@@ -4,20 +4,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-11-21 08:22+0100\n"
-"PO-Revision-Date: 2017-11-22 10:40+0100\n"
+"POT-Creation-Date: 2017-11-24 12:10+0100\n"
+"PO-Revision-Date: 2017-11-24 12:11+0100\n"
+"Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
+"Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.7.1\n"
-"Last-Translator: \n"
-"Language: hu_HU\n"
 
 #: Controller/CompaniesController.php:54;80
 msgid "The company has been saved."
-msgstr "A cég elemntve."
+msgstr "A cég elmentve."
 
 #: Controller/CompaniesController.php:58;84
 msgid "The company could not be saved. Please, try again."
@@ -966,12 +966,12 @@ msgid "December"
 msgstr "December"
 
 #: Template/Plugin/CakeDC/Users/Users/login.ctp:17
-msgid "Please enter your username and password"
-msgstr "Adja meg a felhasználó nevét és a jelszavát"
+msgid "Please enter your email and password"
+msgstr "Kérem adja meg email címét, és jalszavát"
 
 #: Template/Plugin/CakeDC/Users/Users/login.ctp:18
-msgid "Username"
-msgstr "Felhasználónév"
+msgid "Email"
+msgstr "Email cím"
 
 #: Template/Plugin/CakeDC/Users/Users/login.ctp:19
 msgid "Password"
@@ -992,3 +992,9 @@ msgstr "Jelszó visszaállítása"
 #: Template/Plugin/CakeDC/Users/Users/login.ctp:46
 msgid "Login"
 msgstr "Bejelentkezés"
+
+#~ msgid "Please enter your username and password"
+#~ msgstr "Adja meg a felhasználó nevét és a jelszavát"
+
+#~ msgid "Username"
+#~ msgstr "Felhasználónév"
