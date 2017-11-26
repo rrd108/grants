@@ -17,64 +17,65 @@
         <li><?= $this->Html->link(__('New Grant'), ['controller' => 'Grants', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="companiesGrants view small-12 medium-10 large-10 columns content">
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Company') ?></th>
-            <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name,
-                    ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Grant') ?></th>
-            <td><?= $companiesGrant->has('grant')
-                    ? $this->Html->link(
-                        $companiesGrant->grant->shortname,
-                        ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]
-                    ) . ' ' . h($companiesGrant->grant->code)
-                    : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Issuer') ?></th>
-            <td>
-                <?= $companiesGrant->has('grant')
-                    ? $this->Html->link(
-                        $companiesGrant->grant->issuer->name,
-                        ['controller' => 'issuers', 'action' => 'view', $companiesGrant->grant->issuer->id]
-                    )
-                    : '' ?>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Contact') ?></th>
-            <td>
-                <?= h($companiesGrant->contact) ?>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Amount') ?></th>
-            <td>
-                <?= $this->Number->format($companiesGrant->amount) ?>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('De minimis  ') ?></th>
-            <td>
-                <?= $companiesGrant->deminimis ?>
-            </td>
-        </tr>
-    </table>
+<table class="vertical-table small-12 medium-10 large-10 columns">
+    <tr>
+        <th scope="row"><?= __('Company') ?></th>
+        <td><?= $companiesGrant->has('company') ? $this->Html->link($companiesGrant->company->name,
+                ['controller' => 'Companies', 'action' => 'view', $companiesGrant->company->id]) : '' ?></td>
+    </tr>
+    <tr>
+        <th scope="row"><?= __('Grant') ?></th>
+        <td><?= $companiesGrant->has('grant')
+                ? $this->Html->link(
+                    $companiesGrant->grant->shortname,
+                    ['controller' => 'Grants', 'action' => 'view', $companiesGrant->grant->id]
+                ) . ' ' . h($companiesGrant->grant->code)
+                : '' ?></td>
+    </tr>
+    <tr>
+        <th scope="row"><?= __('Issuer') ?></th>
+        <td>
+            <?= $companiesGrant->has('grant')
+                ? $this->Html->link(
+                    $companiesGrant->grant->issuer->name,
+                    ['controller' => 'issuers', 'action' => 'view', $companiesGrant->grant->issuer->id]
+                )
+                : '' ?>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row"><?= __('Contact') ?></th>
+        <td>
+            <?= h($companiesGrant->contact) ?>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row"><?= __('Amount') ?></th>
+        <td>
+            <?= $this->Number->format($companiesGrant->amount) ?>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row"><?= __('De minimis  ') ?></th>
+        <td>
+            <?= $companiesGrant->deminimis ?>
+        </td>
+    </tr>
+</table>
+<div class="companiesGrants view small-12 medium-12 large-12 columns content">
 
     <h3><?= __('History') ?></h3>
     <table class="stack">
         <thead>
         <tr>
-            <th scope="col" style="width: 1%"></th>
-            <th scope="col" style="width: 20%"><?= __('Created') ?></th>
-            <th scope="col" style="width: 20%"><?= __('Status') ?></th>
-            <th scope="col" style="width: 20%"><?= __('User') ?></th>
-            <th scope="col" style="width: 20%"><?= __('Event') ?></th>
-            <th scope="col" style="width: 15%"><?= __('Tags') ?></th>
-            <th scope="col" style="width: 4%" class="actions"><?= __('Actions') ?></th>
+            <th scope="col" style="width: 1%;"></th>
+            <th scope="col" style="width: 15%;"><?= __('Created') ?></th>
+            <th scope="col" style="width: 15%;"><?= __('Deadline') ?></th>
+            <th scope="col" style="width: 20%;"><?= __('Status') ?></th>
+            <th scope="col" style="width: 10%;"><?= __('User') ?></th>
+            <th scope="col" style="width: 25%"><?= __('Event') ?></th>
+            <th scope="col" style="width: 10%;"><?= __('Tags') ?></th>
+            <th scope="col" style="width: 4%;" class="actions"><?= __('Actions') ?></th>
         </tr>
         </thead>
         <tbody>
@@ -87,6 +88,13 @@
                     'type' => 'text',
                     'value' => $time
                 ]); ?>
+            </td>
+            <td>
+                <?= $this->Form->control('deadline', [
+                    'type' => 'text',
+                    'value' => $deadlinetime
+                ]); ?>
+                <?= $this->Form->checkbox('hasdeadline', ['hiddenField' => false, 'checked' => true]) ?>
             </td>
             <td><?= $this->Form->control(__('Status'),
                     ['empty' => true, 'options' => $statuses, 'name' => 'status_id']); ?></td>
@@ -104,6 +112,11 @@
                         ['controller' => 'Histories', 'action' => 'view', $history->id],
                         ['escape' => false]) ?></td>
                 <td><?= h($history->created) ?></td>
+                <td>
+                    <?=
+                        $history->has('deadline') ? $history->deadline : '' 
+                    ?>
+                </td>
                 <td>
                     <?= $history->has('status')
                         ? '<span class="label ' . $history->status->style . '">' . $history->status->name .

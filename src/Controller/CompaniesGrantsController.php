@@ -71,10 +71,13 @@ class CompaniesGrantsController extends AppController
             $time =  Time::now();
         }
         $time = date('Y:m:d H:i:s',$time->timestamp);
+        $deadlinetime = Time::now()->addDay(8);
+        $deadlinetime = date('Y:m:d',$deadlinetime->timestamp);
         $this->set('users', $users);
         $this->set('statuses', $statuses);
         $this->set('tags', $tags);
         $this->set('time',$time);
+        $this->set('deadlinetime', $deadlinetime);
         $this->set('companiesGrant', $companiesGrant);
     }
 
