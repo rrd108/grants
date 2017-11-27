@@ -11,7 +11,6 @@
         <li><?= $this->Html->link(__('New Issuer'), ['controller' => 'Issuers', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Companies'), ['controller' => 'Companies', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Company'), ['controller' => 'Companies', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('New Issuer'), ['controller' => 'Issuers', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="grants form small-12 medium-9 large-9 columns content">
@@ -19,7 +18,8 @@
     <fieldset>
         <legend><?= __('Add Grant') ?></legend>
         <?php
-            echo $this->Form->control('issuer_id', ['options' => $issuers]);
+            echo $this->Form->control('issuer_id', ['options' => $issuers, 'empty' => true]);
+            echo $this->Html->link(__('New Issuer'), ['controller' => 'Issuers', 'action' => 'add']);
             echo $this->Form->control('shortname');
             echo $this->Form->control('name');
             echo $this->Form->control('code');
