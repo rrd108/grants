@@ -57,7 +57,6 @@ class HistoriesController extends AppController
         $history = $this->Histories->newEntity();
         if ($this->request->is('post')) {
             $history = $this->Histories->patchEntity($history, $this->request->getData());
-            debug($history);die();
             if ($history->hasdeadline != 1) {
                 $history->deadline = null;
             }
