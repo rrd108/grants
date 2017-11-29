@@ -100,8 +100,8 @@
                     ['empty' => true, 'options' => $statuses, 'name' => 'status_id']); ?></td>
             <td><?= $this->Form->control(__('User'),
                     ['empty' => true, 'options' => $users, 'name' => 'user_id']); ?></td>
-            <td><?= $this->Form->control('Event'); ?></td>
-            <td><?= $this->Form->control(__('Tags'), ['empty' => true, 'options' => $tags]); ?></td>
+            <td><?= $this->Form->control(__('Event'), ['name' => 'event']); ?></td>
+            <td><?= $this->Form->control(__('Tags'), ['options' => $tags]); ?></td>
             <td><?= $this->Form->button(__('Save'), ['type' => 'submit', 'class' => 'button']) ?></td>
             <?= $this->Form->end() ?>
         </tr>
@@ -114,7 +114,7 @@
                 <td><?= h($history->created) ?></td>
                 <td>
                     <?=
-                        $history->has('deadline') ? $history->deadline : '' 
+                    $history->has('deadline') ? $history->deadline : ''
                     ?>
                 </td>
                 <td>
