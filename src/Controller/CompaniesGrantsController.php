@@ -64,20 +64,20 @@ class CompaniesGrantsController extends AppController
         $statuses = $this->CompaniesGrants->Histories->Statuses->find('list')->order('name')->all();
         $users = $this->CompaniesGrants->Histories->Users->find('list',
             ['keyField' => 'id', 'valueField' => 'username'])->all();
-        $tags = $this->CompaniesGrants->Histories->Tags->find('list')->all();
+        $tags = $this->CompaniesGrants->Histories->Tags->find('list');
         if(AppController::timeZone == 'Europe/Paris'){
             $time = Time::now()->modify('+1 hours');
         } else {
             $time =  Time::now();
         }
-        $time = date('Y:m:d H:i:s',$time->timestamp);
-        $deadlinetime = Time::now()->addDay(8);
-        $deadlinetime = date('Y:m:d',$deadlinetime->timestamp);
+        $time = date('Y-m-d H:i:s',$time->timestamp);
+        $deadlineTime = Time::now()->addDay(8);
+        $deadlineTime = date('Y:m:d',$deadlineTime->timestamp);
         $this->set('users', $users);
         $this->set('statuses', $statuses);
         $this->set('tags', $tags);
         $this->set('time',$time);
-        $this->set('deadlinetime', $deadlinetime);
+        $this->set('deadlineTime', $deadlineTime);
         $this->set('companiesGrant', $companiesGrant);
     }
 
