@@ -57,8 +57,8 @@ class HistoriesController extends AppController
         $history = $this->Histories->newEntity();
         if ($this->request->is('post')) {
             $history = $this->Histories->patchEntity($history, $this->request->getData());
-            if ($history->hasdeadline != 1) {
-                $history->deadline = null;
+            if ($history->deadline == null) {
+                $history->hasdeadline = null;
             }
             if ($this->Histories->save($history)) {
                 $this->Flash->success(__('The history has been saved.'));
@@ -84,9 +84,9 @@ class HistoriesController extends AppController
         } else {
             $time =  Time::now();
         }
-        $time = date('Y:m:d H:i:s',$time->timestamp);
+        $time = date('Y-m-d H:i:s',$time->timestamp);
         $deadlinetime = Time::now()->addDay(8);
-        $deadlinetime = date('Y:m:d',$deadlinetime->timestamp);
+        $deadlinetime = date('Y-m-d',$deadlinetime->timestamp);
         $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
         $this->set('time',$time);
         $this->set('deadlinetime',$deadlinetime);

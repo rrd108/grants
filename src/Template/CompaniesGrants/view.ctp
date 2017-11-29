@@ -63,17 +63,16 @@
     </tr>
 </table>
 <div class="companiesGrants view small-12 medium-12 large-12 columns content">
-
     <h3><?= __('History') ?></h3>
     <table class="stack">
         <thead>
         <tr>
             <th scope="col" style="width: 1%;"></th>
-            <th scope="col" style="width: 15%;"><?= __('Created') ?></th>
+            <th scope="col" style="width: 20%;"><?= __('Created') ?></th>
             <th scope="col" style="width: 15%;"><?= __('Deadline') ?></th>
             <th scope="col" style="width: 20%;"><?= __('Status') ?></th>
             <th scope="col" style="width: 10%;"><?= __('User') ?></th>
-            <th scope="col" style="width: 25%"><?= __('Event') ?></th>
+            <th scope="col" style="width: 20%"><?= __('Event') ?></th>
             <th scope="col" style="width: 10%;"><?= __('Tags') ?></th>
             <th scope="col" style="width: 4%;" class="actions"><?= __('Actions') ?></th>
         </tr>
@@ -86,22 +85,27 @@
             <td>
                 <?= $this->Form->control('created', [
                     'type' => 'text',
-                    'value' => $time
+                    'value' => $time,
+                    'label' => false
                 ]); ?>
             </td>
             <td>
                 <?= $this->Form->control('deadline', [
                     'type' => 'text',
-                    'value' => $deadlinetime
+                    'value' => $deadlineTime,
+                    'label' => false
                 ]); ?>
-                <?= $this->Form->checkbox('hasdeadline', ['hiddenField' => false, 'checked' => true]) ?>
             </td>
             <td><?= $this->Form->control(__('Status'),
-                    ['empty' => true, 'options' => $statuses, 'name' => 'status_id']); ?></td>
-            <td><?= $this->Form->control(__('User'),
-                    ['empty' => true, 'options' => $users, 'name' => 'user_id']); ?></td>
-            <td><?= $this->Form->control(__('Event'), ['name' => 'event']); ?></td>
-            <td><?= $this->Form->control(__('Tags'), ['options' => $tags]); ?></td>
+                    ['empty' => true, 'options' => $statuses, 'name' => 'status_id', 'label' => false]); ?></td>
+            <td>
+                <?= $this->request->session()->read('Auth.User.username')?>
+                <?= $this->Form->control('user_id',
+                    ['value' => $this->request->session()->read('Auth.User.id'), 'type' => 'hidden']) ?>
+            </td>
+            </td>
+            <td><?= $this->Form->control(__('Event'), ['name' => 'event','label' => false]); ?></td>
+            <td><?= $this->Form->control('tags._ids', ['options' => $tags]); ?></td>
             <td><?= $this->Form->button(__('Save'), ['type' => 'submit', 'class' => 'button']) ?></td>
             <?= $this->Form->end() ?>
         </tr>

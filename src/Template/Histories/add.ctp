@@ -23,17 +23,16 @@
     <?= $this->Form->create($history) ?>
     <fieldset>
         <legend><?= __('Add History') ?></legend>
-        <?php
-        echo $this->Form->control('company_grant_id', ['options' => $companiesGrants, 'empty' => true]);
-        echo $this->Form->control('status_id', ['options' => $statuses, 'empty' => true]);
-        echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
-        echo $this->Form->control('event');
-        echo $this->Form->control('created', ['type' => 'text', 'value' => $time]);
-        echo $this->Form->label(__('Has deadline:'));
-        echo $this->Form->checkbox('hasdeadline', ['hiddenField' => false, 'checked' => true]);
-        echo $this->Form->control('deadline',['type' => 'text', 'value' => $deadlinetime]);
-        echo $this->Form->control('tags._ids', ['options' => $tags]);
-        ?>
+        <?= $this->Form->control('company_grant_id', ['options' => $companiesGrants, 'empty' => true]) ?>
+        <?= $this->Form->control('status_id', ['options' => $statuses, 'empty' => true]) ?>
+        <?= $this->Form->label(__('User')) ?>
+        <?= $this->request->session()->read('Auth.User.username')?>
+        <?= $this->Form->control('user_id',
+            ['value' => $this->request->session()->read('Auth.User.id'), 'type' => 'hidden']) ?>
+        <?= $this->Form->control('event') ?>
+        <?= $this->Form->control('created', ['type' => 'text', 'value' => $time]) ?>
+        <?= $this->Form->control('deadline',['type' => 'text', 'value' => $deadlinetime]) ?>
+        <?= $this->Form->control('tags._ids', ['options' => $tags]) ?>
     </fieldset>
     <?= $this->Form->button(__('Submit'), ['class' => 'button']) ?>
     <?= $this->Form->end() ?>
