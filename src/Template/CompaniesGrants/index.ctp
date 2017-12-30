@@ -12,8 +12,26 @@ $this->assign('title', __('Current status of Grants'));
     </ul>
 </nav>
 <div class="companiesGrants index small-12 medium-10 large-10 columns content">
-    <h3><?= __('Current status') ?></h3>
-    <h4><?= $this->Html->link(__('Show Stand by'),['controller' => 'CompaniesGrants', 'action' => 'index', 0]) ?></h4>
+    <div class="row">
+        <?php if ($nonFinished): ?>
+            <h3 class="small-11 columns">
+                <?= __('Current status') ?> » <?= __('Non finished') ?>
+            </h3>
+            <?= $this->Html->link(
+                '<i title="' . __('Show finished') . '" class="fi-lock"></i>',
+                ['controller' => 'CompaniesGrants', 'action' => 'index', 0],
+                ['class' => 'small-1 columns s150', 'escape' => false]) ?>
+        <?php endif;
+        if (!$nonFinished) : ?>
+            <h3 class="small-11 columns">
+                <?= __('Current status') ?> » <?= __('Finished') ?>
+            </h3>
+            <?= $this->Html->link(
+                '<i title="' . __('Show non finished') . '" class="fi-unlock"></i>',
+                ['controller' => 'CompaniesGrants', 'action' => 'index', 1],
+                ['class' => 'small-1 columns s150', 'escape' => false]) ?>
+        <?php endif; ?>
+    </div>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

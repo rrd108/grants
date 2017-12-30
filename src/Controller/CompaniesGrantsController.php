@@ -19,10 +19,11 @@ class CompaniesGrantsController extends AppController
      * Index method
      *
      * @return \Cake\Http\Response|void
-     * @param $await set the status await
+     * @param $nonFinished show only non finished grants
      */
-    public function index(int $await = 1)
+    public function index(int $nonFinished = 1)
     {
+        $finishedStatus = 4;    //TODO hardcoded
         $this->paginate = [
             'sortWhitelist' => [
                 'Companies.name',
@@ -39,8 +40,16 @@ class CompaniesGrantsController extends AppController
             ]
         ];
 
-        $companiesGrants = $this->paginate($this->CompaniesGrants->find('current')->where(['Statuses.await' => $await]));
-        $this->set(compact('companiesGrants'));
+        $condition = ['Statuses.id' => $finishedStatus];
+        if ($nonFinished) {
+            $condition = ['Statuses.id !=' => $finishedStatus];
+        }
+
+        $companiesGrants = $this->paginate(
+            $this->CompaniesGrants->find('current')
+                ->where($condition)
+        );
+        $this->set(compact('companiesGrants', 'nonFinished'));
         $this->set('_serialize', ['companiesGrants']);
     }
 
