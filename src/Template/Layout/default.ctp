@@ -10,6 +10,8 @@
 
     <?= $this->Html->css('foundation.min.css') ?>
     <?= $this->Html->css('foundation-icons.css') ?>
+
+    <?= $this->Html->css("https://fonts.googleapis.com/css?family=Quicksand") ?>
     <?= $this->Html->css('grants.min.css') ?>
 
     <?= $this->fetch('meta') ?>
