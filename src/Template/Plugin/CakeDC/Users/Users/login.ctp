@@ -10,7 +10,10 @@
  */
 use Cake\Core\Configure;
 ?>
-<div class="users form">
+<div class="users login form">
+    <div class="row align-center">
+        <?= $this->Html->image('logo.png') ?>
+    </div>
     <?= $this->Flash->render('auth') ?>
     <?= $this->Form->create() ?>
     <fieldset>
@@ -29,20 +32,32 @@ use Cake\Core\Configure;
             ]);
         }
         ?>
+    </fieldset>
+    <?= implode(' ', $this->User->socialLoginList()); ?>
+    <div class="row align-center">
+        <?= $this->Form->button(__d('CakeDC/Users', 'Login'), ['class' => 'button']) ?>
+    </div>
+    <?= $this->Form->end() ?>
+    <div class="row align-center">
         <?php
         $registrationActive = Configure::read('Users.Registration.active');
         if ($registrationActive) {
-            echo $this->Html->link(__d('CakeDC/Users', 'Register'), ['action' => 'register']);
+            echo $this->Html->link(
+                __d('CakeDC/Users', 'Register'),
+                ['action' => 'register'],
+                ['class' => 'column align-self-middle']
+            );
         }
         if (Configure::read('Users.Email.required')) {
             if ($registrationActive) {
-                echo ' | ';
+                //echo ' | ';
             }
-            echo $this->Html->link(__d('CakeDC/Users', 'Reset Password'), ['action' => 'requestResetPassword']);
+            echo $this->Html->link(
+                __d('CakeDC/Users', 'Reset Password'),
+                ['action' => 'requestResetPassword'],
+                ['class' => 'column align-self-middle']
+            );
         }
         ?>
-    </fieldset>
-    <?= implode(' ', $this->User->socialLoginList()); ?>
-    <?= $this->Form->button(__d('CakeDC/Users', 'Login')); ?>
-    <?= $this->Form->end() ?>
+    </div>
 </div>

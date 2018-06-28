@@ -50,3 +50,14 @@ a {
 .top-bar{
     background-color: #fff;
 }
+
+.login {
+    margin-top: 5em;
+    width: 25em;
+    border: thin solid #aaa;
+    padding: 2em;
+    box-shadow: 5px 10px 8px #aaa;
+}
+.login img {
+    height: 5em;
+}
