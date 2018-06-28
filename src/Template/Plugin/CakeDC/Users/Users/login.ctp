@@ -19,7 +19,11 @@ $this->assign('title', __('Login'));
     <?= $this->Flash->render('auth') ?>
     <?= $this->Form->create() ?>
     <fieldset>
-        <legend><?= __d('CakeDC/Users', 'Please enter your email and password') ?></legend>
+        <div class="callout warning">
+            <legend>
+                <?= __d('CakeDC/Users', 'Please enter your email and password') ?>
+            </legend>
+        </div>
         <?= $this->Form->control('email', ['label' => __d('CakeDC/Users', 'Email'), 'required' => true]) ?>
         <?= $this->Form->control('password', ['label' => __d('CakeDC/Users', 'Password'), 'required' => true]) ?>
         <?php
