@@ -15,7 +15,7 @@ $this->assign('title', __('Current status of Grants'));
     <div class="row">
         <?php if ($nonFinished): ?>
             <h3 class="small-11 columns">
-                <?= __('Current status') ?> » <?= __('Non finished') ?>
+                <?= __('Current status') ?> » <?= __('In progress') ?>
             </h3>
             <?= $this->Html->link(
                 '<i title="' . __('Show finished') . '" class="fi-lock"></i>',
