@@ -9,6 +9,8 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 use Cake\Core\Configure;
+
+$this->assign('title', __('Login'));
 ?>
 <div class="users login form">
     <div class="row align-center">
