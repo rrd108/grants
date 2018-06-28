@@ -10,7 +10,7 @@
 
     <?= $this->Html->css('foundation.min.css') ?>
     <?= $this->Html->css('foundation-icons.css') ?>
-    <?= $this->Html->css('grants.css') ?>
+    <?= $this->Html->css('grants.min.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
