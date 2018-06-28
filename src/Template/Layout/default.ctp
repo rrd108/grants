@@ -21,11 +21,15 @@
 <body>
 <header>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <?= $this->Html->link(
-            $this->Html->image('logo.png'),
-            ['controller' => 'CompaniesGrants', 'action' => 'index'],
-            ['escape' => false]
-        ) ?>
+        <?php
+        if($this->request->params['action'] != 'login') {
+            echo $this->Html->link(
+                $this->Html->image('logo.png'),
+                ['controller' => 'CompaniesGrants', 'action' => 'index'],
+                ['escape' => false]
+            );
+        }
+        ?>
         <div class="top-bar-section">
             <?php
             if ($this->request->session()->read('Auth.User')) :
