@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-11-24 11:10+0000\n"
+"POT-Creation-Date: 2018-06-28 10:55+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -30,19 +30,19 @@ msgstr ""
 msgid "The company could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:92;119
+#: Controller/CompaniesGrantsController.php:104;131
 msgid "The companies grant has been saved."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:96;123
+#: Controller/CompaniesGrantsController.php:108;135
 msgid "The companies grant could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:143
+#: Controller/CompaniesGrantsController.php:155
 msgid "The companies grant has been deleted."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:145
+#: Controller/CompaniesGrantsController.php:157
 msgid "The companies grant could not be deleted. Please, try again."
 msgstr ""
 
@@ -62,19 +62,19 @@ msgstr ""
 msgid "The grant could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/HistoriesController.php:64;112
+#: Controller/HistoriesController.php:64;115
 msgid "The history has been saved."
 msgstr ""
 
-#: Controller/HistoriesController.php:68;116
+#: Controller/HistoriesController.php:68;119
 msgid "The history could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/HistoriesController.php:142
+#: Controller/HistoriesController.php:145
 msgid "The history has been deleted."
 msgstr ""
 
-#: Controller/HistoriesController.php:144
+#: Controller/HistoriesController.php:147
 msgid "The history could not be deleted. Please, try again."
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 #: Template/Companies/view.ctp:8;41
 #: Template/CompaniesGrants/add.ctp:8
 #: Template/CompaniesGrants/edit.ctp:8
-#: Template/CompaniesGrants/index.ctp:6;27
+#: Template/CompaniesGrants/index.ctp:6;45
 #: Template/CompaniesGrants/view.ctp:8;77
 #: Template/Grants/add.ctp:8
 #: Template/Grants/edit.ctp:8
@@ -167,8 +167,8 @@ msgstr ""
 #: Template/Companies/index.ctp:39
 #: Template/Companies/view.ctp:60
 #: Template/CompaniesGrants/edit.ctp:10
-#: Template/CompaniesGrants/index.ctp:60
-#: Template/CompaniesGrants/view.ctp:137
+#: Template/CompaniesGrants/index.ctp:78
+#: Template/CompaniesGrants/view.ctp:154
 #: Template/Grants/edit.ctp:10
 #: Template/Grants/index.ctp:46
 #: Template/Grants/view.ctp:65
@@ -194,8 +194,8 @@ msgstr ""
 #: Template/Companies/index.ctp:41
 #: Template/Companies/view.ctp:11;64
 #: Template/CompaniesGrants/edit.ctp:12
-#: Template/CompaniesGrants/index.ctp:61
-#: Template/CompaniesGrants/view.ctp:11;139
+#: Template/CompaniesGrants/index.ctp:79
+#: Template/CompaniesGrants/view.ctp:11;156
 #: Template/Grants/edit.ctp:12
 #: Template/Grants/index.ctp:48
 #: Template/Grants/view.ctp:10;67
@@ -241,7 +241,7 @@ msgstr ""
 #: Template/CompaniesGrants/edit.ctp:34
 #: Template/Grants/add.ctp:29
 #: Template/Grants/edit.ctp:34
-#: Template/Histories/add.ctp:39
+#: Template/Histories/add.ctp:37
 #: Template/Histories/edit.ctp:42
 #: Template/Issuers/add.ctp:22
 #: Template/Issuers/edit.ctp:28
@@ -249,7 +249,7 @@ msgstr ""
 #: Template/Statuses/edit.ctp:29
 #: Template/Tags/add.ctp:23
 #: Template/Tags/edit.ctp:29
-#: View/Helper/FormHelper.php:1900
+#: View/Helper/FormHelper.php:1986
 msgid "Submit"
 msgstr ""
 
@@ -266,8 +266,8 @@ msgstr ""
 #: Template/Bake/Template/view.ctp:168
 #: Template/Companies/index.ctp:31
 #: Template/Companies/view.ctp:46
-#: Template/CompaniesGrants/index.ctp:38
-#: Template/CompaniesGrants/view.ctp:103
+#: Template/CompaniesGrants/index.ctp:56
+#: Template/CompaniesGrants/view.ctp:115
 #: Template/Grants/index.ctp:33
 #: Template/Grants/view.ctp:55
 #: Template/Histories/index.ctp:66
@@ -278,6 +278,7 @@ msgstr ""
 #: Template/Statuses/view.ctp:51
 #: Template/Tags/index.ctp:30
 #: Template/Tags/view.ctp:51
+#: View/Helper/PaginatorHelper.php:1212
 msgid "View"
 msgstr ""
 
@@ -285,8 +286,8 @@ msgstr ""
 #: Template/Bake/Template/view.ctp:169
 #: Template/Companies/index.ctp:35
 #: Template/Companies/view.ctp:56
-#: Template/CompaniesGrants/index.ctp:59
-#: Template/CompaniesGrants/view.ctp:133
+#: Template/CompaniesGrants/index.ctp:77
+#: Template/CompaniesGrants/view.ctp:150
 #: Template/Grants/index.ctp:42
 #: Template/Grants/view.ctp:61
 #: Template/Histories/index.ctp:67
@@ -302,7 +303,7 @@ msgstr ""
 
 #: Template/Bake/Template/index.ctp:114
 #: Template/Companies/index.ctp:49
-#: Template/CompaniesGrants/index.ctp:70
+#: Template/CompaniesGrants/index.ctp:88
 #: Template/Grants/index.ctp:56
 #: Template/Histories/index.ctp:76
 #: Template/Issuers/index.ctp:40
@@ -313,7 +314,7 @@ msgstr ""
 
 #: Template/Bake/Template/index.ctp:115
 #: Template/Companies/index.ctp:50
-#: Template/CompaniesGrants/index.ctp:71
+#: Template/CompaniesGrants/index.ctp:89
 #: Template/Grants/index.ctp:57
 #: Template/Histories/index.ctp:77
 #: Template/Issuers/index.ctp:41
@@ -324,7 +325,7 @@ msgstr ""
 
 #: Template/Bake/Template/index.ctp:117
 #: Template/Companies/index.ctp:52
-#: Template/CompaniesGrants/index.ctp:73
+#: Template/CompaniesGrants/index.ctp:91
 #: Template/Grants/index.ctp:59
 #: Template/Histories/index.ctp:79
 #: Template/Issuers/index.ctp:43
@@ -335,7 +336,7 @@ msgstr ""
 
 #: Template/Bake/Template/index.ctp:118
 #: Template/Companies/index.ctp:53
-#: Template/CompaniesGrants/index.ctp:74
+#: Template/CompaniesGrants/index.ctp:92
 #: Template/Grants/index.ctp:60
 #: Template/Histories/index.ctp:80
 #: Template/Issuers/index.ctp:44
@@ -346,7 +347,7 @@ msgstr ""
 
 #: Template/Bake/Template/index.ctp:120
 #: Template/Companies/index.ctp:55
-#: Template/CompaniesGrants/index.ctp:76
+#: Template/CompaniesGrants/index.ctp:94
 #: Template/Grants/index.ctp:62
 #: Template/Histories/index.ctp:82
 #: Template/Issuers/index.ctp:46
@@ -510,7 +511,7 @@ msgid "Code"
 msgstr ""
 
 #: Template/Companies/view.ctp:40
-#: Template/CompaniesGrants/view.ctp:73;91
+#: Template/CompaniesGrants/view.ctp:73;99
 #: Template/Histories/view.ctp:31
 #: Template/Tags/view.ctp:36
 msgid "Status"
@@ -548,15 +549,27 @@ msgstr ""
 msgid "New Companies Grant"
 msgstr ""
 
-#: Template/CompaniesGrants/index.ctp:15
+#: Template/CompaniesGrants/index.ctp:18;27
 msgid "Current status"
 msgstr ""
 
-#: Template/CompaniesGrants/index.ctp:16
-msgid "Show Stand by"
+#: Template/CompaniesGrants/index.ctp:18
+msgid "In progress"
 msgstr ""
 
-#: Template/CompaniesGrants/index.ctp:37
+#: Template/CompaniesGrants/index.ctp:21
+msgid "Show finished"
+msgstr ""
+
+#: Template/CompaniesGrants/index.ctp:27
+msgid "Finished"
+msgstr ""
+
+#: Template/CompaniesGrants/index.ctp:30
+msgid "Show non finished"
+msgstr ""
+
+#: Template/CompaniesGrants/index.ctp:55
 msgid "Overdued"
 msgstr ""
 
@@ -564,61 +577,66 @@ msgstr ""
 msgid "Delete Companies Grant"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:23
+#: Template/CompaniesGrants/view.ctp:22
 msgid "Company"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:28
+#: Template/CompaniesGrants/view.ctp:27
 msgid "Grant"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:37
+#: Template/CompaniesGrants/view.ctp:36
 #: Template/Grants/view.ctp:23
 msgid "Issuer"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:48
+#: Template/CompaniesGrants/view.ctp:47
 msgid "Contact"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:54
+#: Template/CompaniesGrants/view.ctp:53
 msgid "Amount"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:60
+#: Template/CompaniesGrants/view.ctp:59
 msgid "De minimis  "
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:67
+#: Template/CompaniesGrants/view.ctp:66
 msgid "History"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:72
+#: Template/CompaniesGrants/view.ctp:71
 #: Template/Histories/view.ctp:47
 #: Template/Statuses/view.ctp:39
 #: Template/Tags/view.ctp:39
 msgid "Created"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:74;93
+#: Template/CompaniesGrants/view.ctp:72
+msgid "Deadline"
+msgstr ""
+
+#: Template/CompaniesGrants/view.ctp:74
+#: Template/Histories/add.ctp:28
 #: Template/Histories/view.ctp:35
 msgid "User"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:75
+#: Template/CompaniesGrants/view.ctp:75;107
 #: Template/Histories/view.ctp:39
 #: Template/Statuses/view.ctp:38
 #: Template/Tags/view.ctp:38
 msgid "Event"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:76;96
+#: Template/CompaniesGrants/view.ctp:76
 #: Template/Histories/index.ctp:29
 #: Template/Tags/index.ctp:15
 msgid "Tags"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:97
+#: Template/CompaniesGrants/view.ctp:109
 msgid "Save"
 msgstr ""
 
@@ -632,7 +650,7 @@ msgstr ""
 msgid "List Issuers"
 msgstr ""
 
-#: Template/Grants/add.ctp:11;14
+#: Template/Grants/add.ctp:11;22
 #: Template/Grants/edit.ctp:17
 #: Template/Grants/index.ctp:11
 #: Template/Grants/view.ctp:14
@@ -641,7 +659,7 @@ msgstr ""
 msgid "New Issuer"
 msgstr ""
 
-#: Template/Grants/add.ctp:20
+#: Template/Grants/add.ctp:19
 msgid "Add Grant"
 msgstr ""
 
@@ -732,19 +750,18 @@ msgstr ""
 msgid "Add History"
 msgstr ""
 
-#: Template/Histories/add.ctp:32
-#: Template/Histories/edit.ctp:36
-msgid "Has deadline:"
-msgstr ""
-
 #: Template/Histories/edit.ctp:29
 #: Template/Histories/view.ctp:9
 msgid "Edit History"
 msgstr ""
 
+#: Template/Histories/edit.ctp:36
+msgid "Has deadline:"
+msgstr ""
+
 #: Template/Histories/index.ctp:9
 #: Template/Histories/view.ctp:12
-#: Template/Layout/default.ctp:29
+#: Template/Layout/default.ctp:33
 #: Template/Statuses/add.ctp:11
 #: Template/Statuses/edit.ctp:17
 #: Template/Statuses/index.ctp:11
@@ -793,6 +810,10 @@ msgstr ""
 msgid "Issuer Id"
 msgstr ""
 
+#: Template/Layout/default.ctp:38
+msgid "Logout"
+msgstr ""
+
 #: Template/Layout/error.ctp:35
 #: Template/Error/error400.ctp:36
 #: Template/Error/error500.ctp:41
@@ -801,6 +822,11 @@ msgstr ""
 
 #: Template/Layout/error.ctp:43
 msgid "Back"
+msgstr ""
+
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:13
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:44
+msgid "Login"
 msgstr ""
 
 #: Template/Statuses/add.ctp:17
@@ -863,31 +889,33 @@ msgstr ""
 msgid "An Internal Error Has Occurred"
 msgstr ""
 
-#: Controller/Component/AuthComponent.php:496
+#: Controller/Component/AuthComponent.php:500
 msgid "You are not authorized to access that location."
 msgstr ""
 
-#: Controller/Component/CsrfComponent.php:155
+#: Controller/Component/CsrfComponent.php:162
+#: Http/Middleware/CsrfProtectionMiddleware.php:190
 msgid "Missing CSRF token cookie"
 msgstr ""
 
-#: Controller/Component/CsrfComponent.php:159
+#: Controller/Component/CsrfComponent.php:166
+#: Http/Middleware/CsrfProtectionMiddleware.php:194
 msgid "CSRF token mismatch."
 msgstr ""
 
-#: Error/ExceptionRenderer.php:258
+#: Error/ExceptionRenderer.php:262
 msgid "Not Found"
 msgstr ""
 
-#: Error/ExceptionRenderer.php:260
+#: Error/ExceptionRenderer.php:264
 msgid "An Internal Error Has Occurred."
 msgstr ""
 
-#: Http/Response.php:2258
+#: Http/Response.php:2603
 msgid "The requested file contains `..` and will not be read."
 msgstr ""
 
-#: Http/Response.php:2269
+#: Http/Response.php:2624
 msgid "The requested file was not found"
 msgstr ""
 
@@ -1055,31 +1083,31 @@ msgstr ""
 msgid "The count does not match {0}{1}"
 msgstr ""
 
-#: Utility/Text.php:899
+#: Utility/Text.php:917
 msgid "and"
 msgstr ""
 
-#: Validation/Validator.php:103
+#: Validation/Validator.php:111
 msgid "This field is required"
 msgstr ""
 
-#: Validation/Validator.php:104
+#: Validation/Validator.php:112
 msgid "This field cannot be left empty"
 msgstr ""
 
-#: Validation/Validator.php:1801
+#: Validation/Validator.php:2054
 msgid "The provided value is invalid"
 msgstr ""
 
-#: View/Helper/FormHelper.php:1020
-msgid "New %s"
+#: View/Helper/FormHelper.php:1097
+msgid "Edit {0}"
 msgstr ""
 
-#: View/Helper/FormHelper.php:1023
-msgid "Edit %s"
+#: View/Helper/FormHelper.php:1099
+msgid "New {0}"
 msgstr ""
 
-#: View/Helper/HtmlHelper.php:794
+#: View/Helper/HtmlHelper.php:815
 msgid "Home"
 msgstr ""
 
@@ -1131,31 +1159,27 @@ msgstr ""
 msgid "December"
 msgstr ""
 
-#: Template/Plugin/CakeDC/Users/Users/login.ctp:17
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:24
 msgid "Please enter your email and password"
 msgstr ""
 
-#: Template/Plugin/CakeDC/Users/Users/login.ctp:18
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:27
 msgid "Email"
 msgstr ""
 
-#: Template/Plugin/CakeDC/Users/Users/login.ctp:19
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:28
 msgid "Password"
 msgstr ""
 
-#: Template/Plugin/CakeDC/Users/Users/login.ctp:27
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:36
 msgid "Remember me"
 msgstr ""
 
-#: Template/Plugin/CakeDC/Users/Users/login.ctp:35
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:52
 msgid "Register"
 msgstr ""
 
-#: Template/Plugin/CakeDC/Users/Users/login.ctp:41
+#: Template/Plugin/CakeDC/Users/Users/login.ctp:62
 msgid "Reset Password"
-msgstr ""
-
-#: Template/Plugin/CakeDC/Users/Users/login.ctp:46
-msgid "Login"
 msgstr ""
 
