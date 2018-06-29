@@ -15,7 +15,6 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\CompaniesGrantsTable|\Cake\ORM\Association\BelongsTo $CompaniesGrants
  * @property \App\Model\Table\StatusesTable|\Cake\ORM\Association\BelongsTo $Statuses
  * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
- * @property \App\Model\Table\TagsTable|\Cake\ORM\Association\BelongsToMany $Tags
  *
  * @method \App\Model\Entity\History get($primaryKey, $options = [])
  * @method \App\Model\Entity\History newEntity($data = null, array $options = [])
@@ -57,11 +56,6 @@ class HistoriesTable extends Table
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
-        ]);
-        $this->belongsToMany('Tags', [
-            'foreignKey' => 'history_id',
-            'targetForeignKey' => 'tag_id',
-            'joinTable' => 'histories_tags'
         ]);
     }
 

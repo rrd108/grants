@@ -15,8 +15,6 @@
         <li><?= $this->Html->link(__('New Status'), ['controller' => 'Statuses', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="histories form small-12 medium-9 large-9 columns content">
@@ -32,7 +30,6 @@
         <?= $this->Form->control('event') ?>
         <?= $this->Form->control('created', ['type' => 'text', 'value' => $time]) ?>
         <?= $this->Form->control('deadline',['type' => 'text', 'value' => $deadlinetime]) ?>
-        <?= $this->Form->control('tags._ids', ['options' => $tags]) ?>
     </fieldset>
     <?= $this->Form->button(__('Submit'), ['class' => 'button']) ?>
     <?= $this->Form->end() ?>

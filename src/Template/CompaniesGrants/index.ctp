@@ -73,7 +73,7 @@ $this->assign('title', __('Current status of Grants'));
                         : ''
                     ?></td>
                 <td><?= $this->Text->autoLink($companiesGrant->contact) ?></td>
-                <td class="actions">
+                <td class="actions align-center">
                     <?= $this->Html->link('<i class="fi-pencil" title="' . __('Edit') . '"></i>', ['action' => 'edit', $companiesGrant->id], ['escape' => false]) ?>
                     <?= $this->Form->postLink('<i class="fi-x" title="' . __('Delete') . '"></i>', ['action' => 'delete', $companiesGrant->id],
                         ['escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?',

@@ -40,7 +40,7 @@ class HistoriesController extends AppController
     public function view($id = null)
     {
         $history = $this->Histories->get($id, [
-            'contain' => ['CompaniesGrants', 'Statuses', 'Users', 'Tags']
+            'contain' => ['CompaniesGrants', 'Statuses', 'Users']
         ]);
 
         $this->set('history', $history);
@@ -87,10 +87,9 @@ class HistoriesController extends AppController
         $time = date('Y-m-d H:i:s',$time->timestamp);
         $deadlinetime = Time::now()->addDay(8);
         $deadlinetime = date('Y-m-d',$deadlinetime->timestamp);
-        $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
         $this->set('time',$time);
         $this->set('deadlinetime',$deadlinetime);
-        $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
+        $this->set(compact('history', 'companiesGrants', 'statuses', 'users'));
         $this->set('_serialize', ['history']);
     }
 
@@ -103,9 +102,7 @@ class HistoriesController extends AppController
      */
     public function edit($id = null)
     {
-        $history = $this->Histories->get($id, [
-            'contain' => ['Tags']
-        ]);
+        $history = $this->Histories->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $history = $this->Histories->patchEntity($history, $this->request->getData());
             if ($history->hasdeadline != 1) {
@@ -125,8 +122,7 @@ class HistoriesController extends AppController
             'valueField' => 'username',
             'limit' => 200
         ]);
-        $tags = $this->Histories->Tags->find('list', ['limit' => 200]);
-        $this->set(compact('history', 'companiesGrants', 'statuses', 'users', 'tags'));
+        $this->set(compact('history', 'companiesGrants', 'statuses', 'users'));
         $this->set('_serialize', ['history']);
     }
 

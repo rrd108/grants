@@ -13,8 +13,6 @@
         <li><?= $this->Html->link(__('New Status'), ['controller' => 'Statuses', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="histories index small-12 medium-9 large-9 columns content">
@@ -26,7 +24,6 @@
                 <th scope="col"><?= $this->Paginator->sort('status_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('event') ?></th>
-                <th scope="col"><?= __('Tags') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -50,17 +47,6 @@
                 <td><?= $history->has('user') ? $this->Html->link($history->user->username, ['controller' => 'Users',
                         'action' => 'view', $history->user->id]) : '' ?></td>
                 <td><?= h($history->event) ?></td>
-                <td>
-                    <?php
-                    if ($history->has('tags')) :
-                        foreach ($history->tags as $tag) :
-                            ?>
-                            <span><?= $tag->name ?></span>
-                            <?php
-                        endforeach;
-                    endif;
-                    ?>
-                </td>
                 <td><?= h($history->created) ?></td>
                 <td class="actions">
                     <?= $this->Html->link('<i class="fi-eye" title="' . __('View') . '"></i>', ['action' => 'view', $history->id], ['escape' => false]) ?>

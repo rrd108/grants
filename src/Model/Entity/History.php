@@ -16,7 +16,6 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\CompaniesGrant $companies_grant
  * @property \App\Model\Entity\Status $status
  * @property \App\Model\Entity\User $user
- * @property \App\Model\Entity\Tag[] $tags
  */
 class History extends Entity
 {

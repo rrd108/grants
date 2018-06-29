@@ -73,7 +73,6 @@
             <th scope="col" style="width: 20%;"><?= __('Status') ?></th>
             <th scope="col" style="width: 10%;"><?= __('User') ?></th>
             <th scope="col" style="width: 20%"><?= __('Event') ?></th>
-            <th scope="col" style="width: 10%;"><?= __('Tags') ?></th>
             <th scope="col" style="width: 4%;" class="actions"><?= __('Actions') ?></th>
         </tr>
         </thead>
@@ -105,7 +104,6 @@
             </td>
             </td>
             <td><?= $this->Form->control(__('Event'), ['name' => 'event','label' => false]); ?></td>
-            <td><?= $this->Form->control('tags._ids', ['options' => $tags]); ?></td>
             <td><?= $this->Form->button(__('Save'), ['type' => 'submit', 'class' => 'button']) ?></td>
             <?= $this->Form->end() ?>
         </tr>
@@ -134,17 +132,6 @@
                         $history->user->id
                     ]) : '' ?></td>
                 <td><?= h($history->event) ?></td>
-                <td>
-                    <?php
-                    if ($history->has('tags')) :
-                        foreach ($history->tags as $tag) :
-                            ?>
-                            <span><?= $tag->name ?></span>
-                            <?php
-                        endforeach;
-                    endif;
-                    ?>
-                </td>
                 <td class="actions">
                     <?= $this->Html->link(
                         '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
