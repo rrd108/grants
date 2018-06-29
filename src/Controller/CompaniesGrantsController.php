@@ -66,7 +66,7 @@ class CompaniesGrantsController extends AppController
             'contain' => [
                 'Companies',
                 'Grants.Issuers',
-                'Histories' => ['Statuses', 'Users']
+                'Histories' => ['Statuses', 'Users', 'Todos' => 'Users']
             ]
         ]);
 

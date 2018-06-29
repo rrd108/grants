@@ -45,6 +45,8 @@ class HistoriesTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->hasOne('Todos');
+
         $this->belongsTo('CompaniesGrants', [
             'foreignKey' => 'company_grant_id',
             'joinType' => 'INNER'

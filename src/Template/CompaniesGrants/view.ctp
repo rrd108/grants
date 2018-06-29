@@ -67,7 +67,7 @@
     <table class="stack">
         <thead>
         <tr>
-            <th scope="col" style="width: 1%;"></th>
+            <th scope="col" style="width: 4%"><?= __('Done') ?></th>
             <th scope="col" style="width: 20%;"><?= __('Created') ?></th>
             <th scope="col" style="width: 15%;"><?= __('Deadline') ?></th>
             <th scope="col" style="width: 20%;"><?= __('Status') ?></th>
@@ -109,20 +109,39 @@
         </tr>
         <?php foreach ($companiesGrant->histories as $history) : ?>
             <tr>
-                <td><?= $this->Html->link(
-                        '<i class="fi-eye" title="' . __('View') . '"></i>',
-                        ['controller' => 'Histories', 'action' => 'view', $history->id],
-                        ['escape' => false]) ?></td>
+                <td>
+                    <?php
+                    if ($history->todo) {
+                        echo '<i class="fi-check" title="' . __('Done') . '"></i>';
+                    }
+                    if ($history->has('deadline') && !$history->todo) {
+                        echo '<i 
+                            class="fi-alert s150" 
+                            title="' . __('Overdued') . '"
+                            id="h' . $history->id . '"
+                            data-open="setDoneModal"
+                            ></i>';
+                    }
+                    ?>
+                </td>
                 <td><?= h($history->created) ?></td>
                 <td>
                     <?=
-                    $history->has('deadline') ? $history->deadline : ''
+                    $history->has('deadline') ? h($history->deadline) : ''
                     ?>
                 </td>
-                <td>
+                <td class="status">
                     <?= $history->has('status')
-                        ? '<span class="label ' . $history->status->style . '">' . $history->status->name .
-                        '</span>'
+                        ? '<span class="label ' . h($history->status->style) . '">'
+                            . h($history->status->name)
+                            . '</span>'
+                        : ''
+                    ?>
+                    <?= $history->todo
+                        ? '<em>'
+                            . h($history->todo['user']['username'])
+                            . ' (' . h($history->todo['created']) . ')'
+                            . '</em>'
                         : ''
                     ?>
                 </td>
