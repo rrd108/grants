@@ -1,7 +1,8 @@
 <?php
-/**
- * @var \App\View\AppView $this
- */
+
+use Cake\I18n\Time;
+
+echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
 ?>
 <nav class="small-12 medium-2 large-2 columns" id="actions-sidebar">
     <ul class="menu vertical">
@@ -150,7 +151,7 @@
                         'action' => 'view',
                         $history->user->id
                     ]) : '' ?></td>
-                <td><?= h($history->event) ?></td>
+                <td class="event"><?= h($history->event) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(
                         '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
@@ -165,4 +166,18 @@
         <?php endforeach; ?>
         </tbody>
     </table>
+</div>
+
+<div class="reveal" id="setDoneModal" data-reveal>
+    <h1><?= __('Set this todo as done?') ?></h1>
+    <p class="lead">Did you finished this todo item?</p>
+    <p class="callout warning" id="eventinfo"></p>
+    <?= $this->Form->create($companiesGrant) ?>
+    <?= $this->Form->control('done', ['label' => __('Done at')]) ?>
+    <?= $this->Form->button(__('Yes'), ['class' => 'button success']) ?>
+    <?= $this->Form->button(__('No'), ['class' => 'button alert']) ?>
+    <?= $this->Form->end() ?>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
 </div>

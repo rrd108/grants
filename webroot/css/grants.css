@@ -1,6 +1,9 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
+a {
+    color: #2c83b6;
+}
 
 .s150{
     font-size: 150%;
@@ -38,6 +41,9 @@ i.fi-alert{
         0 0 .7em #e30,
         0 0 .8em #e30;
 }
+i.fi-check {
+    color: #2caa8d;
+}
 
 .top-bar-section ul {
     list-style-type: none;
@@ -45,10 +51,6 @@ i.fi-alert{
 .top-bar-section li {
     float: left;
     margin: 0 0.3em;
-}
-
-a {
-    color: #2c83b6;
 }
 
 .top-bar{
@@ -65,4 +67,8 @@ a {
 }
 .login img {
     height: 5em;
+}
+
+td em {
+    display: block;
 }
