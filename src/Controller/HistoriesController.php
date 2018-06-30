@@ -63,10 +63,11 @@ class HistoriesController extends AppController
             if ($this->Histories->save($history)) {
                 $this->Flash->success(__('The history has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect('/');
             }
             $this->Flash->error(__('The history could not be saved. Please, try again.'));
         }
+
         $companiesGrants = $this->Histories->CompaniesGrants->find()
             ->contain(['Companies', 'Grants'])
             ->indexBy('id')
