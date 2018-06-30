@@ -36,11 +36,11 @@ $this->assign('title', __('Current status of Grants'));
         <thead>
             <tr>
                 <th scope="col"></th>
-                <th scope="col"><?= $this->Paginator->sort('Companies.name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Grants.shortname') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Companies.name', __('Company')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Grants.shortname', __('Grant')) ?></th>
                 <th scope="col"><?= $this->Paginator->sort('amount') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Statuses.name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('LatestHistory.Histories__deadline') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Statuses.name', __('Status')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort('LatestHistory.Histories__deadline', __('Deadline')) ?></th>
                 <th scope="col"><?= $this->Paginator->sort('contact') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
