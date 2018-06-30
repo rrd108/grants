@@ -24,7 +24,11 @@ class HistoriesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.histories'
+        'app.histories',
+        'app.companies_grants',
+        'app.statuses',
+        'app.users',
+        'app.doneby_users'
     ];
 
     /**
@@ -35,8 +39,8 @@ class HistoriesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Histories') ? [] : ['className' => HistoriesTable::class];
-        $this->Histories = TableRegistry::get('Histories', $config);
+        $config = TableRegistry::getTableLocator()->exists('Histories') ? [] : ['className' => HistoriesTable::class];
+        $this->Histories = TableRegistry::getTableLocator()->get('Histories', $config);
     }
 
     /**

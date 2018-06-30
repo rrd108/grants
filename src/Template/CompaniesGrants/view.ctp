@@ -112,10 +112,10 @@ echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
             <tr>
                 <td>
                     <?php
-                    if ($history->todo) {
+                    if ($history->done) {
                         echo '<i class="fi-check" title="' . __('Done') . '"></i>';
                     }
-                    if ($history->has('deadline') && !$history->todo) {
+                    if ($history->has('deadline') && !$history->done) {
                         echo '<i 
                             class="fi-alert s150" 
                             title="' . __('Overdued') . '"
@@ -138,10 +138,10 @@ echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
                             . '</span>'
                         : ''
                     ?>
-                    <?= $history->todo
+                    <?= $history->done
                         ? '<em>'
-                            . h($history->todo['user']['username'])
-                            . ' (' . h($history->todo['created']) . ')'
+                            . h($history->doneby_user['username'])
+                            . ' (' . h($history->done) . ')'
                             . '</em>'
                         : ''
                     ?>
