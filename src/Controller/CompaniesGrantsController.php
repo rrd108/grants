@@ -80,7 +80,7 @@ class CompaniesGrantsController extends AppController
         }
         $time = date('Y-m-d H:i:s',$time->timestamp);
         $deadlineTime = Time::now()->addDay(8);
-        $deadlineTime = date('Y:m:d',$deadlineTime->timestamp);
+        $deadlineTime = date('Y-m-d',$deadlineTime->timestamp);
         $this->set('users', $users);
         $this->set('statuses', $statuses);
         $this->set('time',$time);
