@@ -12,5 +12,10 @@ return [
             'controller' => 'Users',
             'action' => ['profile', 'logout'],
         ],
+        [
+            'role' => '*',
+            'controller' => 'CompaniesGrants',
+            'action' => ['index'],
+        ],
     ]
 ];
