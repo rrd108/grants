@@ -1,8 +1,4 @@
-<?php
-/**
- * @var \App\View\AppView $this
- */
-?>
+<?php use Cake\I18n\Date; ?>
 <nav class="small-12 medium-2 large-2 columns" id="actions-sidebar">
     <ul class="menu vertical">
         <li class="menu-text"><?= __('Actions') ?></li>
@@ -67,7 +63,7 @@
     <table class="stack">
         <thead>
         <tr>
-            <th scope="col" style="width: 1%;"></th>
+            <th scope="col" style="width: 4%"><?= __('Done') ?></th>
             <th scope="col" style="width: 20%;"><?= __('Created') ?></th>
             <th scope="col" style="width: 15%;"><?= __('Deadline') ?></th>
             <th scope="col" style="width: 20%;"><?= __('Status') ?></th>
@@ -109,20 +105,46 @@
         </tr>
         <?php foreach ($companiesGrant->histories as $history) : ?>
             <tr>
-                <td><?= $this->Html->link(
-                        '<i class="fi-eye" title="' . __('View') . '"></i>',
-                        ['controller' => 'Histories', 'action' => 'view', $history->id],
-                        ['escape' => false]) ?></td>
+                <td>
+                    <?php
+                    if ($history->done) {
+                        echo '<i class="fi-check" title="' . __('Done') . '"></i>';
+                    }
+                    if ($history->has('deadline') && $history->deadline >= Date::now() && !$history->done) {
+                        echo '<i 
+                            class="fi-clock" 
+                            title="' . __('Waiting') . '"
+                            id="h_' . $history->id . '"
+                            data-open="setDoneModal"
+                            ></i>';
+                    }
+                    if ($history->has('deadline') && $history->deadline < Date::now() && !$history->done) {
+                        echo '<i 
+                            class="fi-alert s150l" 
+                            title="' . __('Overdued') . '"
+                            id="h_' . $history->id . '"
+                            ></i>';
+                    }
+                    ?>
+                </td>
                 <td><?= h($history->created) ?></td>
                 <td>
                     <?=
-                    $history->has('deadline') ? $history->deadline : ''
+                    $history->has('deadline') ? h($history->deadline) : ''
                     ?>
                 </td>
-                <td>
+                <td class="status">
                     <?= $history->has('status')
-                        ? '<span class="label ' . $history->status->style . '">' . $history->status->name .
-                        '</span>'
+                        ? '<span class="label ' . h($history->status->style) . '">'
+                            . h($history->status->name)
+                            . '</span>'
+                        : ''
+                    ?>
+                    <?= $history->done
+                        ? '<em>'
+                            . h($history->doneby_user['username'])
+                            . ' (' . h($history->done) . ')'
+                            . '</em>'
                         : ''
                     ?>
                 </td>
@@ -131,7 +153,7 @@
                         'action' => 'view',
                         $history->user->id
                     ]) : '' ?></td>
-                <td><?= h($history->event) ?></td>
+                <td class="event"><?= h($history->event) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(
                         '<i class="fi-pencil" title="' . __('Edit') . '"></i>',
@@ -147,3 +169,5 @@
         </tbody>
     </table>
 </div>
+
+<?php echo $this->element('setDoneModal'); ?>

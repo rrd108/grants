@@ -36,8 +36,8 @@ class IssuersTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Issuers') ? [] : ['className' => IssuersTable::class];
-        $this->Issuers = TableRegistry::get('Issuers', $config);
+        $config = TableRegistry::getTableLocator()->exists('Issuers') ? [] : ['className' => IssuersTable::class];
+        $this->Issuers = TableRegistry::getTableLocator()->get('Issuers', $config);
     }
 
     /**
@@ -52,23 +52,4 @@ class IssuersTableTest extends TestCase
         parent::tearDown();
     }
 
-    /**
-     * Test initialize method
-     *
-     * @return void
-     */
-    public function testInitialize()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
 }

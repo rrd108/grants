@@ -24,7 +24,7 @@ class HistoriesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.histories'
+        'app.histories',
     ];
 
     /**
@@ -35,8 +35,8 @@ class HistoriesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Histories') ? [] : ['className' => HistoriesTable::class];
-        $this->Histories = TableRegistry::get('Histories', $config);
+        $config = TableRegistry::getTableLocator()->exists('Histories') ? [] : ['className' => HistoriesTable::class];
+        $this->Histories = TableRegistry::getTableLocator()->get('Histories', $config);
     }
 
     /**
@@ -54,7 +54,14 @@ class HistoriesTableTest extends TestCase
     public function testFindLatest()
     {
         $actual = $this->Histories->find('latest', []);
-        $expected = [2,3];
+        $expected = [2, 3];
+        $this->assertEquals($expected, $actual->extract('id')->toArray());
+    }
+
+    public function testFindInProgress()
+    {
+        $actual = $this->Histories->find('inProgress', []);
+        $expected = [1, 2];
         $this->assertEquals($expected, $actual->extract('id')->toArray());
     }
 }

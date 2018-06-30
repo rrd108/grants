@@ -57,6 +57,11 @@ class HistoriesTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('DonebyUsers', [
+            'className' => 'Users',
+            'foreignKey' => 'doneby',
+            'joinType' => 'LEFT'
+        ]);
     }
 
     /**
@@ -118,6 +123,23 @@ class HistoriesTable extends Table
             [
                 $this->getAlias() . '.company_grant_id' => new IdentifierExpression('latest.cg_id'),
                 $this->getAlias() . '.created' => new IdentifierExpression('latest.latest')
+            ]
+        );
+    }
+
+    /**
+     * Find histories with deadline what are not finished yet
+     *
+     * @param \Cake\ORM\Query $query
+     * @param array           $options
+     * @return \Cake\ORM\Query
+     */
+    public function findInProgress(Query $query, array $options)
+    {
+        return $query->where(
+            [
+                'deadline IS NOT' => null,
+                'done IS' => NULL
             ]
         );
     }

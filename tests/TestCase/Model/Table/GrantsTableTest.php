@@ -38,8 +38,8 @@ class GrantsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Grants') ? [] : ['className' => GrantsTable::class];
-        $this->Grants = TableRegistry::get('Grants', $config);
+        $config = TableRegistry::getTableLocator()->exists('Grants') ? [] : ['className' => GrantsTable::class];
+        $this->Grants = TableRegistry::getTableLocator()->get('Grants', $config);
     }
 
     /**
@@ -54,33 +54,5 @@ class GrantsTableTest extends TestCase
         parent::tearDown();
     }
 
-    /**
-     * Test initialize method
-     *
-     * @return void
-     */
-    public function testInitialize()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
 
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
 }

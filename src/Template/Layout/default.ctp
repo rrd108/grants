@@ -16,7 +16,6 @@
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
 </head>
 <body>
 <header>
@@ -36,14 +35,15 @@
             ?>
             <ul class="right">
                 <li><?= $this->Html->link(
-                        __('New History'),
-                        ['controller' => 'Histories', 'action' => 'add']
+                        __('Todos'),
+                        ['controller' => 'Histories', 'action' => 'showInProgress']
                     ) ?>
                 </li>
                 <li>
                     <?= $this->Html->link(__('Logout'),
                         ['plugin' => 'CakeDC/Users', 'controller' => 'Users', 'action' => 'logout']);
                     ?>
+                    <span id="username"><?= $this->request->session()->read('Auth.User.username') ?></span>
                 </li>
             </ul>
             <?php endif; ?>
@@ -59,7 +59,7 @@
 <?= $this->Html->script('vendor/jquery.js') ?>
 <?= $this->Html->script('vendor/what-input.js') ?>
 <?= $this->Html->script('vendor/foundation.js') ?>
-<?= $this->Html->script('grants.js') ?>
+<?= $this->Html->script('grants.min') ?>
 <?= $this->fetch('script') ?>
 </body>
 </html>
