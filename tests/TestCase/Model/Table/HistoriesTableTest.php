@@ -25,10 +25,6 @@ class HistoriesTableTest extends TestCase
      */
     public $fixtures = [
         'app.histories',
-        'app.companies_grants',
-        'app.statuses',
-        'app.users',
-        'app.doneby_users'
     ];
 
     /**

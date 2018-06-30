@@ -35,8 +35,8 @@ class TagsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Tags') ? [] : ['className' => TagsTable::class];
-        $this->Tags = TableRegistry::get('Tags', $config);
+        $config = TableRegistry::getTableLocator()->exists('Tags') ? [] : ['className' => TagsTable::class];
+        $this->Tags = TableRegistry::getTableLocator()->get('Tags', $config);
     }
 
     /**
@@ -51,23 +51,4 @@ class TagsTableTest extends TestCase
         parent::tearDown();
     }
 
-    /**
-     * Test initialize method
-     *
-     * @return void
-     */
-    public function testInitialize()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
 }

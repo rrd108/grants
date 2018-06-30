@@ -1,12 +1,12 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\CompaniesTable;
+use App\Model\Table\CompaniesGrantsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\CompaniesTable Test Case
+ * App\Model\Table\CompaniesGrantsTable Test Case
  */
 class CompaniesTableTest extends TestCase
 {
@@ -14,9 +14,9 @@ class CompaniesTableTest extends TestCase
     /**
      * Test subject
      *
-     * @var \App\Model\Table\CompaniesTable
+     * @var \App\Model\Table\CompaniesGrantsTable
      */
-    public $Companies;
+    public $CompaniesGrants;
 
     /**
      * Fixtures
@@ -38,8 +38,8 @@ class CompaniesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Companies') ? [] : ['className' => CompaniesTable::class];
-        $this->Companies = TableRegistry::get('Companies', $config);
+        $config = TableRegistry::getTableLocator()->exists('Companies') ? [] : ['className' => CompaniesTable::class];
+        $this->Companies = TableRegistry::getTableLocator()->get('Companies', $config);
     }
 
     /**
@@ -49,28 +49,9 @@ class CompaniesTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Companies);
+        unset($this->CompaniesGrants);
 
         parent::tearDown();
     }
 
-    /**
-     * Test initialize method
-     *
-     * @return void
-     */
-    public function testInitialize()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
 }

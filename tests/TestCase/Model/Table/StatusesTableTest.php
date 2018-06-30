@@ -35,8 +35,8 @@ class StatusesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Statuses') ? [] : ['className' => StatusesTable::class];
-        $this->Statuses = TableRegistry::get('Statuses', $config);
+        $config = TableRegistry::getTableLocator()->exists('Statuses') ? [] : ['className' => StatusesTable::class];
+        $this->Statuses = TableRegistry::getTableLocator()->get('Statuses', $config);
     }
 
     /**

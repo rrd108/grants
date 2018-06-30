@@ -78,7 +78,6 @@ class HistoriesFixture extends TestFixture
                 'status_id' => 2,
                 'user_id' => '3b72c8fc-06f0-42b2-b8e1-5a1efaf98062',
                 'event' => '',
-                +
                 'created' => '2017-10-15 11:00:00',
                 'deadline'
             ],
