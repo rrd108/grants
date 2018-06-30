@@ -27,7 +27,6 @@ class CompaniesGrantsTableTest extends TestCase
         'app.companies_grants',
         'app.companies',
         'app.grants',
-        'app.issuers',
         'app.histories',
         'app.statuses',
     ];
