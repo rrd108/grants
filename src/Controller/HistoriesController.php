@@ -146,8 +146,13 @@ class HistoriesController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    /**
+     * Set a history event as done by the current user
+     *
+     * @param string|null $id History id.
+     * @return null
+     */
     public function setDone($id = null) {
-        //TODO no sec check is done here, anyone can set done anything
         if ($this->request->is('ajax')) {
             $history = $this->Histories->get($id);
             $history->doneby = $this->Auth->user('id');
@@ -159,5 +164,22 @@ class HistoriesController extends AppController
             $this->set(compact('saved'));
             $this->set('_serialize', ['saved']);
         }
+    }
+
+    /**
+     * Show history events what are not done yet
+     *
+     * @return \Cake\Http\Response|void
+     */
+    public function showInProgress() {
+        $this->paginate = [
+            'contain' => ['CompaniesGrants.Grants', 'CompaniesGrants.Companies', 'Statuses', 'Users'],
+            //'order' => ['Histories.deadline' => 'ASC']
+        ];
+
+        $histories = $this->paginate($this->Histories->find('inProgress'));
+
+        $this->set(compact('histories'));
+        $this->set('_serialize', ['histories']);
     }
 }

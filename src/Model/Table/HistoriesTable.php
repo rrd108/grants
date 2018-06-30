@@ -126,4 +126,21 @@ class HistoriesTable extends Table
             ]
         );
     }
+
+    /**
+     * Find histories with deadline what are not finished yet
+     *
+     * @param \Cake\ORM\Query $query
+     * @param array           $options
+     * @return \Cake\ORM\Query
+     */
+    public function findInProgress(Query $query, array $options)
+    {
+        return $query->where(
+            [
+                'deadline IS NOT' => null,
+                'done IS' => NULL
+            ]
+        );
+    }
 }

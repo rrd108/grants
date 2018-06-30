@@ -31,7 +31,6 @@ i.fi-x{
     color: #c24246;
 }
 i.fi-alert{
-    color: #c60f13;
     text-shadow: 0 0 .1em #fff,
         0 0 .2em #fff,
         0 0 .3em #fff,
@@ -43,6 +42,12 @@ i.fi-alert{
 }
 i.fi-check {
     color: #2caa8d;
+}
+i.fi-alert, em.alert{
+    color: #c60f13;
+}
+i.fi-alert, i.fi-clock {
+    cursor: pointer;
 }
 
 .top-bar-section ul {

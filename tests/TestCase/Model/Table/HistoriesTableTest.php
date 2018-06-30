@@ -54,7 +54,14 @@ class HistoriesTableTest extends TestCase
     public function testFindLatest()
     {
         $actual = $this->Histories->find('latest', []);
-        $expected = [2,3];
+        $expected = [2, 3];
+        $this->assertEquals($expected, $actual->extract('id')->toArray());
+    }
+
+    public function testFindInProgress()
+    {
+        $actual = $this->Histories->find('inProgress', []);
+        $expected = [1, 2];
         $this->assertEquals($expected, $actual->extract('id')->toArray());
     }
 }

@@ -1,11 +1,4 @@
-<?php
-
-use Cake\I18n\Date;
-use Cake\I18n\Time;
-use Cake\Routing\Router;
-
-echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
-?>
+<?php use Cake\I18n\Date; ?>
 <nav class="small-12 medium-2 large-2 columns" id="actions-sidebar">
     <ul class="menu vertical">
         <li class="menu-text"><?= __('Actions') ?></li>
@@ -127,10 +120,9 @@ echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
                     }
                     if ($history->has('deadline') && $history->deadline < Date::now() && !$history->done) {
                         echo '<i 
-                            class="fi-alert s150" 
+                            class="fi-alert s150l" 
                             title="' . __('Overdued') . '"
                             id="h_' . $history->id . '"
-                            data-open="setDoneModal"
                             ></i>';
                     }
                     ?>
@@ -178,21 +170,4 @@ echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
     </table>
 </div>
 
-<div class="reveal" id="setDoneModal" data-reveal>
-    <h1><?= __('Set this todo as done?') ?></h1>
-    <p class="lead">Did you finished this todo item?</p>
-    <p class="callout warning" id="eventinfo"></p>
-    <?= $this->Form->create(
-        null,
-        [
-            'url' => ['controller' => 'Histories', 'action' => 'setDone'],
-            'id' => 'setDoneForm'
-        ]) ?>
-    <?= $this->Form->control('done', ['label' => __('Done at'), 'type' => 'text']) ?>
-    <?= $this->Form->button(__('Yes'), ['class' => 'button success']) ?>
-    <?= $this->Form->button(__('No'), ['class' => 'button alert']) ?>
-    <?= $this->Form->end() ?>
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
+<?php echo $this->element('setDoneModal'); ?>

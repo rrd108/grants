@@ -13,10 +13,12 @@ $(function() {
             + ('0' + d.getSeconds()).slice(-2));
 
         // show a modal asking if you are done with this
-            // handled automatically by foundation
+        // shoud handled automatically by foundation
+        // foundation bug here https://github.com/zurb/foundation-sites/issues/11365
+        // workaround
+        $('#setDoneModal').foundation('open');
 
         clicked = $(this);
-
     });
 
     // if no is clicked close the modal

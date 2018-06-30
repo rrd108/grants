@@ -35,8 +35,8 @@
             ?>
             <ul class="right">
                 <li><?= $this->Html->link(
-                        __('New History'),
-                        ['controller' => 'Histories', 'action' => 'add']
+                        __('Todos'),
+                        ['controller' => 'Histories', 'action' => 'showInProgress']
                     ) ?>
                 </li>
                 <li>
