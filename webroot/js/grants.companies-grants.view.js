@@ -1,9 +1,7 @@
 $(function() {
     var clicked;
 
-    $('i.fi-alert').on('click', function (event) {
-        // console.log($(this).attr('id'));
-
+    $('i.fi-alert,i.fi-clock').on('click', function (event) {
         // populate event info and created
         $('#eventinfo').text($(this).parents('tr').find('.event').text());
         var d = new Date();
@@ -43,7 +41,7 @@ $(function() {
             success : function(data, textStatus, jqXHR){
                 if (data.saved) {
                     // change the icon to done
-                    clicked.removeClass('fi-alert s150').addClass('fi-check');
+                    clicked.removeClass('fi-alert s150').removeClass('fi-clock').addClass('fi-check');
                     //detach the event handler
                     clicked.removeAttr('data-open').removeAttr('aria-controls').removeAttr('aria-haspopup');
                     // put info to status

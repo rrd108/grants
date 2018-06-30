@@ -1,5 +1,6 @@
 <?php
 
+use Cake\I18n\Date;
 use Cake\I18n\Time;
 use Cake\Routing\Router;
 
@@ -116,7 +117,15 @@ echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
                     if ($history->done) {
                         echo '<i class="fi-check" title="' . __('Done') . '"></i>';
                     }
-                    if ($history->has('deadline') && !$history->done) {
+                    if ($history->has('deadline') && $history->deadline >= Date::now() && !$history->done) {
+                        echo '<i 
+                            class="fi-clock" 
+                            title="' . __('Waiting') . '"
+                            id="h_' . $history->id . '"
+                            data-open="setDoneModal"
+                            ></i>';
+                    }
+                    if ($history->has('deadline') && $history->deadline < Date::now() && !$history->done) {
                         echo '<i 
                             class="fi-alert s150" 
                             title="' . __('Overdued') . '"
