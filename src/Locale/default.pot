@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2018-06-28 10:55+0000\n"
+"POT-Creation-Date: 2018-06-30 16:35+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -30,19 +30,19 @@ msgstr ""
 msgid "The company could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:104;131
+#: Controller/CompaniesGrantsController.php:102;129
 msgid "The companies grant has been saved."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:108;135
+#: Controller/CompaniesGrantsController.php:106;133
 msgid "The companies grant could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:155
+#: Controller/CompaniesGrantsController.php:153
 msgid "The companies grant has been deleted."
 msgstr ""
 
-#: Controller/CompaniesGrantsController.php:157
+#: Controller/CompaniesGrantsController.php:155
 msgid "The companies grant could not be deleted. Please, try again."
 msgstr ""
 
@@ -62,19 +62,19 @@ msgstr ""
 msgid "The grant could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/HistoriesController.php:64;115
+#: Controller/HistoriesController.php:64;113
 msgid "The history has been saved."
 msgstr ""
 
-#: Controller/HistoriesController.php:68;119
+#: Controller/HistoriesController.php:68;117
 msgid "The history could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/HistoriesController.php:145
+#: Controller/HistoriesController.php:142
 msgid "The history has been deleted."
 msgstr ""
 
-#: Controller/HistoriesController.php:147
+#: Controller/HistoriesController.php:144
 msgid "The history could not be deleted. Please, try again."
 msgstr ""
 
@@ -136,15 +136,16 @@ msgstr ""
 #: Template/CompaniesGrants/add.ctp:8
 #: Template/CompaniesGrants/edit.ctp:8
 #: Template/CompaniesGrants/index.ctp:6;45
-#: Template/CompaniesGrants/view.ctp:8;77
+#: Template/CompaniesGrants/view.ctp:4;72
 #: Template/Grants/add.ctp:8
 #: Template/Grants/edit.ctp:8
 #: Template/Grants/index.ctp:8;26
 #: Template/Grants/view.ctp:8;50
 #: Template/Histories/add.ctp:8
 #: Template/Histories/edit.ctp:8
-#: Template/Histories/index.ctp:8;31
-#: Template/Histories/view.ctp:8;58
+#: Template/Histories/index.ctp:8;28
+#: Template/Histories/show_in_progress.ctp:4
+#: Template/Histories/view.ctp:8
 #: Template/Issuers/add.ctp:8
 #: Template/Issuers/edit.ctp:8
 #: Template/Issuers/index.ctp:8;21
@@ -168,13 +169,12 @@ msgstr ""
 #: Template/Companies/view.ctp:60
 #: Template/CompaniesGrants/edit.ctp:10
 #: Template/CompaniesGrants/index.ctp:78
-#: Template/CompaniesGrants/view.ctp:154
+#: Template/CompaniesGrants/view.ctp:163
 #: Template/Grants/edit.ctp:10
 #: Template/Grants/index.ctp:46
 #: Template/Grants/view.ctp:65
 #: Template/Histories/edit.ctp:10
-#: Template/Histories/index.ctp:68
-#: Template/Histories/view.ctp:67
+#: Template/Histories/index.ctp:54
 #: Template/Issuers/edit.ctp:10
 #: Template/Issuers/index.ctp:32
 #: Template/Issuers/view.ctp:51
@@ -195,13 +195,13 @@ msgstr ""
 #: Template/Companies/view.ctp:11;64
 #: Template/CompaniesGrants/edit.ctp:12
 #: Template/CompaniesGrants/index.ctp:79
-#: Template/CompaniesGrants/view.ctp:11;156
+#: Template/CompaniesGrants/view.ctp:7;165
 #: Template/Grants/edit.ctp:12
 #: Template/Grants/index.ctp:48
 #: Template/Grants/view.ctp:10;67
 #: Template/Histories/edit.ctp:12
-#: Template/Histories/index.ctp:68
-#: Template/Histories/view.ctp:10;67
+#: Template/Histories/index.ctp:54
+#: Template/Histories/view.ctp:10
 #: Template/Issuers/edit.ctp:12
 #: Template/Issuers/index.ctp:32
 #: Template/Issuers/view.ctp:10;51
@@ -241,8 +241,8 @@ msgstr ""
 #: Template/CompaniesGrants/edit.ctp:34
 #: Template/Grants/add.ctp:29
 #: Template/Grants/edit.ctp:34
-#: Template/Histories/add.ctp:37
-#: Template/Histories/edit.ctp:42
+#: Template/Histories/add.ctp:34
+#: Template/Histories/edit.ctp:39
 #: Template/Issuers/add.ctp:22
 #: Template/Issuers/edit.ctp:28
 #: Template/Statuses/add.ctp:24
@@ -267,11 +267,9 @@ msgstr ""
 #: Template/Companies/index.ctp:31
 #: Template/Companies/view.ctp:46
 #: Template/CompaniesGrants/index.ctp:56
-#: Template/CompaniesGrants/view.ctp:115
 #: Template/Grants/index.ctp:33
 #: Template/Grants/view.ctp:55
-#: Template/Histories/index.ctp:66
-#: Template/Histories/view.ctp:65
+#: Template/Histories/index.ctp:52
 #: Template/Issuers/index.ctp:30
 #: Template/Issuers/view.ctp:49
 #: Template/Statuses/index.ctp:29
@@ -287,11 +285,10 @@ msgstr ""
 #: Template/Companies/index.ctp:35
 #: Template/Companies/view.ctp:56
 #: Template/CompaniesGrants/index.ctp:77
-#: Template/CompaniesGrants/view.ctp:150
+#: Template/CompaniesGrants/view.ctp:159
 #: Template/Grants/index.ctp:42
 #: Template/Grants/view.ctp:61
-#: Template/Histories/index.ctp:67
-#: Template/Histories/view.ctp:66
+#: Template/Histories/index.ctp:53
 #: Template/Issuers/index.ctp:31
 #: Template/Issuers/view.ctp:50
 #: Template/Statuses/index.ctp:36
@@ -305,7 +302,8 @@ msgstr ""
 #: Template/Companies/index.ctp:49
 #: Template/CompaniesGrants/index.ctp:88
 #: Template/Grants/index.ctp:56
-#: Template/Histories/index.ctp:76
+#: Template/Histories/index.ctp:62
+#: Template/Histories/show_in_progress.ctp:71
 #: Template/Issuers/index.ctp:40
 #: Template/Statuses/index.ctp:50
 #: Template/Tags/index.ctp:40
@@ -316,7 +314,8 @@ msgstr ""
 #: Template/Companies/index.ctp:50
 #: Template/CompaniesGrants/index.ctp:89
 #: Template/Grants/index.ctp:57
-#: Template/Histories/index.ctp:77
+#: Template/Histories/index.ctp:63
+#: Template/Histories/show_in_progress.ctp:72
 #: Template/Issuers/index.ctp:41
 #: Template/Statuses/index.ctp:51
 #: Template/Tags/index.ctp:41
@@ -327,7 +326,8 @@ msgstr ""
 #: Template/Companies/index.ctp:52
 #: Template/CompaniesGrants/index.ctp:91
 #: Template/Grants/index.ctp:59
-#: Template/Histories/index.ctp:79
+#: Template/Histories/index.ctp:65
+#: Template/Histories/show_in_progress.ctp:74
 #: Template/Issuers/index.ctp:43
 #: Template/Statuses/index.ctp:53
 #: Template/Tags/index.ctp:43
@@ -338,7 +338,8 @@ msgstr ""
 #: Template/Companies/index.ctp:53
 #: Template/CompaniesGrants/index.ctp:92
 #: Template/Grants/index.ctp:60
-#: Template/Histories/index.ctp:80
+#: Template/Histories/index.ctp:66
+#: Template/Histories/show_in_progress.ctp:75
 #: Template/Issuers/index.ctp:44
 #: Template/Statuses/index.ctp:54
 #: Template/Tags/index.ctp:44
@@ -349,7 +350,8 @@ msgstr ""
 #: Template/Companies/index.ctp:55
 #: Template/CompaniesGrants/index.ctp:94
 #: Template/Grants/index.ctp:62
-#: Template/Histories/index.ctp:82
+#: Template/Histories/index.ctp:68
+#: Template/Histories/show_in_progress.ctp:77
 #: Template/Issuers/index.ctp:46
 #: Template/Statuses/index.ctp:56
 #: Template/Tags/index.ctp:46
@@ -381,10 +383,12 @@ msgid "<%= Inflector::humanize(Inflector::singularize(Inflector::underscore($ali
 msgstr ""
 
 #: Template/Bake/Template/view.ctp:132
+#: Template/Element/setDoneModal.ctp:14
 msgid "Yes"
 msgstr ""
 
 #: Template/Bake/Template/view.ctp:132
+#: Template/Element/setDoneModal.ctp:15
 msgid "No"
 msgstr ""
 
@@ -398,7 +402,7 @@ msgstr ""
 #: Template/CompaniesGrants/add.ctp:10
 #: Template/CompaniesGrants/edit.ctp:16
 #: Template/CompaniesGrants/index.ctp:8
-#: Template/CompaniesGrants/view.ctp:14
+#: Template/CompaniesGrants/view.ctp:10
 #: Template/Grants/add.ctp:12
 #: Template/Grants/edit.ctp:18
 #: Template/Grants/index.ctp:12
@@ -413,7 +417,7 @@ msgstr ""
 #: Template/CompaniesGrants/add.ctp:12
 #: Template/CompaniesGrants/edit.ctp:18
 #: Template/CompaniesGrants/index.ctp:10
-#: Template/CompaniesGrants/view.ctp:16
+#: Template/CompaniesGrants/view.ctp:12
 #: Template/Grants/add.ctp:9
 #: Template/Grants/edit.ctp:15
 #: Template/Grants/view.ctp:11
@@ -431,7 +435,7 @@ msgstr ""
 #: Template/CompaniesGrants/add.ctp:13
 #: Template/CompaniesGrants/edit.ctp:19
 #: Template/CompaniesGrants/index.ctp:11
-#: Template/CompaniesGrants/view.ctp:17
+#: Template/CompaniesGrants/view.ctp:13
 #: Template/Grants/index.ctp:9
 #: Template/Grants/view.ctp:12
 #: Template/Issuers/add.ctp:11
@@ -455,7 +459,7 @@ msgstr ""
 #: Template/CompaniesGrants/add.ctp:11
 #: Template/CompaniesGrants/edit.ctp:17
 #: Template/CompaniesGrants/index.ctp:9
-#: Template/CompaniesGrants/view.ctp:15
+#: Template/CompaniesGrants/view.ctp:11
 #: Template/Grants/add.ctp:13
 #: Template/Grants/edit.ctp:19
 #: Template/Grants/index.ctp:13
@@ -473,7 +477,6 @@ msgstr ""
 
 #: Template/Companies/view.ctp:22;38
 #: Template/Grants/view.ctp:31;49
-#: Template/Histories/view.ctp:57
 #: Template/Issuers/view.ctp:21;37
 #: Template/Statuses/view.ctp:21
 #: Template/Tags/view.ctp:21
@@ -482,7 +485,7 @@ msgstr ""
 
 #: Template/Companies/view.ctp:26
 #: Template/Grants/view.ctp:39
-#: Template/Histories/view.ctp:43;56
+#: Template/Histories/view.ctp:41
 #: Template/Issuers/view.ctp:25;34
 #: Template/Statuses/view.ctp:25;34
 #: Template/Tags/view.ctp:25;34
@@ -511,18 +514,20 @@ msgid "Code"
 msgstr ""
 
 #: Template/Companies/view.ctp:40
-#: Template/CompaniesGrants/view.ctp:73;99
-#: Template/Histories/view.ctp:31
+#: Template/CompaniesGrants/index.ctp:42
+#: Template/CompaniesGrants/view.ctp:69;94
+#: Template/Histories/view.ctp:29
 #: Template/Tags/view.ctp:36
 msgid "Status"
 msgstr ""
 
 #: Template/CompaniesGrants/add.ctp:9
 #: Template/CompaniesGrants/edit.ctp:15
-#: Template/CompaniesGrants/view.ctp:12
+#: Template/CompaniesGrants/view.ctp:8
 #: Template/Histories/add.ctp:10
 #: Template/Histories/edit.ctp:16
 #: Template/Histories/index.ctp:10
+#: Template/Histories/show_in_progress.ctp:6
 #: Template/Histories/view.ctp:13
 msgid "List Companies Grants"
 msgstr ""
@@ -532,7 +537,7 @@ msgid "Add Companies Grant"
 msgstr ""
 
 #: Template/CompaniesGrants/edit.ctp:25
-#: Template/CompaniesGrants/view.ctp:9
+#: Template/CompaniesGrants/view.ctp:5
 msgid "Edit Companies Grant"
 msgstr ""
 
@@ -541,10 +546,11 @@ msgid "Current status of Grants"
 msgstr ""
 
 #: Template/CompaniesGrants/index.ctp:7
-#: Template/CompaniesGrants/view.ctp:13
+#: Template/CompaniesGrants/view.ctp:9
 #: Template/Histories/add.ctp:12
 #: Template/Histories/edit.ctp:17
 #: Template/Histories/index.ctp:11
+#: Template/Histories/show_in_progress.ctp:7
 #: Template/Histories/view.ctp:14
 msgid "New Companies Grant"
 msgstr ""
@@ -569,75 +575,90 @@ msgstr ""
 msgid "Show non finished"
 msgstr ""
 
-#: Template/CompaniesGrants/index.ctp:55
-msgid "Overdued"
-msgstr ""
-
-#: Template/CompaniesGrants/view.ctp:10
-msgid "Delete Companies Grant"
-msgstr ""
-
-#: Template/CompaniesGrants/view.ctp:22
+#: Template/CompaniesGrants/index.ctp:39
+#: Template/CompaniesGrants/view.ctp:18
 msgid "Company"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:27
+#: Template/CompaniesGrants/index.ctp:40
+#: Template/CompaniesGrants/view.ctp:23
+#: Template/Histories/show_in_progress.ctp:21
 msgid "Grant"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:36
+#: Template/CompaniesGrants/index.ctp:43
+#: Template/CompaniesGrants/view.ctp:68
+msgid "Deadline"
+msgstr ""
+
+#: Template/CompaniesGrants/index.ctp:55
+#: Template/CompaniesGrants/view.ctp:124
+msgid "Overdued"
+msgstr ""
+
+#: Template/CompaniesGrants/view.ctp:6
+msgid "Delete Companies Grant"
+msgstr ""
+
+#: Template/CompaniesGrants/view.ctp:32
 #: Template/Grants/view.ctp:23
 msgid "Issuer"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:47
+#: Template/CompaniesGrants/view.ctp:43
 msgid "Contact"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:53
+#: Template/CompaniesGrants/view.ctp:49
 msgid "Amount"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:59
+#: Template/CompaniesGrants/view.ctp:55
 msgid "De minimis  "
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:66
+#: Template/CompaniesGrants/view.ctp:62
 msgid "History"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:71
-#: Template/Histories/view.ctp:47
+#: Template/CompaniesGrants/view.ctp:66;111
+msgid "Done"
+msgstr ""
+
+#: Template/CompaniesGrants/view.ctp:67
+#: Template/Histories/view.ctp:45
 #: Template/Statuses/view.ctp:39
 #: Template/Tags/view.ctp:39
 msgid "Created"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:72
-msgid "Deadline"
-msgstr ""
-
-#: Template/CompaniesGrants/view.ctp:74
-#: Template/Histories/add.ctp:28
-#: Template/Histories/view.ctp:35
+#: Template/CompaniesGrants/view.ctp:70
+#: Template/Histories/add.ctp:26
+#: Template/Histories/view.ctp:33
 msgid "User"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:75;107
-#: Template/Histories/view.ctp:39
+#: Template/CompaniesGrants/view.ctp:71;102
+#: Template/Histories/view.ctp:37
 #: Template/Statuses/view.ctp:38
 #: Template/Tags/view.ctp:38
 msgid "Event"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:76
-#: Template/Histories/index.ctp:29
-#: Template/Tags/index.ctp:15
-msgid "Tags"
+#: Template/CompaniesGrants/view.ctp:103
+msgid "Save"
 msgstr ""
 
-#: Template/CompaniesGrants/view.ctp:109
-msgid "Save"
+#: Template/CompaniesGrants/view.ctp:116
+msgid "Waiting"
+msgstr ""
+
+#: Template/Element/setDoneModal.ctp:4
+msgid "Set this todo as done?"
+msgstr ""
+
+#: Template/Element/setDoneModal.ctp:13
+msgid "Done at"
 msgstr ""
 
 #: Template/Grants/add.ctp:10
@@ -697,6 +718,7 @@ msgstr ""
 #: Template/Histories/add.ctp:14
 #: Template/Histories/edit.ctp:18
 #: Template/Histories/index.ctp:12
+#: Template/Histories/show_in_progress.ctp:8
 #: Template/Histories/view.ctp:15
 #: Template/Statuses/add.ctp:9
 #: Template/Statuses/edit.ctp:15
@@ -707,6 +729,7 @@ msgstr ""
 #: Template/Histories/add.ctp:15
 #: Template/Histories/edit.ctp:19
 #: Template/Histories/index.ctp:13
+#: Template/Histories/show_in_progress.ctp:9
 #: Template/Histories/view.ctp:16
 #: Template/Statuses/index.ctp:9
 #: Template/Statuses/view.ctp:12
@@ -716,6 +739,7 @@ msgstr ""
 #: Template/Histories/add.ctp:16
 #: Template/Histories/edit.ctp:20
 #: Template/Histories/index.ctp:14
+#: Template/Histories/show_in_progress.ctp:10
 #: Template/Histories/view.ctp:17
 msgid "List Users"
 msgstr ""
@@ -723,45 +747,27 @@ msgstr ""
 #: Template/Histories/add.ctp:17
 #: Template/Histories/edit.ctp:21
 #: Template/Histories/index.ctp:15
+#: Template/Histories/show_in_progress.ctp:11
 #: Template/Histories/view.ctp:18
 msgid "New User"
 msgstr ""
 
-#: Template/Histories/add.ctp:18
-#: Template/Histories/edit.ctp:22
-#: Template/Histories/index.ctp:16
-#: Template/Histories/view.ctp:19
-#: Template/Tags/add.ctp:9
-#: Template/Tags/edit.ctp:15
-#: Template/Tags/view.ctp:11
-msgid "List Tags"
-msgstr ""
-
-#: Template/Histories/add.ctp:19
-#: Template/Histories/edit.ctp:23
-#: Template/Histories/index.ctp:17
-#: Template/Histories/view.ctp:20
-#: Template/Tags/index.ctp:9
-#: Template/Tags/view.ctp:12
-msgid "New Tag"
-msgstr ""
-
-#: Template/Histories/add.ctp:25
+#: Template/Histories/add.ctp:23
 msgid "Add History"
 msgstr ""
 
-#: Template/Histories/edit.ctp:29
+#: Template/Histories/edit.ctp:27
 #: Template/Histories/view.ctp:9
 msgid "Edit History"
 msgstr ""
 
-#: Template/Histories/edit.ctp:36
+#: Template/Histories/edit.ctp:34
 msgid "Has deadline:"
 msgstr ""
 
 #: Template/Histories/index.ctp:9
+#: Template/Histories/show_in_progress.ctp:5
 #: Template/Histories/view.ctp:12
-#: Template/Layout/default.ctp:33
 #: Template/Statuses/add.ctp:11
 #: Template/Statuses/edit.ctp:17
 #: Template/Statuses/index.ctp:11
@@ -773,20 +779,29 @@ msgstr ""
 msgid "New History"
 msgstr ""
 
-#: Template/Histories/index.ctp:21
+#: Template/Histories/index.ctp:19
 msgid "Histories"
+msgstr ""
+
+#: Template/Histories/show_in_progress.ctp:15
+#: Template/Layout/default.ctp:38
+msgid "Todos"
+msgstr ""
+
+#: Template/Histories/show_in_progress.ctp:20
+msgid "Overdue"
+msgstr ""
+
+#: Template/Histories/show_in_progress.ctp:40
+msgid "{0} days"
 msgstr ""
 
 #: Template/Histories/view.ctp:10
 msgid "Delete History"
 msgstr ""
 
-#: Template/Histories/view.ctp:27
+#: Template/Histories/view.ctp:25
 msgid "Companies Grant"
-msgstr ""
-
-#: Template/Histories/view.ctp:52
-msgid "Related Tags"
 msgstr ""
 
 #: Template/Issuers/add.ctp:17
@@ -810,7 +825,7 @@ msgstr ""
 msgid "Issuer Id"
 msgstr ""
 
-#: Template/Layout/default.ctp:38
+#: Template/Layout/default.ctp:43
 msgid "Logout"
 msgstr ""
 
@@ -864,6 +879,12 @@ msgstr ""
 msgid "User Id"
 msgstr ""
 
+#: Template/Tags/add.ctp:9
+#: Template/Tags/edit.ctp:15
+#: Template/Tags/view.ctp:11
+msgid "List Tags"
+msgstr ""
+
 #: Template/Tags/add.ctp:17
 msgid "Add Tag"
 msgstr ""
@@ -871,6 +892,15 @@ msgstr ""
 #: Template/Tags/edit.ctp:23
 #: Template/Tags/view.ctp:9
 msgid "Edit Tag"
+msgstr ""
+
+#: Template/Tags/index.ctp:9
+#: Template/Tags/view.ctp:12
+msgid "New Tag"
+msgstr ""
+
+#: Template/Tags/index.ctp:15
+msgid "Tags"
 msgstr ""
 
 #: Template/Tags/view.ctp:10
