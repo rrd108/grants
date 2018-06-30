@@ -1,6 +1,7 @@
 <?php
 
 use Cake\I18n\Time;
+use Cake\Routing\Router;
 
 echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
 ?>
@@ -119,7 +120,7 @@ echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
                         echo '<i 
                             class="fi-alert s150" 
                             title="' . __('Overdued') . '"
-                            id="h' . $history->id . '"
+                            id="h_' . $history->id . '"
                             data-open="setDoneModal"
                             ></i>';
                     }
@@ -172,8 +173,13 @@ echo $this->Html->script('grants.companies-grants.view.min', ['block' => true]);
     <h1><?= __('Set this todo as done?') ?></h1>
     <p class="lead">Did you finished this todo item?</p>
     <p class="callout warning" id="eventinfo"></p>
-    <?= $this->Form->create($companiesGrant) ?>
-    <?= $this->Form->control('done', ['label' => __('Done at')]) ?>
+    <?= $this->Form->create(
+        null,
+        [
+            'url' => ['controller' => 'Histories', 'action' => 'setDone'],
+            'id' => 'setDoneForm'
+        ]) ?>
+    <?= $this->Form->control('done', ['label' => __('Done at'), 'type' => 'text']) ?>
     <?= $this->Form->button(__('Yes'), ['class' => 'button success']) ?>
     <?= $this->Form->button(__('No'), ['class' => 'button alert']) ?>
     <?= $this->Form->end() ?>

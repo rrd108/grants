@@ -145,4 +145,19 @@ class HistoriesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function setDone($id = null) {
+        //TODO no sec check is done here, anyone can set done anything
+        if ($this->request->is('ajax')) {
+            $history = $this->Histories->get($id);
+            $history->doneby = $this->Auth->user('id');
+            $history = $this->Histories->patchEntity($history, $this->request->getData());
+            $saved = false;
+            if ($this->Histories->save($history)) {
+                $saved = true;
+            }
+            $this->set(compact('saved'));
+            $this->set('_serialize', ['saved']);
+        }
+    }
 }

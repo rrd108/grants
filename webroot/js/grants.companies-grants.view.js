@@ -30,19 +30,35 @@ $(function() {
     // if yes is clicked
     $('button.success').on('click', function (event) {
         event.preventDefault();
-        // TODO send an ajax request
-        // change the icon to done
-        clicked.removeClass('fi-alert s150').addClass('fi-check');
-        // put info to status
-        var currentHtml = clicked.parents('tr').find('.status').html();
-        clicked.parents('tr').find('.status').html(currentHtml
-            + '<em>'
-            + $('#username').text()
-            + ' ('
-            + $('#done').val()
-            + ')'
-            + '</em>');
-        //close the modal
-        $('button.close-button').trigger('click');
+        // send an ajax request
+        var historyId = clicked.attr('id').replace('h_', '');
+        $.ajax({
+            type : 'post',
+            url : $('#setDoneForm').attr('action') + '/' + historyId,
+            dataType : 'json',
+            data : {
+                done : $('#done').val()
+            },
+            error : function(jqXHR, textStatus, errorThrown){},
+            success : function(data, textStatus, jqXHR){
+                if (data.saved) {
+                    // change the icon to done
+                    clicked.removeClass('fi-alert s150').addClass('fi-check');
+                    //detach the event handler
+                    clicked.removeAttr('data-open').removeAttr('aria-controls').removeAttr('aria-haspopup');
+                    // put info to status
+                    var currentHtml = clicked.parents('tr').find('.status').html();
+                    clicked.parents('tr').find('.status').html(currentHtml
+                        + '<em>'
+                        + $('#username').text()
+                        + ' ('
+                        + $('#done').val()
+                        + ')'
+                        + '</em>');
+                    //close the modal
+                    $('button.close-button').trigger('click');
+                }
+            }
+        });
     });
 });
