@@ -17,10 +17,6 @@ main.row {
     font-weight: bold;
 }
 
-header img {
-    height: 2em;
-}
-
 i.fi-eye{
     color: #696814;
 }
@@ -58,10 +54,18 @@ i.fi-alert, i.fi-clock {
     margin: 0 0.3em;
 }
 
-.top-bar{
+.top-bar ul, .top-bar {
     background-color: #fff;
+}
+
+.top-bar{
     margin-bottom: 1.5em;
 }
+
+.top-bar-left img {
+    height: 1.6em;
+}
+
 
 .login {
     margin-top: 5em;

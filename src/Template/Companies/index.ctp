@@ -3,8 +3,18 @@
   * @var \App\View\AppView $this
   */
 ?>
-<div class="companies index small-12 medium-9 large-9 columns content">
-    <h3><?= __('Companies') ?></h3>
+<div class="companies index small-12 columns content">
+    <div class="row">
+        <h3 class="small-6"><?= __('Companies') ?></h3>
+        <?= $this->Html->link(
+            '<i class="fi-plus"></i>',
+            ['controller' => 'companies', 'action' => 'add'],
+            [
+                'escape' => false,
+                'class' => 'small-6 s150 text-right',
+                'title' => __('New Company')
+            ]) ?>
+    </div>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
