@@ -18,38 +18,9 @@
     <?= $this->fetch('css') ?>
 </head>
 <body>
-<header>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <?php
-        if($this->request->params['action'] != 'login') {
-            echo $this->Html->link(
-                $this->Html->image('logo.png'),
-                ['controller' => 'CompaniesGrants', 'action' => 'index'],
-                ['escape' => false]
-            );
-        }
-        ?>
-        <div class="top-bar-section">
-            <?php
-            if ($this->request->session()->read('Auth.User')) :
-            ?>
-            <ul class="right">
-                <li><?= $this->Html->link(
-                        __('Todos'),
-                        ['controller' => 'Histories', 'action' => 'showInProgress']
-                    ) ?>
-                </li>
-                <li>
-                    <?= $this->Html->link(__('Logout'),
-                        ['plugin' => 'CakeDC/Users', 'controller' => 'Users', 'action' => 'logout']);
-                    ?>
-                    <span id="username"><?= $this->request->session()->read('Auth.User.username') ?></span>
-                </li>
-            </ul>
-            <?php endif; ?>
-        </div>
-    </nav>
-</header>
+
+<?= $this->element('header') ?>
+
 <?= $this->Flash->render() ?>
 <main class="container clearfix row">
     <?= $this->fetch('content') ?>
