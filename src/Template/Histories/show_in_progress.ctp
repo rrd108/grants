@@ -1,17 +1,9 @@
-<?php use Cake\I18n\Date; ?>
-<nav class="small-12 medium-3 large-3 columns" id="actions-sidebar">
-    <ul class="menu vertical">
-        <li class="menu-text"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New History'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Companies Grants'), ['controller' => 'CompaniesGrants', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Companies Grant'), ['controller' => 'CompaniesGrants', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Statuses'), ['controller' => 'Statuses', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Status'), ['controller' => 'Statuses', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="histories index small-12 medium-9 large-9 columns content">
+<?php
+use Cake\I18n\Date;
+
+$this->assign('title', __('Todos'));
+?>
+<div class="histories index small-12 columns content">
     <h3><?= __('Todos') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

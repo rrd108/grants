@@ -1,17 +1,7 @@
 <?php
 $this->assign('title', __('Current status of Grants'));
 ?>
-<nav class="small-12 medium-2 large-2 columns" id="actions-sidebar">
-    <ul class="menu vertical">
-        <li class="menu-text"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Companies Grant'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Companies'), ['controller' => 'Companies', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Company'), ['controller' => 'Companies', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Grants'), ['controller' => 'Grants', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Grant'), ['controller' => 'Grants', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="companiesGrants index small-12 medium-10 large-10 columns content">
+<div class="companiesGrants index small-12 columns content">
     <div class="row">
         <?php if ($nonFinished): ?>
             <h3 class="small-11 columns">
