@@ -1,7 +1,5 @@
 <?php
-/**
-  * @var \App\View\AppView $this
-  */
+$this->assign('title', __('New Grant'));
 ?>
 <nav class="small-12 medium-3 large-3 columns" id="actions-sidebar">
     <ul class="menu vertical">

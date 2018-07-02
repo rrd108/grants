@@ -1,7 +1,6 @@
 <?php
-/**
-  * @var \App\View\AppView $this
-  */
+$this->assign('title', __('New Company'));
+
 ?>
 <div class="companies form small-12 columns content">
     <?= $this->Form->create($company) ?>
