@@ -48,7 +48,7 @@ class DatalistBehavior extends Behavior
             }
         }
 
-        foreach ($keysToRemove as $key => $value) {
+        foreach ($keysToRemove as $key) {
             unset($data[$key]);
         }
     }
