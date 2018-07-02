@@ -37,6 +37,12 @@ class AppView extends View
     public function initialize()
     {
         parent::initialize();
+        $this->loadHelper('Form', [
+            'templates' => 'form-templates',
+            'widgets' => [
+                'datalist' => ['Datalist']
+            ]
+        ]);
         $this->loadHelper('CakeDC/Users.User');
     }
 }
