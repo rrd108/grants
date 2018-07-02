@@ -1,18 +1,19 @@
 <?php
 $this->assign('title', __('Grants'));
 ?>
-<nav class="small-12 medium-3 large-3 columns" id="actions-sidebar">
-    <ul class="menu vertical">
-        <li class="menu-text"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Grant'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Issuers'), ['controller' => 'Issuers', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Issuer'), ['controller' => 'Issuers', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Companies'), ['controller' => 'Companies', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Company'), ['controller' => 'Companies', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="grants index small-12 medium-9 large-9 columns content">
-    <h3><?= __('Grants') ?></h3>
+
+<div class="grants index small-12 columns content">
+    <div class="row">
+        <h3 class="small-6"><?= __('Grants') ?></h3>
+        <?= $this->Html->link(
+            '<i class="fi-plus"></i>',
+            ['controller' => 'grants', 'action' => 'add'],
+            [
+                'escape' => false,
+                'class' => 'small-6 s150 text-right',
+                'title' => __('New Grant')
+            ]) ?>
+    </div>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

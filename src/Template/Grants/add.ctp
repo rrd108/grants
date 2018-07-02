@@ -1,17 +1,7 @@
 <?php
 $this->assign('title', __('New Grant'));
 ?>
-<nav class="small-12 medium-3 large-3 columns" id="actions-sidebar">
-    <ul class="menu vertical">
-        <li class="menu-text"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Grants'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Issuers'), ['controller' => 'Issuers', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Issuer'), ['controller' => 'Issuers', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Companies'), ['controller' => 'Companies', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Company'), ['controller' => 'Companies', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="grants form small-12 medium-9 large-9 columns content">
+<div class="grants form small-12 columns content">
     <?= $this->Form->create($grant) ?>
     <fieldset>
         <legend><?= __('Add Grant') ?></legend>
