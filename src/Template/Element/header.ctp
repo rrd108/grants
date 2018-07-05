@@ -48,7 +48,7 @@
                             <li>
                                 <?= $this->Html->link(
                                     '<i class="fi-widget"> ' . __('Main data') . '</i>',
-                                    ['plugin' => false, 'controller' => 'centers', 'action' => 'index'],
+                                    ['plugin' => false],
                                     ['escape' => false]
                                 ) ?>
                                 <ul class="nested vertical menu">
