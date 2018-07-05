@@ -28,7 +28,6 @@ class DatalistBehaviorTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->Datalist = new DatalistBehavior(new Table());
     }
 
     /**
@@ -55,7 +54,9 @@ class DatalistBehaviorTest extends TestCase
             'name' => 'Name of the element',
         ];
         $data = new ArrayObject($data);
-        $options = new ArrayObject(['Issuers' => 'name']);
+        $this->Datalist = new DatalistBehavior(new Table(), ['Issuers' => 'name']);
+
+        $options = new ArrayObject(['associated' => ['issuers']]);
         $this->Datalist->beforeMarshal(new Event('Model.beforeSave'), $data, $options);
         $this->assertEquals('this is a string', $data['issuer']['name']);
 
@@ -66,7 +67,9 @@ class DatalistBehaviorTest extends TestCase
             ]
         ];
         $data = new ArrayObject($data);
-        $options = new ArrayObject(['Companies' => 'name']);
+        $this->Datalist = new DatalistBehavior(new Table(), ['Companies' => 'name']);
+
+        $options = new ArrayObject(['associated' => ['companies']]);
         $this->Datalist->beforeMarshal(new Event('Model.beforeSave'), $data, $options);
         $this->assertEquals('New Company', $data['companies'][0]['name']);
 
@@ -78,7 +81,8 @@ class DatalistBehaviorTest extends TestCase
             ]
         ];
         $data = new ArrayObject($data);
-        $options = new ArrayObject(['Issuers' => 'name', 'Companies' => 'name']);
+        $this->Datalist = new DatalistBehavior(new Table(), ['Issuers' => 'name', 'Companies' => 'name']);
+        $options = new ArrayObject(['associated' => ['issuers', 'companies']]);
         $this->Datalist->beforeMarshal(new Event('Model.beforeSave'), $data, $options);
         $this->assertEquals('this is a string', $data['issuer']['name']);
         $this->assertEquals('New Company', $data['companies'][0]['name']);

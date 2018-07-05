@@ -30,7 +30,6 @@ class DatalistBehavior extends Behavior
     public function beforeMarshal(Event $event, ArrayObject $data, ArrayObject $options)
     {
         $keysToRemove = [];
-        debug($data);
         foreach ($data as $key => $value) {
             if (substr($key, -3) == '_id' && !is_int($value)) {
                 $model = substr($key, 0, -3);
