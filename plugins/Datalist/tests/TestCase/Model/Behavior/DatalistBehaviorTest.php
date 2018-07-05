@@ -1,7 +1,7 @@
 <?php
-namespace App\Test\TestCase\Model\Behavior;
+namespace Datalist\Test\TestCase\Model\Behavior;
 
-use App\Model\Behavior\DatalistBehavior;
+use Datalist\Model\Behavior\DatalistBehavior;
 use ArrayObject;
 use Cake\Event\Event;
 use Cake\ORM\Table;
@@ -16,7 +16,7 @@ class DatalistBehaviorTest extends TestCase
     /**
      * Test subject
      *
-     * @var \App\Model\Behavior\DatalistBehavior
+     * @var \Datalist\Model\Behavior\DatalistBehavior
      */
     public $Datalist;
 

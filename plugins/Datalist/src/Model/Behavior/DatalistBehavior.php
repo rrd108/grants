@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Behavior;
+namespace Datalist\Model\Behavior;
 
 use ArrayObject;
 use Cake\Event\Event;
