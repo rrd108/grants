@@ -30,21 +30,26 @@ class DatalistBehavior extends Behavior
     public function beforeMarshal(Event $event, ArrayObject $data, ArrayObject $options)
     {
         $keysToRemove = [];
+        debug($data);
         foreach ($data as $key => $value) {
             if (substr($key, -3) == '_id' && !is_int($value)) {
                 $model = substr($key, 0, -3);
-                $field = $options[ucfirst(Inflector::pluralize($model))];
-                $data[$model] = [$field => $value];
+                if ($field = $this->getConfig(ucfirst(Inflector::pluralize($model)))) {
+                    $data[$model] = [$field => $value];
+                }
                 $keysToRemove[] = $key;
             }
 
             if (is_array($value) && array_key_exists('_ids', $value)
                 && !is_array($value['_ids']) && !is_int($value['_ids'])) {
-                $field = $options[ucfirst(Inflector::pluralize($key))];
-                $data[$key][] = [
-                    $field => $value['_ids']
-                ];
-                unset($data[$key]['_ids']);
+                if ($field = $this->getConfig(ucfirst(Inflector::pluralize($key)))) {
+                    $data[$key][] = [
+                        $field => $value['_ids']
+                    ];
+                    unset($data[$key]['_ids']);
+                } else {
+                    $keysToRemove[] = $key;
+                }
             }
         }
 
