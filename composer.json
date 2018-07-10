@@ -10,7 +10,8 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "~1.0",
-        "cakedc/users": "^5.2"
+        "cakedc/users": "^5.2",
+        "rrd108/cakephp-datalist": "^0.0.2",
     },
     "require-dev": {
         "psy/psysh": "@stable",

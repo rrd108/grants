@@ -37,7 +37,7 @@ class GrantsTable extends Table
         $this->setDisplayField('shortname');
         $this->setPrimaryKey('id');
 
-        $this->addBehavior('Datalist', ['Issuers' => 'name', 'Companies' => 'name']);
+        $this->addBehavior('Datalist.Datalist', ['Issuers' => 'name', 'Companies' => 'name']);
 
         $this->belongsTo('Issuers', [
             'foreignKey' => 'issuer_id',

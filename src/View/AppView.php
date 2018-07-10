@@ -38,9 +38,9 @@ class AppView extends View
     {
         parent::initialize();
         $this->loadHelper('Form', [
-            'templates' => 'form-templates',
+            'templates' => 'Datalist.form-templates',
             'widgets' => [
-                'datalist' => ['Datalist']
+                'datalist' => ['Datalist\View\Widget\DatalistWidget']
             ]
         ]);
         $this->loadHelper('CakeDC/Users.User');
