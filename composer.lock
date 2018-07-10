@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa1b7ac44e9284a49a68b5a6d70ab276",
+    "content-hash": "d5c43fb496d804ef92f84f30c82b3c91",
     "packages": [
         {
             "name": "aura/intl",
@@ -624,6 +624,40 @@
                 "phinx"
             ],
             "time": "2017-06-05T13:30:19+00:00"
+        },
+        {
+            "name": "rrd108/cakephp-datalist",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rrd108/cakephp-datalist.git",
+                "reference": "fba25f3c0e8f2927fd219ad0f2fd19b4cdf7aabb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rrd108/cakephp-datalist/zipball/fba25f3c0e8f2927fd219ad0f2fd19b4cdf7aabb",
+                "reference": "fba25f3c0e8f2927fd219ad0f2fd19b4cdf7aabb",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^3.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.14|^6.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Datalist\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Datalist plugin for CakePHP 3",
+            "homepage": "https://github.com/rrd108/cakephp-datalist",
+            "time": "2018-07-06T15:07:46+00:00"
         },
         {
             "name": "symfony/config",

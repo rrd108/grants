@@ -81,3 +81,12 @@ i.fi-alert, i.fi-clock {
 td em {
     display: block;
 }
+
+ul.dropdown li {
+    background-color: #fff;
+    margin: 0 .2em;
+}
+ul.dropdown li a:hover {
+    background-color: #2c83b6;
+    color: #fff;
+}
