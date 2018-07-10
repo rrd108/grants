@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2018-06-30 16:35+0000\n"
-"PO-Revision-Date: 2018-06-30 18:37+0200\n"
+"PO-Revision-Date: 2018-07-06 18:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: hu_HU\n"
@@ -657,7 +657,7 @@ msgstr "Kibocsátó szerkesztése"
 
 #: Template/Issuers/index.ctp:15
 msgid "Issuers"
-msgstr "Kiocsátók"
+msgstr "Kibocsátók"
 
 #: Template/Issuers/view.ctp:10
 msgid "Delete Issuer"
