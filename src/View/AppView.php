@@ -43,6 +43,7 @@ class AppView extends View
                 'datalist' => ['Datalist\View\Widget\DatalistWidget']
             ]
         ]);
+        $this->loadHelper('MenuLink.MenuLink');
         $this->loadHelper('CakeDC/Users.User');
     }
 }

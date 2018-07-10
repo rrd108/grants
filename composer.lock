@@ -660,6 +660,39 @@
             "time": "2018-07-06T15:07:46+00:00"
         },
         {
+            "name": "rrd108/cakephp-menulink",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rrd108/cakephp-menulink.git",
+                "reference": "e6f4b47fcdd601a352990b5dd693d6387aea0b65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rrd108/cakephp-menulink/zipball/e6f4b47fcdd601a352990b5dd693d6387aea0b65",
+                "reference": "e6f4b47fcdd601a352990b5dd693d6387aea0b65",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7|^6.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "MenuLink\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "MenuLink plugin for CakePHP",
+            "time": "2017-07-18T14:15:15+00:00"
+        },
+        {
             "name": "symfony/config",
             "version": "v3.4.12",
             "source": {

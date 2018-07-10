@@ -12,6 +12,7 @@
         "cakephp/plugin-installer": "~1.0",
         "cakedc/users": "^5.2",
         "rrd108/cakephp-datalist": "^0.0.2",
+        "rrd108/cakephp-menulink": "^1.0"
     },
     "require-dev": {
         "psy/psysh": "@stable",

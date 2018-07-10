@@ -5,6 +5,11 @@ a {
     color: #2c83b6;
 }
 
+a.active {
+    background-color: #2c83b6;
+    color: #fff;
+}
+
 .s150{
     font-size: 150%;
 }

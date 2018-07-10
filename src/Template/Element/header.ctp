@@ -11,14 +11,10 @@
                     <?php if ($this->request->getSession()->read('Auth.User')) : ?>
                     <ul class="dropdown menu" data-dropdown-menu>
                         <li>
-                            <?= $this->Html->link(
-                                    $this->Html->image('logo.png'),
-                                    ['controller' => 'CompaniesGrants', 'action' => 'index'],
-                                    ['escape' => false]
-                                ); ?>
+                            <?= $this->Html->image('logo.png') ?>
                         </li>
                         <li>
-                            <?= $this->Html->link(
+                            <?= $this->MenuLink->menuLink(
                                 '<i class="fi-home"> ' . __('Home') . '</i>',
                                 [
                                     'plugin' => false,
@@ -31,7 +27,7 @@
                             ) ?>
                         </li>
                         <li>
-                            <?= $this->Html->link(
+                            <?= $this->MenuLink->menuLink(
                                 '<i class="fi-calendar"> ' . __('Todos') . '</i>',
                                 [
                                     'plugin' => false,
@@ -46,28 +42,28 @@
                         <?php if ($this->request->getSession()->read('Auth.User.is_superuser')
                             && $this->request->getSession()->read('Auth.User.role') == 'superuser') : ?>
                             <li>
-                                <?= $this->Html->link(
+                                <?= $this->MenuLink->menuLink(
                                     '<i class="fi-widget"> ' . __('Main data') . '</i>',
                                     ['plugin' => false],
                                     ['escape' => false]
                                 ) ?>
                                 <ul class="nested vertical menu">
-                                    <li><?= $this->Html->link(
+                                    <li><?= $this->MenuLink->menuLink(
                                             '<i class="fi-torso-business"> ' . __('Companies') . '</i>',
                                             ['plugin' => false, 'controller' => 'companies', 'action' => 'index'],
                                             ['escape' => false]
                                         ) ?></li>
-                                    <li><?= $this->Html->link(
+                                    <li><?= $this->MenuLink->menuLink(
                                             '<i class="fi-puzzle"> ' . __('Grants') . '</i>',
                                             ['plugin' => false, 'controller' => 'grants', 'action' => 'index'],
                                             ['escape' => false]
                                         ) ?></li>
-                                    <li><?= $this->Html->link(
+                                    <li><?= $this->MenuLink->menuLink(
                                             '<i class="fi-arrows-out"> ' . __('Issuers') . '</i>',
                                             ['plugin' => false, 'controller' => 'issuers', 'action' => 'index'],
                                             ['escape' => false]
                                         ) ?></li>
-                                    <li><?= $this->Html->link(
+                                    <li><?= $this->MenuLink->menuLink(
                                             '<i class="fi-bookmark"> ' . __('Statuses') . '</i>',
                                             ['plugin' => false, 'controller' => 'statuses', 'action' => 'index'],
                                             ['escape' => false]
