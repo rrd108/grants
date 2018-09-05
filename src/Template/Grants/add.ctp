@@ -8,14 +8,14 @@ $this->assign('title', __('New Grant'));
         <?php
             echo $this->Form->control(
                 'issuer_id',
-                ['type' => 'datalist', 'options' => $issuers->order('Issuers.name')]
+                ['type' => 'datalistJs', 'options' => $issuers->order('Issuers.name')]
             );
             echo $this->Form->control('shortname');
             echo $this->Form->control('name');
             echo $this->Form->control('code');
             echo $this->Form->control(
                 'companies._ids',
-                ['type' => 'datalist', 'options' => $companies->order('Companies.name')]
+                ['type' => 'datalistJs', 'options' => $companies->order('Companies.name')]
             );
         ?>
     </fieldset>

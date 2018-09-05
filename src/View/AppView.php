@@ -40,7 +40,7 @@ class AppView extends View
         $this->loadHelper('Form', [
             'templates' => 'Datalist.form-templates',
             'widgets' => [
-                'datalist' => ['Datalist\View\Widget\DatalistWidget']
+                'datalistJs' => ['Datalist\View\Widget\DatalistJsWidget']
             ]
         ]);
         $this->loadHelper('MenuLink.MenuLink');

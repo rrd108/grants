@@ -62,7 +62,9 @@ class GrantsController extends AppController
                 if ($grant->companies == null) {
                     return $this->redirect(['action' => 'index']);
                 } else {
-                    $companiesGrant = $this->Grants->CompaniesGrants->find()->where(['company_id' => $grant->companies[0]->id])->where(['grant_id' => $grant->id])->first();
+                    $companiesGrant = $this->Grants->CompaniesGrants->find()
+                        ->where(['company_id' => $grant->companies[0]->id])
+                        ->where(['grant_id' => $grant->id])->first();
                     $history = $this->Grants->CompaniesGrants->Histories->newEntity();
                     $history->company_grant_id = $companiesGrant->id;
                     $history->status_id = 11;
