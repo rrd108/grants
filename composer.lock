@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c389fffc51053843b17a4ac13754a61",
+    "content-hash": "e2798710bd089ebd0d00b9c919f460bd",
     "packages": [
         {
             "name": "aura/intl",
@@ -627,16 +627,16 @@
         },
         {
             "name": "rrd108/cakephp-datalist",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rrd108/cakephp-datalist.git",
-                "reference": "0066ae41368401d6a5351d14b78cbdfaa3984649"
+                "reference": "b1cd8cb3bfbd3dd12a880e0203c24ecf7754e199"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rrd108/cakephp-datalist/zipball/0066ae41368401d6a5351d14b78cbdfaa3984649",
-                "reference": "0066ae41368401d6a5351d14b78cbdfaa3984649",
+                "url": "https://api.github.com/repos/rrd108/cakephp-datalist/zipball/b1cd8cb3bfbd3dd12a880e0203c24ecf7754e199",
+                "reference": "b1cd8cb3bfbd3dd12a880e0203c24ecf7754e199",
                 "shasum": ""
             },
             "require": {
@@ -657,7 +657,7 @@
             ],
             "description": "Datalist plugin for CakePHP 3",
             "homepage": "https://github.com/rrd108/cakephp-datalist",
-            "time": "2018-07-13T15:28:30+00:00"
+            "time": "2018-09-05T11:17:25+00:00"
         },
         {
             "name": "rrd108/cakephp-menulink",
