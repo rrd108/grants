@@ -2,6 +2,21 @@
 return [
     'Users.SimpleRbac.permissions' => [
         [
+            'role' => 'user',
+            'controller' => 'Histories',
+            'action' => ['showInProgress', 'add'],
+        ],
+        [
+            'role' => 'user',
+            'controller' => 'CompaniesGrants',
+            'action' => ['edit', 'view'],
+        ],
+        [
+            'role' => 'user',
+            'controller' => 'Grants',
+            'action' => ['view'],
+        ],
+        [
             'role' => '*',
             'controller' => 'Pages',
             'action' => ['display'],
