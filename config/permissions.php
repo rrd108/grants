@@ -4,7 +4,7 @@ return [
         [
             'role' => 'user',
             'controller' => 'Histories',
-            'action' => ['showInProgress', 'add'],
+            'action' => ['showInProgress', 'add', 'setDone'],
         ],
         [
             'role' => 'user',
